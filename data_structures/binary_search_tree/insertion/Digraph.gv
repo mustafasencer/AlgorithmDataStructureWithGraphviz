@@ -1,0 +1,14 @@
+digraph {
+	name=Tree rankdir=TB
+	1 [label=<<FONT POINT-SIZE="18" FACE="ubuntu">4</FONT><BR ALIGN="CENTER"/>> shape=circle]
+	1 -> 2
+	1 -> 3
+	2 [label=<<FONT POINT-SIZE="18" FACE="ubuntu">1</FONT><BR ALIGN="CENTER"/>> shape=circle]
+	2 -> 4
+	4 [label=<<FONT POINT-SIZE="18" FACE="ubuntu">4</FONT><BR ALIGN="CENTER"/>> shape=circle]
+	4 -> 5
+	5 [label=<<FONT POINT-SIZE="18" FACE="ubuntu">2</FONT><BR ALIGN="CENTER"/>> shape=circle]
+	3 [label=<<FONT POINT-SIZE="18" FACE="ubuntu">6</FONT><BR ALIGN="CENTER"/>> shape=circle]
+	3 -> 6
+	6 [label=<<FONT POINT-SIZE="18" FACE="ubuntu">7</FONT><BR ALIGN="CENTER"/>> shape=circle]
+}
