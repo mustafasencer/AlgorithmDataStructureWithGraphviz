@@ -1,6 +1,6 @@
 #Algorithms and Data Structures in Python with Graphviz Visualization
 
-*Implementation of the main Algorithms in Python and Data Structure implementations with Graphviz as the visualization tool.*
+Implementation of the main Algorithms in Python and Data Structure implementations with Graphviz as the visualization tool.
 
 ## Installation
 
