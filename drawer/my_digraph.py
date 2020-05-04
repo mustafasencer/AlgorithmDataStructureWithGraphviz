@@ -10,8 +10,8 @@ class MyDiGraph:
     class NodeAttributes:
         node_label = """<<FONT POINT-SIZE="18" FACE="ubuntu">%s</FONT><BR ALIGN="CENTER"/>>"""
 
-    def __init__(self):
-        self.digraph = Digraph()
+    def __init__(self, format='pdf'):
+        self.digraph = Digraph(format=format)
         self.digraph.attr(name=MyDiGraph.GraphAttributes.name, rankdir=MyDiGraph.GraphAttributes.rankdir)
 
     def add_node(self, key, value):

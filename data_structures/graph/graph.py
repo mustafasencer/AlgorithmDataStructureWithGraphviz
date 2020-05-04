@@ -9,8 +9,7 @@ class Graph:
         self.V = vertices
         self.graph = [None] * self.V
 
-        # Function to add an edge in an undirected graph
-
+    # Function to add an edge in an undirected graph
     def add_edge(self, src, dest):
         # Adding the node to the source node
         node = AdjNode(dest)
@@ -22,8 +21,6 @@ class Graph:
         node = AdjNode(src)
         node.next = self.graph[dest]
         self.graph[dest] = node
-
-        # Function to print the graph
 
     def print_graph(self):
         for i in range(self.V):

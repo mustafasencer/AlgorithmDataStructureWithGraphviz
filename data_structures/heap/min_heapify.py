@@ -28,16 +28,17 @@ class MinHeap:
         return self.heap[0]
 
 
-heapObj = MinHeap()
-heapObj.insert_key(3)
-heapObj.insert_key(2)
-heapObj.delete_key(1)
-heapObj.insert_key(15)
-heapObj.insert_key(5)
-heapObj.insert_key(4)
-heapObj.insert_key(45)
+if __name__ == '__main__':
+    heapObj = MinHeap()
+    heapObj.insert_key(3)
+    heapObj.insert_key(2)
+    heapObj.delete_key(1)
+    heapObj.insert_key(15)
+    heapObj.insert_key(5)
+    heapObj.insert_key(4)
+    heapObj.insert_key(45)
 
-heapObj.extract_min()
-heapObj.get_min()
-heapObj.decrease_key(2, 1)
-heapObj.get_min()
+    heapObj.extract_min()
+    heapObj.get_min()
+    heapObj.decrease_key(2, 1)
+    heapObj.get_min()

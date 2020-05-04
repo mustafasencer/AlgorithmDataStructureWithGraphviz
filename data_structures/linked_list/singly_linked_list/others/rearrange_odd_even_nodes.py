@@ -4,7 +4,7 @@ head = None  # head of list
 
 
 # Function to segregate even and odd nodes.
-def segregateEvenOdd():
+def segregate_even_odd():
     global head
 
     # Starting node of list having
@@ -87,20 +87,19 @@ def print_list():
     print()
 
 
-push(11)
-push(10)
-push(9)
-push(6)
-push(4)
-push(1)
-push(0)
+if __name__ == '__main__':
+    push(11)
+    push(10)
+    push(9)
+    push(6)
+    push(4)
+    push(1)
+    push(0)
 
-print("Original Linked list")
-print_list()
+    print("Original Linked list")
+    print_list()
 
-segregateEvenOdd()
+    segregate_even_odd()
 
-print("Modified Linked list")
-print_list()
-
-# This code is contributed by shubhamsingh10.
+    print("Modified Linked list")
+    print_list()

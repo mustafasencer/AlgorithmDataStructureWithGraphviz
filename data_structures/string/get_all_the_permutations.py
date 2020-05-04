@@ -1,5 +1,5 @@
 def get_all_the_permutations(chars):
-    pass
+    raise NotImplementedError
 
 
 if __name__ == '__main':
