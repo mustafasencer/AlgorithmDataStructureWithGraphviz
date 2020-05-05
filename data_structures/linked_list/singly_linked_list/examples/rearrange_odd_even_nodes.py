@@ -3,7 +3,6 @@ from data_structures.linked_list.singly_linked_list.node import Node
 head = None  # head of list
 
 
-# Function to segregate even and odd nodes.
 def segregate_even_odd():
     global head
 

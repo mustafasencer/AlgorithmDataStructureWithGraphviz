@@ -2,7 +2,7 @@ from data_structures.linked_list.singly_linked_list.node import Node
 
 
 class Solution:
-    def getIntersectionNode(self, headA: Node, headB: Node) -> Node:
+    def get_intersection_node(self, headA: Node, headB: Node) -> Node:
         count_a = self.get_count(headA)
         count_b = self.get_count(headB)
         if count_a > count_b:
@@ -48,4 +48,4 @@ if __name__ == '__main__':
     node_b.next.next.next.next = Node(4)
     node_b.next.next.next.next.next = Node(5)
 
-    Solution().getIntersectionNode(node_a, node_b)
+    Solution().get_intersection_node(node_a, node_b)

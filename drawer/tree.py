@@ -4,7 +4,7 @@ from drawer.my_digraph import MyDiGraph
 
 class TreeDrawer:
     def __init__(self):
-        self.digraph = MyDiGraph()
+        self.digraph = MyDiGraph(format='png')
         self.key_value_pairs = []
         self._key = None
         self.source = None

@@ -2,7 +2,7 @@ from data_structures.linked_list.singly_linked_list.node import Node
 
 
 class Solution:
-    def oddEvenList(self, head: Node):
+    def odd_even_list(self, head: Node):
         count_total = self.get_count(head)
         count = 1
         current = head.next

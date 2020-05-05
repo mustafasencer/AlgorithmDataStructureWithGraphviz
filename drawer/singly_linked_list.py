@@ -9,7 +9,7 @@ class LinkedListDrawer:
         self.digraph.add_node(str(val), str(val) if val else 'null')
 
     def _create_edge(self, source, destination):
-        self.digraph.add_edge(source, destination)
+        self.digraph.add_edge(str(source), str(destination))
 
     def create_nodes(self, root):
         if root and root.val:
