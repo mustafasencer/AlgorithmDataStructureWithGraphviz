@@ -1,12 +1,12 @@
 # Python program for implementation of MergeSort
-def mergeSort(arr):
+def merge_sort(arr):
     if len(arr) > 1:
         mid = len(arr) // 2  # Finding the mid of the array
         L = arr[:mid]  # Dividing the array elements
         R = arr[mid:]  # into 2 halves
 
-        mergeSort(L)  # Sorting the first half
-        mergeSort(R)  # Sorting the second half
+        merge_sort(L)  # Sorting the first half
+        merge_sort(R)  # Sorting the second half
 
         i = j = k = 0
 
@@ -33,7 +33,7 @@ def mergeSort(arr):
 
 
 # Code to print the list
-def printList(arr):
+def print_list(arr):
     for i in range(len(arr)):
         print(arr[i], end=" ")
     print()
@@ -43,7 +43,7 @@ def printList(arr):
 if __name__ == '__main__':
     arr = [12, 11, 13, 5, 6, 7]
     print("Given array is", end="\n")
-    printList(arr)
-    mergeSort(arr)
+    print_list(arr)
+    merge_sort(arr)
     print("Sorted array is: ", end="\n")
-    printList(arr)
+    print_list(arr)
