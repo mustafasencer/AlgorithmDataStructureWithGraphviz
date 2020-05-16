@@ -6,7 +6,7 @@ Implementation of the main Algorithms in Python and Data Structure implementatio
 ## Installation
 
 ```bash
-pip install requirements.txt
+pip install -r requirements.txt
 ```
 
 ## Algorithms
