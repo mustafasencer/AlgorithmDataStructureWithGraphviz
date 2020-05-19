@@ -16,18 +16,38 @@ class Graph:
         visited = [False] * self.V
 
         stack = []
+        result = []
 
         stack.append(start)
 
         while stack:
             s = stack.pop()
             if not visited[s]:
-                print(s, end=' ')
                 visited[s] = True
+                result.append(s)
 
             for node in self.graph[s]:
                 if not visited[node]:
                     stack.append(node)
+        return result
+
+    def dfs_(self, start):
+        visited = [False] * self.V
+
+        stack = []
+        result = []
+        stack.append(start)
+
+        while stack:
+            s = stack.pop()
+
+            if not visited[s]:
+                visited[s] = True
+                result.append(s)
+            for i in self.graph[s]:
+                if not visited[i]:
+                    stack.append(i)
+        return result
 
 
 if __name__ == '__main__':
@@ -37,4 +57,5 @@ if __name__ == '__main__':
     g.add_edge(2, 1)
     g.add_edge(0, 3)
     g.add_edge(1, 4)
-    g.dfs(0)
+    assert g.dfs(1) == g.dfs_(1)
+    print(g.dfs(1))
