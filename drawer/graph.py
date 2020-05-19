@@ -1,7 +1,7 @@
 """
     Created by Mustafa Sencer Özcan on 18.05.2020.
 """
-from drawer.my_digraph import MyDiGraph
+from drawer.base import MyDiGraph
 
 
 class GraphDrawer:
@@ -12,7 +12,44 @@ class GraphDrawer:
         self.source = None
         self.edges = []
 
-    def create_nodes(self, graph):
+    def get_key(self, value):
+        key = self.key
+        self.key_value_pairs.append((key, value))
+        return key
+
+    def get_source(self):
+        if self.key_value_pairs:
+            key, value = self.key_value_pairs.pop(0)
+            self.source = key
+            return key
+        key = self.key
+        self.source = key
+        return key
+
+    def create_edges(self):
+        for source, destination in self.edges:
+            self.digraph.add_edge(source, destination)
+
+    def create_node(self, value):
+        source = self.get_source()
+        self.digraph.add_node(str(source), str(value) if value else 'null')
+
+    def append_edges(self, root):
+        if root.left:
+            destination = self.get_key(root.left.val)
+            self.edges.append((str(self.source), str(destination)))
+        if root.right:
+            destination = self.get_key(root.right.val)
+            self.edges.append((str(self.source), str(destination)))
+
+    @property
+    def key(self):
+        if not self._key:
+            self._key = 0
+        self._key += 1
+        return self._key
+
+    def create_nodes(self, root):
         if not root:
             raise ValueError('Tree is empty!')
         result, queue = [], [root]
@@ -29,10 +66,3 @@ class GraphDrawer:
     def visualize(self, graph):
         self.create_nodes(graph)
         self.digraph.view()
-
-
-if __name__ == '__main__':
-    array = [1, 2, 1, 8, 5, 6, 7, 4, 6, 4, 6, 3, 5]
-    root = build_graph(array, None, 0, len(array))
-    drawer = GraphDrawer()
-    drawer.visualize(root)

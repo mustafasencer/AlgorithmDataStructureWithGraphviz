@@ -1,4 +1,4 @@
-from drawer.my_digraph import MyDiGraph
+from drawer.base import MyDiGraph
 
 
 class LinkedListDrawer:

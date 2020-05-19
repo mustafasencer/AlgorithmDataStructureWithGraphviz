@@ -1,5 +1,5 @@
 from data_structures.tree.build.level_order import build_tree
-from drawer.my_digraph import MyDiGraph
+from drawer.base import MyDiGraph
 
 
 class TreeDrawer:
