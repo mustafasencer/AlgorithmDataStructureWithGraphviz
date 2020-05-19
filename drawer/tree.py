@@ -67,7 +67,8 @@ class TreeDrawer:
 
 
 if __name__ == '__main__':
-    array = [1, 2, 1, 8, 5, 6, 7, 4, 6, 4, 6, 3, 5]
+    array = ['Tree', 'Graph', 'Linked-List', 'Queue', 'Stack', 'Binary Search Tree', 'Trie', 'Heap', 'Priority Queue',
+             'Doubly Linked-List', 'Array', 'String', 'Sort', 'Search', 'Hash Table']
     root = build_tree(array, None, 0, len(array))
     drawer = TreeDrawer()
     drawer.visualize(root)

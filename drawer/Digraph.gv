@@ -1,18 +1,20 @@
 digraph {
 	name=Tree rankdir=TB
-	1 [label=<<FONT POINT-SIZE="18" FACE="ubuntu">1</FONT><BR ALIGN="CENTER"/>> height=1 shape=circle width=1]
-	2 [label=<<FONT POINT-SIZE="18" FACE="ubuntu">2</FONT><BR ALIGN="CENTER"/>> height=1 shape=circle width=1]
-	3 [label=<<FONT POINT-SIZE="18" FACE="ubuntu">1</FONT><BR ALIGN="CENTER"/>> height=1 shape=circle width=1]
-	4 [label=<<FONT POINT-SIZE="18" FACE="ubuntu">8</FONT><BR ALIGN="CENTER"/>> height=1 shape=circle width=1]
-	5 [label=<<FONT POINT-SIZE="18" FACE="ubuntu">5</FONT><BR ALIGN="CENTER"/>> height=1 shape=circle width=1]
-	6 [label=<<FONT POINT-SIZE="18" FACE="ubuntu">6</FONT><BR ALIGN="CENTER"/>> height=1 shape=circle width=1]
-	7 [label=<<FONT POINT-SIZE="18" FACE="ubuntu">7</FONT><BR ALIGN="CENTER"/>> height=1 shape=circle width=1]
-	8 [label=<<FONT POINT-SIZE="18" FACE="ubuntu">4</FONT><BR ALIGN="CENTER"/>> height=1 shape=circle width=1]
-	9 [label=<<FONT POINT-SIZE="18" FACE="ubuntu">6</FONT><BR ALIGN="CENTER"/>> height=1 shape=circle width=1]
-	10 [label=<<FONT POINT-SIZE="18" FACE="ubuntu">4</FONT><BR ALIGN="CENTER"/>> height=1 shape=circle width=1]
-	11 [label=<<FONT POINT-SIZE="18" FACE="ubuntu">6</FONT><BR ALIGN="CENTER"/>> height=1 shape=circle width=1]
-	12 [label=<<FONT POINT-SIZE="18" FACE="ubuntu">3</FONT><BR ALIGN="CENTER"/>> height=1 shape=circle width=1]
-	13 [label=<<FONT POINT-SIZE="18" FACE="ubuntu">5</FONT><BR ALIGN="CENTER"/>> height=1 shape=circle width=1]
+	1 [label=<<FONT POINT-SIZE="18" FACE="ubuntu">Tree</FONT><BR ALIGN="CENTER"/>> height=1 shape=circle width=1]
+	2 [label=<<FONT POINT-SIZE="18" FACE="ubuntu">Graph</FONT><BR ALIGN="CENTER"/>> height=1 shape=circle width=1]
+	3 [label=<<FONT POINT-SIZE="18" FACE="ubuntu">Linked-List</FONT><BR ALIGN="CENTER"/>> height=1 shape=circle width=1]
+	4 [label=<<FONT POINT-SIZE="18" FACE="ubuntu">Queue</FONT><BR ALIGN="CENTER"/>> height=1 shape=circle width=1]
+	5 [label=<<FONT POINT-SIZE="18" FACE="ubuntu">Stack</FONT><BR ALIGN="CENTER"/>> height=1 shape=circle width=1]
+	6 [label=<<FONT POINT-SIZE="18" FACE="ubuntu">Binary Search Tree</FONT><BR ALIGN="CENTER"/>> height=1 shape=circle width=1]
+	7 [label=<<FONT POINT-SIZE="18" FACE="ubuntu">Trie</FONT><BR ALIGN="CENTER"/>> height=1 shape=circle width=1]
+	8 [label=<<FONT POINT-SIZE="18" FACE="ubuntu">Heap</FONT><BR ALIGN="CENTER"/>> height=1 shape=circle width=1]
+	9 [label=<<FONT POINT-SIZE="18" FACE="ubuntu">Priority Queue</FONT><BR ALIGN="CENTER"/>> height=1 shape=circle width=1]
+	10 [label=<<FONT POINT-SIZE="18" FACE="ubuntu">Doubly Linked-List</FONT><BR ALIGN="CENTER"/>> height=1 shape=circle width=1]
+	11 [label=<<FONT POINT-SIZE="18" FACE="ubuntu">Array</FONT><BR ALIGN="CENTER"/>> height=1 shape=circle width=1]
+	12 [label=<<FONT POINT-SIZE="18" FACE="ubuntu">String</FONT><BR ALIGN="CENTER"/>> height=1 shape=circle width=1]
+	13 [label=<<FONT POINT-SIZE="18" FACE="ubuntu">Sort</FONT><BR ALIGN="CENTER"/>> height=1 shape=circle width=1]
+	14 [label=<<FONT POINT-SIZE="18" FACE="ubuntu">Search</FONT><BR ALIGN="CENTER"/>> height=1 shape=circle width=1]
+	15 [label=<<FONT POINT-SIZE="18" FACE="ubuntu">Hash Table</FONT><BR ALIGN="CENTER"/>> height=1 shape=circle width=1]
 	1 -> 2
 	1 -> 3
 	2 -> 4
@@ -25,4 +27,6 @@ digraph {
 	5 -> 11
 	6 -> 12
 	6 -> 13
+	7 -> 14
+	7 -> 15
 }
