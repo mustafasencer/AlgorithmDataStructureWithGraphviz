@@ -3,16 +3,15 @@ from graphviz import Digraph
 
 class MyDiGraph:
     class GraphAttributes:
-        name = 'Tree'
         label = """<<FONT POINT-SIZE="30" FACE="ubuntu">{}</FONT><BR ALIGN="CENTER"/>>"""
-        rankdir = 'TB'
 
     class NodeAttributes:
         node_label = """<<FONT POINT-SIZE="18" FACE="ubuntu">%s</FONT><BR ALIGN="CENTER"/>>"""
 
-    def __init__(self, format='pdf'):
+    def __init__(self, name='', format='pdf', is_vertical=False):
+
         self.digraph = Digraph(format=format)
-        self.digraph.attr(name=MyDiGraph.GraphAttributes.name, rankdir=MyDiGraph.GraphAttributes.rankdir)
+        self.digraph.attr(name=name, rankdir='TB' if is_vertical else 'LR')
 
     def add_node(self, key, value):
         if value == 'null':
