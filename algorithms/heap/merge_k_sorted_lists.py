@@ -1,7 +1,7 @@
 import heapq
 from queue import PriorityQueue
 
-from data_structures.linked_list.build import build_linked_list
+from data_structures.linked_list.build.builder import build_linked_list
 from data_structures.linked_list.node import Node
 
 

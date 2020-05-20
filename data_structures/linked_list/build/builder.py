@@ -1,4 +1,4 @@
-from drawer.singly_linked_list import LinkedListDrawer
+from drawer.linked_list import LinkedListDrawer
 from data_structures.linked_list.node import Node
 
 
