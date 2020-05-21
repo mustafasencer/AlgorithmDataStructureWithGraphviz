@@ -1,6 +1,6 @@
 import time
 
-from data_structures.linked_list.build import build_linked_list
+from data_structures.linked_list.build.builder import build_linked_list
 from data_structures.linked_list.node import Node
 
 
@@ -89,5 +89,3 @@ if __name__ == '__main__':
     result = insert_nth_(head, INDEX, VALUE)
     print_list(result)
     print(time.time() - start)
-
-    print('*********')

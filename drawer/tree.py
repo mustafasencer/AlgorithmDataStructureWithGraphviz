@@ -10,6 +10,13 @@ class TreeDrawer:
         self.source = None
         self.edges = []
 
+    @property
+    def key(self):
+        if not self._key:
+            self._key = 0
+        self._key += 1
+        return self._key
+
     def get_key(self, value):
         key = self.key
         self.key_value_pairs.append((key, value))
@@ -39,13 +46,6 @@ class TreeDrawer:
         if root.right:
             destination = self.get_key(root.right.val)
             self.edges.append((str(self.source), str(destination)))
-
-    @property
-    def key(self):
-        if not self._key:
-            self._key = 0
-        self._key += 1
-        return self._key
 
     def create_nodes(self, root):
         if not root:
