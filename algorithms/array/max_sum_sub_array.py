@@ -1,18 +1,14 @@
-def max_summed_sub_array(array):
-    for i in range(1, len(array)):
-        if array[i - 1] > 0:
-            array[i] += array[i - 1]
-    return max(array)
+from typing import List
 
 
-def _test(array):
-    for i in range(1, len(array)):
-        if array[i - 1] > 0:
-            array[i] = array[i - 1] + array[i]
-    return max(array)
+class Solution:
+    def maxSubArray(self, nums: List[int]) -> int:
+        for i in range(1, len(nums)):
+            if nums[i - 1] > 0:
+                nums[i] += nums[i - 1]
+        return max(nums)
 
 
 if __name__ == '__main__':
-    array = [1, 3, -5, 5]
-    result = _test(array)
-    print(result)
+    array = [1, 3, -5, 5, 2, 3]
+    result = Solution().maxSubArray(array)
