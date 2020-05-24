@@ -5,7 +5,7 @@ from data_structures.tree.node import Node
 def build_bst(array):
     if not array:
         return None
-    array = [i for i in array if i]
+    array = [i for i in array if i is not None]
 
     array.sort()
 

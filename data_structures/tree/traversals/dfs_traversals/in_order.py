@@ -36,7 +36,7 @@ def morris_traversal(root):
 
 
 if __name__ == '__main__':
-    array = [1, 2, 3, 4, 5]
+    array = [1, 2, 3, 4, None, 5]
     root = build_tree(array, None, 0, len(array))
     result = stack(root)
     print(result)
