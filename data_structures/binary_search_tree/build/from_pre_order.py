@@ -1,4 +1,4 @@
-from data_structures.tree.traversals.dfs_traversals import stack
+from data_structures.tree.traversals.dfs_traversals.in_order import stack
 from drawer.tree import TreeDrawer
 from data_structures.tree.node import Node
 
@@ -38,5 +38,5 @@ if __name__ == '__main__':
     array = [10, 5, 1, 7, 40]
     root = stack_deneme(array)
     TreeDrawer().visualize(root)
-    in_order_result = stack(root)
+    in_order_result = build_with_stack(array)
     print(in_order_result)

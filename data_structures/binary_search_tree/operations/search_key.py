@@ -1,4 +1,4 @@
-from data_structures.binary_search_tree import build_bst
+from data_structures.binary_search_tree.build.from_array import build_bst
 from drawer.tree import TreeDrawer
 
 
