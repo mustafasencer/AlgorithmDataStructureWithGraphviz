@@ -3,9 +3,9 @@ from collections import defaultdict
 
 
 class AdjNode:
-    def __init__(self, data):
+    def __init__(self, data, neighbors=None):
         self.vertex = data
-        self.next = None
+        self.neighbors = neighbors if neighbors is not None else []
 
 
 class Graph:
@@ -13,22 +13,15 @@ class Graph:
         self.V = vertices
         self.graph = defaultdict(list)
 
-    def add_edge(self, src, dest):
-        node = AdjNode(dest)
-        node.next = self.graph[src]
-        self.graph[src] = node
-
-        node = AdjNode(src)
-        node.next = self.graph[dest]
-        self.graph[dest] = node
+    def add_edge(self, v, w):
+        self.graph[v].append(w)
 
     def print_graph(self):
         for i in range(self.V):
             print("Adjacency list of vertex {}\n head".format(i), end="")
             temp = self.graph[i]
             while temp:
-                print(" -> {}".format(temp.vertex), end="")
-                temp = temp.next
+                print(" -> {}".format(temp.pop(0)), end="")
             print(" \n")
 
 

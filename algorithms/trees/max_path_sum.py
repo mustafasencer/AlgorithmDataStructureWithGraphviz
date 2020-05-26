@@ -1,27 +1,44 @@
 """
     Created by Mustafa Sencer Özcan on 24.05.2020.
+    :arg Hard
 """
 from data_structures.tree.build.level_order import build_tree
 from data_structures.tree.node import Node
 
 
 class Solution:
+    result = float('-inf')
+
     def maxPathSum(self, root: Node) -> int:
-        self.result = 0
         self.dfs(root)
         return self.result
 
     def dfs(self, root):
-        if not root or not root.val:
+        if root is None or root.val is None:
             return 0
         left = self.dfs(root.left)
         right = self.dfs(root.right)
-        self.result = max(self.result, root.val + left + right)
-        return max(left, right) + root.val
+        self.result = max(self.result, root.val + left + right, root.val)
+        return max(root.val + left + right, 0)
+
+    def maxPathSum_(self, root):
+        def maxend(node):
+            if not node:
+                return 0
+            left = maxend(node.left)
+            right = maxend(node.right)
+            self.max = max(self.max, left + node.val + right)
+            return max(node.val + max(left, right), 0)
+
+        self.max = 0
+        maxend(root)
+        return self.max
 
 
 if __name__ == '__main__':
-    array = [-10, 9, 20, None, None, 15, 7]
+    array = [1, 2, 3, 4, 5, 6, 7]
     root = build_tree(array, None, 0, len(array))
     result = Solution().maxPathSum(root)
+    result_ = Solution().maxPathSum_(root)
     print(result)
+    print(result_)

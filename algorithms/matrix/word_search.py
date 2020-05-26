@@ -2,6 +2,7 @@
     Created by Mustafa Sencer Özcan on 23.05.2020.
 """
 from typing import List
+
 """Backtracking / DFS """
 
 
@@ -21,11 +22,10 @@ class Solution:
             return False
         temp = board[i][j]
         board[i][j] = '#'
-        result = self.backtrack(board, word[1:], i - 1, j) or self.backtrack(board, word[1:], i,
-                                                                             j - 1) or self.backtrack(board, word[1:],
-                                                                                                      i + 1,
-                                                                                                      j) or self.backtrack(
-            board, word[1:], i, j + 1)
+        result = self.backtrack(board, word[1:], i - 1, j) \
+                 or self.backtrack(board, word[1:], i, j - 1) \
+                 or self.backtrack(board, word[1:], i + 1, j) \
+                 or self.backtrack(board, word[1:], i, j + 1)
         board[i][j] = temp
         return result
 

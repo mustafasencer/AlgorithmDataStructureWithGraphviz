@@ -24,6 +24,21 @@ def stack(root):
     return result
 
 
+def stack_(root):
+    if not root or not root.val:
+        return
+    stack = []
+    result = []
+    while stack or root:
+        while root:
+            stack.append(root)
+            root = root.left
+        root = stack.pop()
+        result.append(root.val)
+        root = root.right
+    return result
+
+
 def morris_traversal(root):
     current = root
     result = []
@@ -39,4 +54,6 @@ if __name__ == '__main__':
     array = [1, 2, 3, 4, None, 5]
     root = build_tree(array, None, 0, len(array))
     result = stack(root)
+    result_ = stack_(root)
+    assert result == result_
     print(result)
