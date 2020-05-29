@@ -37,7 +37,7 @@ class TreeDrawer:
 
     def create_node(self, value):
         source = self.get_source()
-        self.digraph.add_node(str(source), str(value) if value else 'null')
+        self.digraph.add_node(str(source), str(value) if value is not None else 'null')
 
     def append_edges(self, root):
         if root.left:

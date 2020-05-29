@@ -1,4 +1,3 @@
-from data_structures.linked_list.build.builder import build_linked_list
 from drawer.base import MyDiGraph
 
 
@@ -55,6 +54,6 @@ class LinkedListDrawer:
 if __name__ == '__main__':
     array = ['Tree', 'Graph', 'Linked-List', 'Queue', 'Stack', 'Binary Search Tree', 'Trie', 'Heap', 'Priority Queue',
              'Doubly Linked-List', 'Array', 'String', 'Sort', 'Search', 'Hash Table']
-    root = build_linked_list(array)
-    drawer = LinkedListDrawer()
-    drawer.visualize(root)
+    # root = build_linked_list(array)
+    # drawer = LinkedListDrawer()
+    # drawer.visualize(root)
