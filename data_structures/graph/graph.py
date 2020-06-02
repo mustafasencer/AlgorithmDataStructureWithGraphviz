@@ -8,6 +8,23 @@ class AdjNode:
         self.neighbors = neighbors if neighbors is not None else []
 
 
+class WeightedGraph:
+    def __init__(self, vertices):
+        self.V = vertices
+        self.graph = []
+
+    def add_edge(self, v, w, c):
+        self.graph.append((v, w, c))
+
+    def print_graph(self):
+        for i in range(self.V):
+            print("Adjacency list of vertex {}\n head".format(i), end="")
+            temp = self.graph[i]
+            while temp:
+                print(" -> {}".format(temp.pop(0)), end="")
+            print(" \n")
+
+
 class Graph:
     def __init__(self, vertices):
         self.V = vertices

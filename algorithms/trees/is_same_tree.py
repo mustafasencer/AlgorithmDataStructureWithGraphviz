@@ -1,5 +1,7 @@
 """
     Created by Mustafa Sencer Özcan on 24.05.2020.
+
+    Check again in Leetcode
 """
 from data_structures.tree.build.level_order import build_tree
 from data_structures.tree.node import Node
