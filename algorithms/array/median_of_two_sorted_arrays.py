@@ -20,4 +20,4 @@ class Solution:
 
 
 if __name__ == '__main__':
-    Solution().find_median_sorted_arrays([2, 3, 4], [3, 5, 2, 4])
+    result = Solution().find_median_sorted_arrays([2, 3, 4], [3, 5, 2, 4])

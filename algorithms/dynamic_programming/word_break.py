@@ -5,7 +5,7 @@ from typing import List
 
 
 class Solution:
-    def wordBreak(self, s: str, wordDict: List[str]) -> bool:
+    def word_break(self, s: str, wordDict: List[str]) -> bool:
         dp = [False] * len(s)
         for i in range(len(s)):
             for w in wordDict:
@@ -15,5 +15,5 @@ class Solution:
 
 
 if __name__ == '__main__':
-    result = Solution().wordBreak("leetcode", ["leet", "code"])
+    result = Solution().word_break("leetcode", ["leet", "code"])
     print(result)

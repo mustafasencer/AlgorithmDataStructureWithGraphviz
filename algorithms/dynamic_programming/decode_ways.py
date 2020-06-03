@@ -1,10 +1,18 @@
 """
     Created by Mustafa Sencer Özcan on 23.05.2020.
+    
+    A message containing letters from A-Z is being encoded to numbers using the following mapping:
+
+    'A' -> 1
+    'B' -> 2
+    ...
+    'Z' -> 26
+    Given a non-empty string containing only digits, determine the total number of ways to decode it.
 """
 
 
 class Solution:
-    def numDecodings(self, s: str) -> int:
+    def num_decodings(self, s: str) -> int:
         if not s:
             return 0
 
@@ -21,5 +29,5 @@ class Solution:
 
 
 if __name__ == '__main__':
-    result = Solution().numDecodings("10")
+    result = Solution().num_decodings("10")
     print(result)

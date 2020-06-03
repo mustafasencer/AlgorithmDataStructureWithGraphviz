@@ -5,7 +5,7 @@ from typing import List
 
 
 class Solution:
-    def arrayRankTransform(self, arr: List[int]) -> List[int]:
+    def array_rank_transform(self, arr: List[int]) -> List[int]:
         copy_ = arr.copy()
         copy_.sort()
         store = {}
@@ -26,6 +26,7 @@ class Solution:
 
 
 if __name__ == '__main__':
-    result = Solution().arrayRankTransform([40, 10, 20, 30])
+    result = Solution().array_rank_transform([40, 10, 20, 30])
     result_ = Solution().test_([40, 10, 20, 30])
     assert result == result_
+    print(result)

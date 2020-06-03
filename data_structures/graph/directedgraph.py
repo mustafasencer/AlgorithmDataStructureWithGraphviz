@@ -25,7 +25,7 @@ class WeightedGraph:
             print(" \n")
 
 
-class Graph:
+class DirectedGraph:
     def __init__(self, vertices):
         self.V = vertices
         self.graph = defaultdict(list)
@@ -44,7 +44,7 @@ class Graph:
 
 if __name__ == "__main__":
     V = 5
-    graph = Graph(V)
+    graph = DirectedGraph(V)
     graph.add_edge(0, 1)
     graph.add_edge(0, 4)
     graph.add_edge(1, 2)

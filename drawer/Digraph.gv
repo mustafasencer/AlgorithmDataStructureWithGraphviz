@@ -1,5 +1,5 @@
 digraph {
-	name="" rankdir=LR
+	name="" rankdir=TB
 	1 [label=<<FONT POINT-SIZE="18" FACE="ubuntu">Tree</FONT><BR ALIGN="CENTER"/>> height=1 shape=circle width=1]
 	2 [label=<<FONT POINT-SIZE="18" FACE="ubuntu">Graph</FONT><BR ALIGN="CENTER"/>> height=1 shape=circle width=1]
 	3 [label=<<FONT POINT-SIZE="18" FACE="ubuntu">Linked-List</FONT><BR ALIGN="CENTER"/>> height=1 shape=circle width=1]

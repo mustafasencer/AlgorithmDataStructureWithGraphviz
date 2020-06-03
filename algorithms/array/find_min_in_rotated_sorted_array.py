@@ -1,11 +1,19 @@
 """
     Created by Mustafa Sencer Özcan on 27.05.2020.
+
+    Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.
+
+    (i.e.,  [0,1,2,4,5,6,7] might become  [4,5,6,7,0,1,2]).
+
+    Find the minimum element.
+
+    You may assume no duplicate exists in the array.
 """
 from typing import List
 
 
 class Solution:
-    def findMin(self, nums: List[int]) -> int:
+    def find_min(self, nums: List[int]) -> int:
         low = 0
         high = len(nums) - 1
 
@@ -19,5 +27,5 @@ class Solution:
 
 
 if __name__ == '__main__':
-    result = Solution().findMin([3, 4, 5, 0, 1, 2])
+    result = Solution().find_min([3, 4, 5, 0, 1, 2])
     print(result)

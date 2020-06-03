@@ -6,7 +6,7 @@
 """
 import collections
 
-from data_structures.graph.graph import AdjNode
+from data_structures.graph.directedgraph import AdjNode
 
 
 class Solution:

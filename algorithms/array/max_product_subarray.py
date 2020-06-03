@@ -1,12 +1,15 @@
 """
     Created by Mustafa Sencer Özcan on 26.05.2020.
+
+    Given an integer array nums, find the contiguous subarray
+    within an array (containing at least one number) which has the largest product.
 """
 from typing import List
 from functools import reduce
 
 
 class Solution:
-    def maxProduct(self, nums: List[int]) -> int:
+    def max_product(self, nums: List[int]) -> int:
         result = 0
         for i in range(len(nums)):
             k = i + 1
@@ -24,7 +27,7 @@ class Solution:
 
 
 if __name__ == '__main__':
-    result = Solution().maxProduct([-2, 2, 3])
+    result = Solution().max_product([-2, 2, 3])
     result_ = Solution()._test([-2, 2, 3])
     assert result == result_
     print(result)

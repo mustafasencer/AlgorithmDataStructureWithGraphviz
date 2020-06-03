@@ -1,11 +1,17 @@
 """
     Created by Mustafa Sencer Özcan on 21.05.2020.
+
+    Given an array of non-negative integers, you are initially positioned at the first index of the array.
+
+    Each element in the array represents your maximum jump length at that position.
+
+    Determine if you are able to reach the last index.
 """
 from typing import List
 
 
 class Solution:
-    def canJump(self, nums: List[int]) -> bool:
+    def can_jump(self, nums: List[int]) -> bool:
         n = len(nums)
         last = n - 1
         for i in range(n - 2, -1, -1):
@@ -15,5 +21,5 @@ class Solution:
 
 
 if __name__ == '__main__':
-    result = Solution().canJump([2, 2, 1, 0, 4])
+    result = Solution().can_jump([2, 2, 1, 0, 4])
     print(result)

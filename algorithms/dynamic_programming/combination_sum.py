@@ -1,12 +1,21 @@
 """
     Created by Mustafa Sencer Özcan on 21.05.2020.
-    backtrack
+    BACKTRACK!
+
+    Given a set of candidate numbers (candidates) (without duplicates) and a target number (target), find all unique combinations in candidates where the candidate numbers sums to target.
+
+    The same repeated number may be chosen from candidates unlimited number of times.
+
+    Note:
+
+    All numbers (including target) will be positive integers.
+    The solution set must not contain duplicate combinations.
 """
 from typing import List
 
 
 class Solution:
-    def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
+    def combination_sum(self, candidates: List[int], target: int) -> List[List[int]]:
         result = []
         candidates.sort()
         self.backtrack(result, candidates, [], target, 0)
@@ -24,5 +33,5 @@ class Solution:
 
 
 if __name__ == '__main__':
-    result = Solution().combinationSum([2, 3, 6, 7], 7)
+    result = Solution().combination_sum([2, 3, 6, 7], 7)
     print(result)
