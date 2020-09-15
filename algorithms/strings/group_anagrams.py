@@ -5,7 +5,7 @@ from typing import List
 
 
 class Solution:
-    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+    def group_anagrams(self, strs: List[str]) -> List[List[str]]:
         memo = {}
         for item in strs:
             sort_ = "".join(sorted(item))
@@ -18,5 +18,5 @@ class Solution:
 
 
 if __name__ == '__main__':
-    result = Solution().groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"])
+    result = Solution().group_anagrams(["eat", "tea", "tan", "ate", "nat", "bat"])
     print(result)

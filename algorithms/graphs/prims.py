@@ -4,7 +4,7 @@
 from heapq import heappush, heappop
 from itertools import count
 
-from data_structures.graph.directedgraph import DirectedGraph
+from data_structures.graph.directed_graph import DirectedGraph
 
 
 def minimum_spanning_tree_cost(graph):

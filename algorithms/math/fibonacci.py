@@ -38,3 +38,7 @@ def fibonacci(n):
             a = b
             b = c
         return b
+
+
+if __name__ == '__main__':
+    fibonacci()
