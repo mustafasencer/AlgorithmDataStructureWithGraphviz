@@ -15,15 +15,15 @@ def heap_sort(arr):
         heapify_(arr, i, 0)
 
 
-def heap_sort_deneme(array):
+def test_heap_sort(array):
     heapify(array)
 
 
 if __name__ == '__main__':
     arr = [12, 11, 13, 5, 6, 7]
     # heap_sort(arr)
-    heap_sort_deneme(arr)
+    test_heap_sort(arr)
     n = len(arr)
-    print("Sorted array is")
+    print("Sorted arrays is")
     for i in range(n):
         print("%d" % arr[i]),

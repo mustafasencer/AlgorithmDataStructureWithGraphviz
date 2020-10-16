@@ -1,9 +1,9 @@
 """
     Created by Mustafa Sencer Özcan on 21.05.2020.
 
-    Given an array of non-negative integers, you are initially positioned at the first index of the array.
+    Given an arrays of non-negative integers, you are initially positioned at the first index of the arrays.
 
-    Each element in the array represents your maximum jump length at that position.
+    Each element in the arrays represents your maximum jump length at that position.
 
     Determine if you are able to reach the last index.
 """

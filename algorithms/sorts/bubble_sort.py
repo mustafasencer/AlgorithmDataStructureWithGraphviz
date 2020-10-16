@@ -2,7 +2,7 @@
 def bubble_sort(arr):
     n = len(arr)
 
-    # Traverse through all array elements
+    # Traverse through all arrays elements
     for i in range(n):
         swapped = False
 
@@ -10,7 +10,7 @@ def bubble_sort(arr):
         #  in place
         for j in range(0, n - i - 1):
 
-            # traverse the array from 0 to
+            # traverse the arrays from 0 to
             # n-i-1. Swap if the element
             # found is greater than the
             # next element
@@ -29,6 +29,6 @@ if __name__ == '__main__':
 
     bubble_sort(arr)
 
-    print("Sorted array :")
+    print("Sorted arrays :")
     for i in range(len(arr)):
         print("%d" % arr[i], end=" ")

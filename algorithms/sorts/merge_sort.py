@@ -1,7 +1,7 @@
 def merge_sort(arr):
     if len(arr) > 1:
-        mid = len(arr) // 2  # Finding the mid of the array
-        L = arr[:mid]  # Dividing the array elements
+        mid = len(arr) // 2  # Finding the mid of the arrays
+        L = arr[:mid]  # Dividing the arrays elements
         R = arr[mid:]  # into 2 halves
 
         merge_sort(L)  # Sorting the first half
@@ -41,8 +41,8 @@ def print_list(arr):
 # driver code to test the above code
 if __name__ == '__main__':
     arr = [12, 11, 13, 5, 6, 7]
-    print("Given array is", end="\n")
+    print("Given arrays is", end="\n")
     print_list(arr)
     merge_sort(arr)
-    print("Sorted array is: ", end="\n")
+    print("Sorted arrays is: ", end="\n")
     print_list(arr)

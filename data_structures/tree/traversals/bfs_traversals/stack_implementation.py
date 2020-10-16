@@ -1,4 +1,4 @@
-# dfs + stack
+# dfs + stacks
 from drawer.tree import TreeDrawer
 from data_structures.tree.build.level_order import build_tree
 

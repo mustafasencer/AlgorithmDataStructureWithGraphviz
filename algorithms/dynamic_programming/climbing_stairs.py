@@ -23,5 +23,5 @@ class Solution:
 
 
 if __name__ == '__main__':
-    result = Solution().climb_stairs(8)
+    result = Solution().climb_stairs(3)
     print(result)

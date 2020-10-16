@@ -20,7 +20,7 @@ def quick_sort(arr, low, high):
         # at right place
         pi = partition(arr, low, high)
 
-        # Separately sorting elements before
+        # Separately sorts elements before
         # partition and after partition
         quick_sort(arr, low, pi - 1)
         quick_sort(arr, pi + 1, high)
@@ -30,6 +30,6 @@ if __name__ == '__main__':
     arr = [10, 7, 8, 9, 1, 5]
     n = len(arr)
     quick_sort(arr, 0, n - 1)
-    print("Sorted array is:")
+    print("Sorted arrays is:")
     for i in range(n):
         print("%d" % arr[i])

@@ -31,7 +31,22 @@ class Solution:
             for i in range(start, len(nums)):
                 self.backtrack(result_, nums, temp + [nums[i]], remain - nums[i], i)
 
+    def _test(self, candidates, target):
+        result = []
+        self.dfs(result, candidates, target, [])
+        return result
+
+    def dfs(self, result_, candidates, remain, path):
+        if remain < 0:
+            return
+        if remain == 0:
+            result_.append(path)
+            return
+        for i in range(len(candidates)):
+            self.dfs(result_, candidates[i:], remain - candidates[i], path + [candidates[i]])
+
 
 if __name__ == '__main__':
-    result = Solution().combination_sum([2, 3, 6, 7], 7)
+    # result = Solution().combination_sum([2, 3, 6, 7], 7)
+    result = Solution()._test([2, 3, 6, 7], 7)
     print(result)

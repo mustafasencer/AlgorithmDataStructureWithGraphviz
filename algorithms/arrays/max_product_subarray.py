@@ -1,8 +1,8 @@
 """
     Created by Mustafa Sencer Özcan on 26.05.2020.
 
-    Given an integer array nums, find the contiguous subarray
-    within an array (containing at least one number) which has the largest product.
+    Given an integer arrays nums, find the contiguous subarray
+    within an arrays (containing at least one number) which has the largest product.
 """
 from typing import List
 from functools import reduce

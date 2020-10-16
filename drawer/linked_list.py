@@ -54,6 +54,6 @@ class LinkedListDrawer:
 if __name__ == '__main__':
     array = ['Tree', 'Graph', 'Linked-List', 'Queue', 'Stack', 'Binary Search Tree', 'Trie', 'Heap', 'Priority Queue',
              'Doubly Linked-List', 'Array', 'String', 'Sort', 'Search', 'Hash Table']
-    # root = build_linked_list(array)
+    # root = build_linked_list(arrays)
     # drawer = LinkedListDrawer()
     # drawer.visualize(root)
