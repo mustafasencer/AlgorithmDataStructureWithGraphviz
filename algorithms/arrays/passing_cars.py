@@ -66,7 +66,7 @@ def solution(A):
         else:
             combinations += zero_count
 
-        if combinations > 1000000000:
+        if combinations > 1E9:
             return -1
 
     return combinations

@@ -1,3 +1,8 @@
+"""
+    Codility equi leader question
+"""
+
+
 def solution(A):
     mapper = {}
 

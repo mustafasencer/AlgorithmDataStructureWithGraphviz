@@ -59,7 +59,7 @@ def solution_(S, P, Q):
             result.append(1)
         elif 'C' in S[p: q + 1]:
             result.append(2)
-        elif 'C' in S[p: q + 1]:
+        elif 'G' in S[p: q + 1]:
             result.append(3)
         else:
             result.append(4)

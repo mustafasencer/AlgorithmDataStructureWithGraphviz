@@ -57,3 +57,5 @@ def solution(A):
 if __name__ == '__main__':
     A = [1, 5, 2, 1, 4, 0]
     result = solution(A)
+    assert result == 11
+    print(result)

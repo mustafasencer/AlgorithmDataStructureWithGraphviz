@@ -21,7 +21,7 @@ class Solution:
                 res = max(j - i, res)
         return res
 
-    # O(nlog(n))
+    # O(nlog(n)) dp approach
     def _test(self, nums):
         if not nums:
             return 0

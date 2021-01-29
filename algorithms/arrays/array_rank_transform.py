@@ -11,17 +11,22 @@ class Solution:
         store = {}
         counter = 1
         for i in copy_:
-            if not i in store:
+
+            if i not in store:
                 store[i] = counter
                 counter += 1
+
         for i in range(len(arr)):
             arr[i] = store[arr[i]]
+
         return arr
 
     def test_(self, arr):
         store = {val: index + 1 for index, val in enumerate(sorted(set(arr)))}
+
         for i in range(len(arr)):
             arr[i] = store[arr[i]]
+
         return arr
 
 
