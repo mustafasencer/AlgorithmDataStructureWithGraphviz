@@ -42,7 +42,9 @@ def solution(A):
     for i in range(N):
         count[A[i]] += 1
     dp = [-1] * (S + 1)
+
     dp[0] = 0
+
     for a in range(1, M + 1):
         if count[a] > 0:
             for j in range(S):
@@ -50,10 +52,12 @@ def solution(A):
                     dp[j] = count[a]
                 elif (j >= a and dp[j - a] > 0):
                     dp[j] = dp[j - a] - 1
+
     result = S
     for i in range(S // 2 + 1):
         if dp[i] >= 0:
             result = min(result, S - 2 * i)
+
     return result
 
 

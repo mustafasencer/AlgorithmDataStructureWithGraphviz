@@ -17,7 +17,7 @@ def binary_search(array, start_index, end_index, value):
 
 if __name__ == '__main__':
     arr = [2, 3, 4, 10, 40, 50, 60]
-    x = 10
+    x = 50
 
     # Function call
     result = binary_search(arr, 0, len(arr) - 1, x)

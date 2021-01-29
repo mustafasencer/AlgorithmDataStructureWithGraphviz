@@ -18,6 +18,7 @@ class Solution:
 
         n = len(s)
         dp = [1, 1 if s[0] != '0' else 0]
+
         for i in range(2, n + 1):
             first = int(s[i - 1: i])
             second = int(s[i - 2: i])
@@ -25,9 +26,10 @@ class Solution:
                 dp.append(dp[i - 1])
             if 10 <= second <= 26:
                 dp[i] += dp[i - 2]
+
         return dp[n]
 
 
 if __name__ == '__main__':
-    result = Solution().num_decodings("10")
+    result = Solution().num_decodings("010")
     print(result)
