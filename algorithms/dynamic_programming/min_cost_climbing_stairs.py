@@ -16,7 +16,17 @@ class Solution:
             min1, min2 = min2, min(min1, min2) + c
         return min(min1, min2)
 
+    def test(self, cost):
+        cost_0, cost_1 = cost[0], cost[1]
+
+        for c in cost[2:]:
+            cost_0, cost_1 = cost_1, min(cost_0, cost_1) + c
+
+        return min(cost_0, cost_1)
+
 
 if __name__ == '__main__':
-    result = Solution().minCostClimbingStairs([10, 15, 20])
+    A = [10, 15, 20, 3, 7]
+    result = Solution().test(A)
+    assert result == 18
     print(result)

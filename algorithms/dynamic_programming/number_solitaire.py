@@ -55,6 +55,7 @@ def solution(A):  # false
             dp[i] = dp[i - 1] + A[i]
             return dp[i]
         dp[i] = max(dp[i - 1] + A[i], dp[i - 1])
+    pass
 
 
 def solution_(A):

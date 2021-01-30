@@ -27,7 +27,6 @@ class Solution:
             return
         if remain == 0:
             result_.append(temp)
-            return
         else:
             for i in range(start, len(nums)):
                 self.backtrack(result_, nums, temp + [nums[i]], remain - nums[i], i)
