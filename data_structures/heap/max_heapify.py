@@ -3,13 +3,13 @@ from drawer.tree import TreeDrawer
 
 def heapify(arr, n, i):
     largest = i  # Initialize largest as root
-    l = 2 * i + 1  # left = 2*i + 1
-    r = 2 * i + 2  # right = 2*i + 2
+    left = 2 * i + 1  # left = 2*i + 1
+    right = 2 * i + 2  # right = 2*i + 2
 
-    if l < n and arr[i] < arr[l]:
-        largest = l
-    if r < n and arr[largest] < arr[r]:
-        largest = r
+    if left < n and arr[i] < arr[left]:
+        largest = left
+    if right < n and arr[largest] < arr[right]:
+        largest = right
     if largest != i:
         arr[i], arr[largest] = arr[largest], arr[i]  # swap
         heapify(arr, n, largest)

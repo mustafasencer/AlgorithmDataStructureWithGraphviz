@@ -1,4 +1,3 @@
-from data_structures.linked_list.singly_linked_list import Node
 from drawer.tree import TreeDrawer
 from data_structures.tree.node import Node
 from data_structures.tree.build.level_order import build_tree

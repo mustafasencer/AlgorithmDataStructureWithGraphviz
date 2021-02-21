@@ -4,18 +4,20 @@
 
 
 class Solution:
-    def lengthOfLongestSubstring(self, s: str) -> int:
+    def length_longest_substring(self, s: str) -> int:
         if not s:
             return 0
         dict_ = {}
         max_ = 0
         last_index = 0
+
         for i, value in enumerate(s):
             if value in dict_:
                 # second pointer should be moved left to the last occurrence
                 last_index = max(dict_[value] + 1, last_index)
             dict_[value] = i
             max_ = max(max_, i - last_index + 1)
+
         return max_
 
     def test_(self, s):
@@ -36,5 +38,5 @@ class Solution:
 
 
 if __name__ == '__main__':
-    result = Solution().lengthOfLongestSubstring("abba")
+    result = Solution().length_longest_substring("abbacdfhsddshgdg")
     print(result)

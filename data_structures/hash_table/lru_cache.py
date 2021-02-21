@@ -1,4 +1,7 @@
-class DLink:
+from functools import lru_cache
+
+
+class DLinkNode:
     def __init__(self, key, value):
         self.key = key
         self.value = value
@@ -17,7 +20,7 @@ class LRUCache:
         self.lookup = {}  # value to LNode
 
         # double linked list, support delete
-        self.head, self.tail = DLink(0, 0), DLink(0, 0)
+        self.head, self.tail = DLinkNode(0, 0), DLinkNode(0, 0)
         self.head.next = self.tail
         self.tail.prev = self.head
 
@@ -36,8 +39,7 @@ class LRUCache:
         node.next = nxt
         nxt.prev = node
 
-        # get and update
-
+    # get and update
     def get(self, key):
         """
         :type key: int
@@ -75,7 +77,7 @@ class LRUCache:
             self.add_dlink(node)
         else:
             # add new node
-            node = DLink(key, value)
+            node = DLinkNode(key, value)
             # check capacity
             if len(self.lookup) >= self.capacity:
                 temp_node = self.tail.prev
@@ -85,7 +87,12 @@ class LRUCache:
             self.lookup[key] = node
             self.add_dlink(node)
 
-# Your LRUCache object will be instantiated and called as such:
-# obj = LRUCache(capacity)
-# param_1 = obj.get(key)
-# obj.put(key,value)
+
+if __name__ == '__main__':
+    capacity = 50
+    obj = LRUCache(capacity)
+    for i in range(100):
+        obj.put(i % 10, 20)
+
+    obj.get(20)
+    obj.get(30)

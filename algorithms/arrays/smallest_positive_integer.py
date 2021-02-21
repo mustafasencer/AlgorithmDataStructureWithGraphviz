@@ -1,3 +1,8 @@
+"""
+Find the missing smallest positive integer
+"""
+
+
 def solution(A):
     B = set(A)
     min_value = 1
