@@ -29,25 +29,8 @@ class Solution:
 
         return dp[n]
 
-    def _test(self, s):
-        if not s:
-            return 0
-
-        dp = [1 if s[0] != "0" else 0]
-        dp[1] = dp[0] + 1 if s[1] != "0" else 0
-
-        for index in range(2, len(s)):
-            first = dp[index - 1]
-            second = dp[index - 2: index]
-
-            if 0 < int(first) <= 9:
-                dp[index] = dp[index - 1] + 1
-            if 10 <= int(second) <= 26:
-                dp[index] = dp[index - 1] + 1
-
-        return dp[-1]
-
 
 if __name__ == '__main__':
     result = Solution().num_decodings("111")
+    assert result == 3
     print(result)

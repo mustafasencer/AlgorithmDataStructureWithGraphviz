@@ -58,7 +58,7 @@ def solution(A):  # false
     pass
 
 
-def solution_(A):
+def solution_1(A):
     dp = [0] * len(A)
     dp[0] = A[0]
 
@@ -71,8 +71,22 @@ def solution_(A):
     return dp[-1]
 
 
+def solution_2(A):
+    dp = [A[0]] * len(A)
+
+    for i in range(1, len(A)):
+        if i == len(A) - 1:
+            dp[i] = dp[i - 1] + A[i]
+            return dp[i]
+        max_value = dp[i - 1] + A[i]
+        for j in range(1, 7):
+            if i - j >= 0:
+                max_value = max(max_value, dp[i - j])
+        dp[i] = max_value
+
+
 if __name__ == '__main__':
     A = [1, -2, 0, 9, -1, -2]
-    result = solution_(A)
+    result = solution_2(A)
     assert result == 8
     print(result)
