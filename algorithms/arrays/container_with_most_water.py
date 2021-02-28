@@ -24,7 +24,22 @@ class Solution:
                 i += 1
         return max_area
 
+    def test_(self, height):
+        i = 0
+        j = len(height) - 1
+        max_area = 0
+
+        while i < j:
+            max_area = max(max_area, min(height[i], height[j]) * (j - i))
+
+            if height[i] > height[j]:
+                j -= 1
+            else:
+                i += 1
+        return max_area
+
 
 if __name__ == '__main__':
-    result = Solution().max_area([1, 8, 6, 2, 5, 4, 8, 3, 7])
-    print(result)
+    result = Solution().test_([1, 8, 6, 2, 5, 4, 8, 3, 7])
+    result_ = Solution().max_area([1, 8, 6, 2, 5, 4, 8, 3, 7])
+    assert result == result_

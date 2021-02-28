@@ -22,7 +22,7 @@ class Solution:
         return res
 
     # O(nlog(n)) dp approach
-    def _test(self, nums):
+    def dp_approach(self, nums):
         if not nums:
             return 0
         nums.sort()
@@ -39,7 +39,6 @@ class Solution:
 
 
 if __name__ == '__main__':
-    result = Solution().longestConsecutive([1, 2, 0, 1])
-    result_ = Solution()._test([1, 2, 0, 1])
-    assert result == result_
+    result = Solution().longestConsecutive([1, 2, 0, 1, 4, 5, 6, 7])
+    assert result == 4
     print(result)

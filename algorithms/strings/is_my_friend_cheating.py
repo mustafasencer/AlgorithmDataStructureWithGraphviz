@@ -1,3 +1,8 @@
+"""
+Codewars
+"""
+
+
 def remove_nb(n):
     sum = n * (n + 1) / 2
 

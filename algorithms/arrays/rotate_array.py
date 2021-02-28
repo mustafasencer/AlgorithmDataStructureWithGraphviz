@@ -1,3 +1,6 @@
+"""
+
+"""
 from typing import List
 
 
@@ -27,3 +30,4 @@ if __name__ == '__main__':
     result = Solution().rotate(nums, k)
     Solution().test(nums, k)
     assert nums == result
+    print(result)

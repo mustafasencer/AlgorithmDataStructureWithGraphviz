@@ -1,4 +1,3 @@
-from data_structures.tree.traversals.dfs_traversals.in_order import stack
 from drawer.tree import TreeDrawer
 from data_structures.tree.node import Node
 

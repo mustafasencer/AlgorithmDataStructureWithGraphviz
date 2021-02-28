@@ -14,5 +14,5 @@ def flatten_recursive(L):
 
 if __name__ == '__main__':
     L = [[2, [2, 2]], [2]]
-    result = flatten(L)
+    result = flatten_recursive(L)
     print(result)

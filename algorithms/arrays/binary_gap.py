@@ -1,3 +1,8 @@
+"""
+Binary Gap
+"""
+
+
 def solution(N):
     max_gap = 0
     count = 0

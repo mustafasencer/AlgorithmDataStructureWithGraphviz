@@ -25,9 +25,19 @@ class Solution:
             nums_copy[i] *= nums[i - 1] or 1
         return max(nums + nums_copy)
 
+    def test_(self, nums):
+        max_product = 0
+        for i in range(len(nums)):
+            k = i + 1
+            product_start = nums[i]
+            while k < len(nums):
+                product_start = product_start * nums[k]
+                max_product = max(product_start, 0, max_product)
+                k += 1
+        return max_product
+
 
 if __name__ == '__main__':
-    result = Solution().max_product([-2, 2, 3])
-    result_ = Solution()._test([-2, 2, 3])
-    assert result == result_
+    result = Solution().test_([-2, 2, 3])
+    assert result == 6
     print(result)

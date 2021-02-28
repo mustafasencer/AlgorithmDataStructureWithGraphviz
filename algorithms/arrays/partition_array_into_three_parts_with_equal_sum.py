@@ -1,3 +1,8 @@
+"""
+Partition array into three parts with equal sum
+"""
+
+
 def solution(A) -> bool:
     average = sum(A) // 3
     remainder = sum(A) % 3
@@ -13,7 +18,7 @@ def solution(A) -> bool:
 
 
 if __name__ == '__main__':
-    A = [1, -1, 1, -1]
+    A = [1, -1, 1, -1, 1, -1]
     result = solution(A)
-    assert result == False
+    assert result == True
     print(result)

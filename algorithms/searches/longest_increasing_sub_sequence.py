@@ -1,25 +1,21 @@
 """
-Max sum increasing sub sequence
+Longest increasing sub sequence
+https://www.geeksforgeeks.org/longest-increasing-subsequence-dp-3/
 """
 
 
-def max_sum_is(nums):
-    tails = [0] * len(nums)
-    size = 0
-    for x in nums:
-        i, j = 0, size
-        while i != j:
-            m = int((i + j) / 2)
-            if tails[m] < x:
-                i = m + 1
-            else:
-                j = m
-        tails[i] = x
-        size = max(i + 1, size)
-    return size
+def solution(nums):
+    dp = [1] * len(nums)
+
+    for i in range(1, len(nums)):
+        for j in range(i):
+            if nums[i] > nums[j] and dp[i] < dp[j] + 1:
+                dp[i] = dp[j] + 1
+
+    return max(dp)
 
 
 if __name__ == '__main__':
-    arr = [1, 101, 2, 3, 100, 4, 5]
-    length = len(arr)
-    print(f"Sum of maximum sum increasing subsequence is {max_sum_is(arr)}")
+    arr = [1, 101, 2, 3, 100, 4, 5, 7, 10]
+    result = solution(arr)
+    assert result == 7

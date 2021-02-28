@@ -7,18 +7,18 @@ class Solution:
     def length_longest_substring(self, s: str) -> int:
         if not s:
             return 0
-        dict_ = {}
-        max_ = 0
+        lookup = {}
+        longest_value = 0
         last_index = 0
 
         for i, value in enumerate(s):
-            if value in dict_:
+            if value in lookup:
                 # second pointer should be moved left to the last occurrence
-                last_index = max(dict_[value] + 1, last_index)
-            dict_[value] = i
-            max_ = max(max_, i - last_index + 1)
+                last_index = max(lookup[value] + 1, last_index)
+            lookup[value] = i
+            longest_value = max(longest_value, i - last_index + 1)
 
-        return max_
+        return longest_value
 
     def test_(self, s):
         dict_ = {}
@@ -38,5 +38,6 @@ class Solution:
 
 
 if __name__ == '__main__':
-    result = Solution().length_longest_substring("abbacdfhsddshgdg")
+    result = Solution().length_longest_substring("abbacdabc")
+    assert result == 4
     print(result)

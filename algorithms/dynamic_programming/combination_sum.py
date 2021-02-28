@@ -48,5 +48,5 @@ class Solution:
 
 if __name__ == '__main__':
     # result = Solution().combination_sum([2, 3, 6, 7], 7)
-    result = Solution()._test([2, 3, 6, 7], 7)
+    result = Solution().combination_sum([2, 3, 6, 7], 7)
     print(result)
