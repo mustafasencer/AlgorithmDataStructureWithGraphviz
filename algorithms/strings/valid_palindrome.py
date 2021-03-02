@@ -4,6 +4,7 @@
 
 
 class Solution:
+
     def is_palindrome(self, s: str) -> bool:
         s = s.lower()
         i = 0
