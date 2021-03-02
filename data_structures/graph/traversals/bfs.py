@@ -50,9 +50,6 @@ class Graph:
                     queue.append(i)
         return result
 
-    def bfs_queue_2(self, s):
-        pass
-
 
 if __name__ == '__main__':
     g = Graph(4)
