@@ -17,8 +17,26 @@ class Solution:
                 index += 1
         return len(nums[:index])
 
+    def solution_1(self, nums: List[int]) -> int:
+
+        i = 1
+        count = 2
+        while i < len(nums):
+
+            if nums[i] - nums[i - 1] == 0 and count < 2:
+                nums[:] = nums[:i] + nums[i + 1:]
+                count += 1
+            elif nums[i] - nums[i - 1] == 0:
+                i += 1
+                count += -1
+            else:
+                i += 1
+                count = 2
+
+        return len(nums)
+
 
 if __name__ == '__main__':
-    result = Solution().remove_duplicates([1, 1, 1, 2, 2, 3])
+    result = Solution().solution_1([1, 1, 1, 2, 2, 3])
     assert result == 5
     print(result)

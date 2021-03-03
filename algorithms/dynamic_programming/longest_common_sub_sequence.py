@@ -7,7 +7,7 @@ def lcs(str0, str1):
     m = len(str0)
     n = len(str1)
 
-    dp = [[None] * (n + 1) for i in range(m + 1)]
+    dp = [[0] * (n + 1) for _ in range(m + 1)]
 
     """
     Following steps build L[m+1][n+1] in bottom up fashion 

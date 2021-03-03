@@ -1,3 +1,8 @@
+"""
+Given an integer array nums, you need to find one continuous subarray that if you only sort this subarray in ascending order, then the whole array will be sorted in ascending order.
+
+Return the shortest such subarray and output its length.
+"""
 from typing import List
 
 
@@ -28,10 +33,34 @@ class Solution:
 
         return end - start + 1
 
+    def solution_1(self, nums):
+        prev = nums[0]
+        end = 0
+
+        for i in range(len(nums)):
+            if nums[i] < prev:
+                end = i
+            else:
+                prev = nums[i]
+
+        start = 0
+        prev = nums[len(nums) - 1]
+
+        for i in range(len(nums) - 1, -1, -1):
+            if prev < nums[i]:
+                start = i
+            else:
+                prev = nums[i]
+
+        if end == 0:
+            return 0
+
+        return end - start + 1
+
 
 if __name__ == '__main__':
     # nums = [2, 6, 4, 8, 10, 9, 15]
     nums = [5, 4, 3, 2, 1]
-    result = Solution().findUnsortedSubarray(nums)
+    result = Solution().solution_1(nums)
     assert result == 2
     print(result)

@@ -24,7 +24,19 @@ class Solution:
                 dp[i] = nums[i] + max(dp[:i - 1])
         return max(dp)
 
+    def solution_1(self, nums):
+        dp = [0] * len(nums)
+
+        for i in range(len(nums)):
+            if i < 2:
+                dp[i] = nums[i]
+            else:
+                dp[i] = nums[i] + max(dp[:i - 1])
+
+        return max(dp)
+
 
 if __name__ == '__main__':
-    result = Solution().rob([2, 1, 1, 2, 7])
+    result = Solution().rob([2, 1, 8, 1, 2, 7])
+    assert result == 15
     print(result)

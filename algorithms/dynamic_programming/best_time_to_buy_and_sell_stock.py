@@ -32,7 +32,7 @@ class Solution:
 
         return max(dp)
 
-    def test(self, prices):
+    def solution_1(self, prices):
         dp = [prices[0]] * len(prices)
         max_profit = 0
 
@@ -42,8 +42,15 @@ class Solution:
             max_profit = max(prices[i] - min(dp[:i]), max_profit)
         return max_profit
 
+    def solution_2(self, prices):
+        dp = [0] * len(prices)
+
+        for i in range(1, len(prices)):
+            dp[i] = prices[i] - min(prices[:i])
+        return max(dp)
+
 
 if __name__ == '__main__':
-    result = Solution().max_profit([7, 1, 5, 3, 6, 4])
+    result = Solution().solution_1([7, 1, 5, 3, 6, 4])
     assert result == 5
     print(result)

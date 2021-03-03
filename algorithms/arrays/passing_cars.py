@@ -72,8 +72,20 @@ def solution(A):
     return combinations
 
 
+def solution_1(A):
+    count = 0
+    for i in range(len(A)):
+        j = i + 1
+        if A[i] == 0:
+            while j < len(A):
+                if A[j] == 1:
+                    count += 1
+                j += 1
+    return count
+
+
 if __name__ == '__main__':
     A = [0, 1, 0, 1, 1]
     result = solution(A)
-    assert result == [(0, 1), (0, 3), (0, 4), (2, 3), (2, 4)]
+    assert result == 5
     print(result)

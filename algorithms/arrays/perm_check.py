@@ -61,8 +61,16 @@ def solution(A):
     return 1
 
 
+def solution_1(A):
+    A.sort()
+    for i in range(1, len(A)):
+        if not A[i] - A[i - 1] == 1:
+            return 0
+    return 1
+
+
 if __name__ == '__main__':
-    A = [1,  3, 4]
-    result = solution(A)
-    assert result == 1
+    A = [1, 3, 4]
+    result = solution_1(A)
+    assert result == 0
     print(result)

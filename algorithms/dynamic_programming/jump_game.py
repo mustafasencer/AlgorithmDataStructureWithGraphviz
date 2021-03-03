@@ -21,5 +21,5 @@ class Solution:
 
 
 if __name__ == '__main__':
-    result = Solution().can_jump([2, 2, 1, 0, 4])
+    result = Solution().can_jump([2, 2, 1, 1, 4])
     print(result)

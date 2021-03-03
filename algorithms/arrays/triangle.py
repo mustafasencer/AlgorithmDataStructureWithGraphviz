@@ -45,17 +45,6 @@ def solution(A):
     return 0
 
 
-def test_(A):
-    if len(A) < 3:
-        return 0
-
-    first = A[0]
-    second = A[1]
-
-    for i in range(len(A)):
-        pass
-
-
 if __name__ == '__main__':
     A = [10, 2, 5, 1, 8, 20]
     result = solution(A)

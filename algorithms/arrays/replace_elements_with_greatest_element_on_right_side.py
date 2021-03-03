@@ -35,8 +35,21 @@ def test(A):
     return A
 
 
+def solution_3(A):
+    i = 0
+
+    for j in range(1, len(A) + 1):
+        if i == len(A) - 1:
+            A[i] = -1
+            break
+        A[i] = max(A[j:])
+        i += 1
+
+    return A
+
+
 if __name__ == '__main__':
     A = [21, 18, 5, 4, 6, 1]
-    result = test(A)
+    result = solution_3(A)
     assert result == [18, 6, 6, 6, 1, -1]
     print(result)

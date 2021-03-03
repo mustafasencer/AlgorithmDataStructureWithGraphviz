@@ -21,7 +21,7 @@ class Solution:
             b = c
         return b
 
-    def test(self, n):
+    def solution_1(self, n):
         if n == 0:
             return 0
 
@@ -36,7 +36,7 @@ class Solution:
 
 
 if __name__ == '__main__':
-    result = Solution().test(5)
+    result = Solution().solution_1(5)
     result__ = Solution().climb_stairs(5)
     assert result == result__
     print(result)
