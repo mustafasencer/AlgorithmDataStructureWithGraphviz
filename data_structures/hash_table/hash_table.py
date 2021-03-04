@@ -8,8 +8,6 @@ class HashTable:
     def create_buckets(self):
         return [[] for _ in range(self.size)]
 
-        # Insert values into hash map
-
     def set_val(self, key, val):
 
         # Get the index from the key
@@ -36,8 +34,6 @@ class HashTable:
             bucket[index] = (key, val)
         else:
             bucket.append((key, val))
-
-            # Return searched value with specific key
 
     def get_val(self, key):
 

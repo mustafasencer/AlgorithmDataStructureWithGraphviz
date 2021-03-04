@@ -23,29 +23,26 @@ def longest_palindrome(s):
     return s[(center_index - max_len) // 2: (center_index + max_len) // 2]
 
 
-def helper(s, l, r):
-    while l >= 0 and r < len(s) and s[r] == s[l]:
-        l -= 1
-        r += 1
-    return s[l + 1: r]
-
-
 class Solution:
-    def test(self, string):
-        pass
 
     def longest_palindrome(self, s: str) -> str:
         result = ""
         for i in range(len(s)):
             # handle the odd cases
-            tmp = helper(s, i, i)
+            tmp = self.helper(s, i, i)
             if len(tmp) > len(result):
                 result = tmp
             # handle the even cases
-            tmp = helper(s, i, i + 1)
+            tmp = self.helper(s, i, i + 1)
             if len(tmp) > len(result):
                 result = tmp
         return result
+
+    def helper(self, s, l, r):
+        while l >= 0 and r < len(s) and s[r] == s[l]:
+            l -= 1
+            r += 1
+        return s[l + 1: r]
 
 
 if __name__ == '__main__':
