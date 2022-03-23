@@ -24,6 +24,6 @@ if __name__ == '__main__':
     heap_sort(arr)
     # test_heap_sort(arr)
     length = len(arr)
-    print("Sorted arrays is")
+    print("Sorted array is")
     for i in range(length):
         print("%d" % arr[i])

@@ -14,7 +14,7 @@ Write a function:
 
 def solution(A, B)
 
-that, given two non-empty arrays A and B of Z integers, returns the number of positions K for which the prime divisors of A[K] and B[K] are exactly the same.
+that, given two non-empty array A and B of Z integers, returns the number of positions K for which the prime divisors of A[K] and B[K] are exactly the same.
 
 For example, given:
 
@@ -26,7 +26,7 @@ the function should return 1, because only one pair (15, 75) has the same set of
 Write an efficient algorithm for the following assumptions:
 
 Z is an integer within the range [1..6,000];
-each element of arrays A, B is an integer within the range [1..2,147,483,647].
+each element of array A, B is an integer within the range [1..2,147,483,647].
 
 """
 

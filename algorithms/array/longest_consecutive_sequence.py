@@ -1,7 +1,7 @@
 """
     Created by Mustafa Sencer Özcan on 25.05.2020.
 
-    Given an unsorted arrays of integers, find the length of the longest consecutive elements sequence.
+    Given an unsorted array of integers, find the length of the longest consecutive elements sequence.
 
     Your algorithm should run in O(n) complexity.
 """
