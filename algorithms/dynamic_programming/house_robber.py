@@ -24,7 +24,7 @@ class Solution:
                 dp[i] = nums[i] + max(dp[:i - 1])
         return max(dp)
 
-    def solution_1(self, nums):
+    def solution_1(self, nums) -> int:
         dp = [0] * len(nums)
 
         for i in range(len(nums)):
@@ -38,5 +38,5 @@ class Solution:
 
 if __name__ == '__main__':
     result = Solution().rob([2, 1, 8, 1, 2, 7])
-    assert result == 15
+    assert result == 17
     print(result)

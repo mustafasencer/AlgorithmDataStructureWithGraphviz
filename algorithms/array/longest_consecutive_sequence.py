@@ -10,7 +10,7 @@ from typing import List
 
 class Solution:
     # O(n)
-    def longestConsecutive(self, nums: List[int]) -> int:
+    def longest_consecutive(self, nums: List[int]) -> int:
         nums = set(nums)
         res = 0
         for i in nums:
@@ -39,6 +39,6 @@ class Solution:
 
 
 if __name__ == '__main__':
-    result = Solution().longestConsecutive([1, 2, 0, 1, 4, 5, 6, 7])
+    result = Solution().longest_consecutive([1, 2, 0, 1, 4, 5, 6, 7])
     assert result == 4
     print(result)

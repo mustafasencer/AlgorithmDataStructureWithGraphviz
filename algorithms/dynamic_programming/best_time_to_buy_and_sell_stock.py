@@ -51,6 +51,6 @@ class Solution:
 
 
 if __name__ == '__main__':
-    result = Solution().solution_1([7, 1, 5, 3, 6, 4])
+    result = Solution().max_profit([7, 1, 5, 3, 6, 4])
     assert result == 5
     print(result)

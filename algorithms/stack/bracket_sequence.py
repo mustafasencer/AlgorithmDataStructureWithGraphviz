@@ -1,6 +1,3 @@
-sequence = '{{{}}}()[][]'
-
-
 def check_sequence(sequence):
     bracket_mapper = {
         '{': '}',
@@ -20,5 +17,6 @@ def check_sequence(sequence):
 
 
 if __name__ == '__main__':
+    sequence = '{{{}}}()[][]'
     result = check_sequence(sequence)
     print(result)

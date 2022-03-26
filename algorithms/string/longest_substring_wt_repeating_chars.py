@@ -1,5 +1,6 @@
 """
     Created by Mustafa Sencer Özcan on 19.05.2020.
+    Hint: Move pointers intellugently in order to solve it!
 """
 
 
@@ -10,14 +11,14 @@ class Solution:
             return 0
         lookup = {}
         longest_value = 0
-        last_index = 0
+        count_from = 0
 
         for i, value in enumerate(s):
             if value in lookup:
                 # second pointer should be moved left to the last occurrence
-                last_index = max(lookup[value] + 1, last_index)
+                count_from = max(lookup[value] + 1, count_from)
             lookup[value] = i
-            longest_value = max(longest_value, i - last_index + 1)
+            longest_value = max(longest_value, i - count_from + 1)
 
         return longest_value
 

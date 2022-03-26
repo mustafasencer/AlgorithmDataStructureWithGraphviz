@@ -50,7 +50,7 @@ def solution(A):
             for j in range(S):
                 if dp[j] >= 0:
                     dp[j] = count[a]
-                elif (j >= a and dp[j - a] > 0):
+                elif j >= a and dp[j - a] > 0:
                     dp[j] = dp[j - a] - 1
 
     result = S
