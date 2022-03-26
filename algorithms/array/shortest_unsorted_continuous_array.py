@@ -1,5 +1,6 @@
 """
-Given an integer array nums, you need to find one continuous subarray that if you only sort this subarray in ascending order, then the whole array will be sorted in ascending order.
+Given an integer array nums, you need to find one continuous subarray that if you only sort this subarray in ascending order,
+ then the whole array will be sorted in ascending order.
 
 Return the shortest such subarray and output its length.
 """
@@ -57,10 +58,27 @@ class Solution:
 
         return end - start + 1
 
+    def solution_2(self, nums):
+        start = 0
+
+        for i in range(1, len(nums)):
+            prev = i - 1
+            if nums[i] < nums[prev]:
+                start = prev
+                break
+
+        end = len(nums) - 1
+        for i in range(len(nums) - 1, -1, -1):
+            prev = i - 1
+            if nums[i] < nums[prev]:
+                end = i
+                break
+
+        return end - start + 1
+
 
 if __name__ == '__main__':
-    # nums = [2, 6, 4, 8, 10, 9, 15]
-    nums = [5, 4, 3, 2, 1]
+    nums = [2, 6, 4, 8, 10, 9, 15]
     result = Solution().solution_1(nums)
-    assert result == 2
+    assert result == 5
     print(result)

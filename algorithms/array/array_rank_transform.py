@@ -21,7 +21,7 @@ class Solution:
 
         return arr
 
-    def test_(self, arr):
+    def _test(self, arr):
         store = {val: index + 1 for index, val in enumerate(sorted(set(arr)))}
 
         for i in range(len(arr)):
@@ -32,6 +32,6 @@ class Solution:
 
 if __name__ == '__main__':
     result = Solution().array_rank_transform([40, 10, 20, 30])
-    result_ = Solution().test_([40, 10, 20, 30])
-    assert result == result_
+    _result = Solution()._test([40, 10, 20, 30])
+    assert result == _result
     print(result)

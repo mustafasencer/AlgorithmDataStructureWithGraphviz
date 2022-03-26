@@ -1,7 +1,9 @@
 """
-We draw N discs on a plane. The discs are numbered from 0 to N − 1. An array A of N non-negative integers, specifying the radiuses of the discs, is given. The J-th disc is drawn with its center at (J, 0) and radius A[J].
+We draw N discs on a plane. The discs are numbered from 0 to N − 1. An array A of N non-negative integers, specifying
+the radiuses of the discs, is given. The J-th disc is drawn with its center at (J, 0) and radius A[J].
 
-We say that the J-th disc and K-th disc intersect if J ≠ K and the J-th and K-th discs have at least one common point (assuming that the discs contain their borders).
+We say that the J-th disc and K-th disc intersect if J ≠ K and the J-th and K-th discs have at least one common point
+(assuming that the discs contain their borders).
 
 The figure below shows discs drawn for N = 6 and A as follows:
 
@@ -21,7 +23,8 @@ Write a function:
 
 def solution(A)
 
-that, given an array A describing N discs as explained above, returns the number of (unordered) pairs of intersecting discs. The function should return −1 if the number of intersecting pairs exceeds 10,000,000.
+that, given an array A describing N discs as explained above, returns the number of (unordered) pairs of intersecting
+discs. The function should return −1 if the number of intersecting pairs exceeds 10,000,000.
 
 Given array A shown above, the function should return 11, as explained above.
 
@@ -33,7 +36,6 @@ each element of array A is an integer within the range [0..2,147,483,647].
 
 
 def solution(A):
-    # write your code in Python 3.6
     circle_endpoints = []
     for i, a in enumerate(A):
         circle_endpoints += [(i - a, True), (i + a, False)]
@@ -52,6 +54,11 @@ def solution(A):
             return -1
 
     return intersections
+
+
+def solution_2(A):
+    for i in range(len(A)):
+        pass
 
 
 if __name__ == '__main__':

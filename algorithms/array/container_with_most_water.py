@@ -38,6 +38,10 @@ class Solution:
                 i += 1
         return max_area
 
+    def test__(self, height):
+        for i in range(len(height)):
+            pass
+
 
 if __name__ == '__main__':
     result = Solution().test_([1, 8, 6, 2, 5, 4, 8, 3, 7])

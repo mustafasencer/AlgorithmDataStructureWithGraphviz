@@ -73,19 +73,21 @@ def solution(A):
 
 
 def solution_1(A):
-    count = 0
+    passing_cars = 0
     for i in range(len(A)):
-        j = i + 1
         if A[i] == 0:
+            j = i + 1
             while j < len(A):
                 if A[j] == 1:
-                    count += 1
+                    passing_cars += 1
+                    if passing_cars > 1E9:
+                        return -1
                 j += 1
-    return count
+    return passing_cars
 
 
 if __name__ == '__main__':
     A = [0, 1, 0, 1, 1]
-    result = solution(A)
+    result = solution_1(A)
     assert result == 5
     print(result)

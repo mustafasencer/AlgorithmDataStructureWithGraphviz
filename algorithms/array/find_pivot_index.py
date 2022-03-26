@@ -1,4 +1,10 @@
-def solution(AA):
+"""
+
+"""
+from typing import List
+
+
+def solution(A: List[int]):
     for i in range(len(A)):
         if i == 0:
             sum_first = 0

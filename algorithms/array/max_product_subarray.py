@@ -38,6 +38,6 @@ class Solution:
 
 
 if __name__ == '__main__':
-    result = Solution().test_([-2, 2, 3])
-    assert result == 6
+    result = Solution()._test([-2, 2, 3, -1, 3, 9])
+    assert result == 2916
     print(result)

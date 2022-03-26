@@ -1,9 +1,10 @@
 """
     Created by Mustafa Sencer Özcan on 18.05.2020.
 """
+from typing import Any, List
 
 
-def flatten_recursive(L):
+def flatten_recursive(L) -> List[Any]:
     if not L:
         return []
     elif isinstance(L[0], list):

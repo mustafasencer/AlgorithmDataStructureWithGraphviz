@@ -14,7 +14,19 @@ class Solution:
             else:
                 dict_[value] = i
 
+    def two_sum(self, nums, target):
+        lookup = {}
+        for i in range(len(nums)):
+            remaining = target - nums[i]
+
+            if remaining in lookup:
+                return [lookup[remaining], i]
+            else:
+                lookup[nums[i]] = i
+        return
+
 
 if __name__ == '__main__':
     result = Solution().twoSum([2, 7, 11, 15], 9)
-    print(result)
+    result_2 = Solution().two_sum([2, 7, 11, 15], 9)
+    assert result == result_2

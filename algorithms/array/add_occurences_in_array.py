@@ -1,5 +1,6 @@
 """
-A non-empty array A consisting of N integers is given. The array contains an odd number of elements, and each element of the array can be paired with another element that has the same value, except for one element that is left unpaired.
+A non-empty array A consisting of N integers is given. The array contains an odd number of elements, and each element of
+the array can be paired with another element that has the same value, except for one element that is left unpaired.
 
 For example, in array A such that:
 
@@ -31,11 +32,7 @@ all but one of the values in A occur an even number of times.
 """
 
 
-# you can write to stdout for debugging purposes, e.g.
-# print("this is a debug message")
-
 def solution(A):
-    # write your code in Python 3.6
     dict_ = {}
     for item in A:
         if item not in dict_:

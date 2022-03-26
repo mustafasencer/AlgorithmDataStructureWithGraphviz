@@ -59,8 +59,15 @@ def solution(A):
     return min_value
 
 
+def solution_2(A) -> int:
+    min_value = abs(sum(A[:1]) - sum(A[1:]))
+    for i in range(2, len(A)):
+        min_value = min(abs(sum(A[:i]) - sum(A[i:])), min_value)
+    return min_value
+
+
 if __name__ == '__main__':
-    A = [2000, 2000]
-    result = solution(A)
-    assert result == 2000
+    A = [3, 1, 2, 4, 3]
+    result = solution_2(A)
+    assert result == 1
     print(result)

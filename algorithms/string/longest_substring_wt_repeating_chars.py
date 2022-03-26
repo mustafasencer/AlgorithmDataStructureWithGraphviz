@@ -4,7 +4,8 @@
 
 
 class Solution:
-    def length_longest_substring(self, s: str) -> int:
+    @staticmethod
+    def length_longest_substring(s: str) -> int:
         if not s:
             return 0
         lookup = {}
@@ -20,7 +21,8 @@ class Solution:
 
         return longest_value
 
-    def test_(self, s):
+    @staticmethod
+    def length_longest_substring_2(s):
         dict_ = {}
         counter = begin = end = d = 0
         while end < len(s):
