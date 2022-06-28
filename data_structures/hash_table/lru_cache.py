@@ -1,4 +1,4 @@
-from functools import lru_cache
+from collections import OrderedDict
 
 
 class DLinkNode:
@@ -51,7 +51,7 @@ class LRUCache:
             self.remove_dlink(node)
             self.add_dlink(node)
 
-            return node.value
+            return node.data
         else:
             return -1
 
@@ -71,7 +71,7 @@ class LRUCache:
             # change the value and update state
             node = self.lookup[key]
             # change
-            node.value = value
+            node.data = value
             # update
             self.remove_dlink(node)
             self.add_dlink(node)
@@ -86,6 +86,28 @@ class LRUCache:
 
             self.lookup[key] = node
             self.add_dlink(node)
+
+
+class LRUCacheDict:
+    def __init__(self, size=10):
+        self.size = size
+        self.cache = OrderedDict()
+
+    def get(self, key):
+        try:
+            value = self.cache.pop(key)
+        except KeyError:
+            return -1
+        self.cache[key] = value
+        return value
+
+    def set(self, key, value):
+        try:
+            self.cache.pop(key)
+        except KeyError:
+            if len(self.cache) >= self.size:
+                self.cache.popitem()
+        self.cache[key] = value
 
 
 if __name__ == '__main__':

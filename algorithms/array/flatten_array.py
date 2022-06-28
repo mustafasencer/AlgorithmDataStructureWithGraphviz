@@ -4,7 +4,7 @@
 from typing import Any, List
 
 
-def flatten_recursive(L) -> List[Any]:
+def flatten_recursive(L: List) -> List[Any]:
     if not L:
         return []
     elif isinstance(L[0], list):

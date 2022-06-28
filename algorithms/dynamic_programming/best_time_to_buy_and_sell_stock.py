@@ -49,8 +49,20 @@ class Solution:
             dp[i] = prices[i] - min(prices[:i])
         return max(dp)
 
+    def solution_3(self, prices):
+        dp = [0] * len(prices)
+
+        for i in range(1, len(prices)):
+            gain = prices[i] - min(prices[:i])
+            if gain > 0:
+                dp[i] = max(dp[i - 1], gain)
+            else:
+                dp[i] = dp[i - 1]
+
+        return dp[-1]
+
 
 if __name__ == '__main__':
-    result = Solution().max_profit([7, 1, 5, 3, 6, 4])
+    result = Solution().solution_3([7, 1, 5, 3, 6, 4])
     assert result == 5
     print(result)

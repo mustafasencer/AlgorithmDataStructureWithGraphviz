@@ -9,16 +9,18 @@ def solve(number: int):
 def solve_2(number: int) -> int:
     a = 0
     b = 1
+    n = 1
 
-    while a <= number:
+    while n < number:
         c = a + b
         a = b
         b = c
+        n += 1
 
     return b
 
 
 if __name__ == '__main__':
-    number = 7
+    number = 4
     result = solve_2(number)
-    assert result == 13
+    assert result == 3

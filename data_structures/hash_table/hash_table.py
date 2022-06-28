@@ -1,3 +1,6 @@
+from typing import MutableSequence, Sequence
+
+
 class HashTable:
 
     # Create empty bucket list of given size
@@ -88,6 +91,52 @@ class HashTable:
     # To print the items of hash map
     def __str__(self):
         return "".join(str(item) for item in self.hash_table)
+
+
+class Bar:
+
+    def __init__(self, size):
+        self.size = size
+        self.buckets = self.create_buckets(size)
+
+    @staticmethod
+    def create_buckets(size) -> MutableSequence[Sequence[int, int]]:
+        return [() for _ in range(size)]
+
+    def set_value(self, key, value):
+        key_hash = hash(key) % self.size
+
+        for index, item in enumerate(self.buckets):
+            item_key, item_value = item
+
+            if item_key == key_hash:
+                self.buckets[index] = (item_key, value)
+                return
+
+        self.buckets.append([key_hash, value])
+
+    def get_value(self, key) -> int:
+        key_hash = hash(key) % self.size
+
+        for index, item in enumerate(self.buckets):
+            item_key, item_value = item
+
+            if item_key == key_hash:
+                return self.buckets[index][1]
+
+        return 0
+
+    def delete_value(self, key):
+        key_hash = hash(key) % self.size
+
+        for index, item in enumerate(self.buckets):
+            item_key, item_value = item
+
+            if item_key == key_hash:
+                self.buckets.pop(index)
+
+    def __str__(self):
+        return "".join((str(value) for key, value in self.buckets))
 
 
 if __name__ == '__main__':
