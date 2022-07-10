@@ -5,7 +5,7 @@ https://helokarma.com/2021/04/27/codility-test-challenge-2/
 
 def solve():
     """
-        create database test
+    create database test
 
     create table teams
     (

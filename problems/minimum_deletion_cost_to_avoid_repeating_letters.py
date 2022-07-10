@@ -4,20 +4,20 @@ https://leetcode.com/problems/minimum-time-to-make-rope-colorful
 """
 
 
-def solution(S, C):
+def solution(string, costs):
     # write your code in Python 3.6
 
     min_cost = 0
 
-    for i in range(len(S) - 1):
-        if S[i] != S[i + 1]:
+    for i in range(len(string) - 1):
+        if string[i] != string[i + 1]:
             continue
-        if C[i] > C[i + 1]:
-            current_cost = C[i]
-            next_cost = C[i + 1]
-            C[i] = min(current_cost, next_cost)
-            C[i + 1] = max(current_cost, next_cost)
-        min_cost += C[i]
+        if costs[i] > costs[i + 1]:
+            current_cost = costs[i]
+            next_cost = costs[i + 1]
+            costs[i] = min(current_cost, next_cost)
+            costs[i + 1] = max(current_cost, next_cost)
+        min_cost += costs[i]
 
     return min_cost
 

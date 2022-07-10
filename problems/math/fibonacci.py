@@ -1,6 +1,14 @@
 fib_results = {}
 
 
+def fib_recursion(number: int):
+    if number == 0:
+        return 0
+    if number == 1:
+        return 1
+    return fib_recursion(number - 1) + fib_recursion(number - 2)
+
+
 def fib(n):
     if n in fib_results:
         return fib_results[n]

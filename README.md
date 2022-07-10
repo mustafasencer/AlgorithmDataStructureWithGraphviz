@@ -29,7 +29,7 @@ to ease the process of mental researching before defining the angle of an attack
 * 🔟 **Bit Manipulation**
 * 🕳️ **DFS**
 * 📝 **Dynamic Programming**
-* 📈 **Graphs**
+* 📈 **Graph**
 * 🔣 **HashTable**
 * 🌲 **Heap**
 * 🔗 **Linked List**
@@ -37,15 +37,16 @@ to ease the process of mental researching before defining the angle of an attack
 * 🔢 **Matrix**
 * 🔁 **Recursion**
 * 🖇️ **Sorting**
-* .📚 **Stacks and Queues**
+* .📚 **Stack and Queue**
 * 🔤 **String**
-* 🌴 **Trees**
-* 🌿 **Tries**
+* 🌴 **Tree**
+* 🌿 **Trie**
 * 2️⃣ **Two Pointers**
 
 ### ❓ List of Problems with Tag Representations
 
 - Array rank transform 📃 
+- Absolute distinct count 📃 
 - Best time to buy and sell stock 📃 
 - Calendar merge intervals 📃 
 - Container with most water  📃 

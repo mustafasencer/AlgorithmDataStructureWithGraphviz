@@ -6,44 +6,44 @@ Hint: Leveraging sorted array would enable the solution to use only O(1) extra s
 from typing import List
 
 
-def solve(nums: List[int]) -> int:
+def solve(numbers: List[int]) -> int:
     distinct = set()
-    for value in nums:
+    for value in numbers:
         distinct.add(abs(value))
 
     return len(distinct)
 
 
-def solve_2(nums: List[int]) -> int:
-    count = len(nums)
+def solve_2(numbers: List[int]) -> int:
+    count = len(numbers)
 
-    i, j = 0, len(nums) - 1
+    i, j = 0, len(numbers) - 1
 
     while i < j:
 
         # Clear negative duplicates from the array
-        while nums[i] == nums[i + 1]:
+        while numbers[i] == numbers[i + 1]:
             count -= 1
             i += 1
 
         # Clear positive duplicates from the array
-        while nums[j] == nums[j - 1]:
+        while numbers[j] == numbers[j - 1]:
             count -= 1
             j -= 1
 
         if j == i:
             break
 
-        sum = nums[i] + nums[j]
+        _sum = numbers[i] + numbers[j]
 
-        if sum == 0:
+        if _sum == 0:
             i += 1
             j -= 1
             count -= 1
 
-        if sum > 0:
+        if _sum > 0:
             j -= 1
-        elif sum < 0:
+        elif _sum < 0:
             i += 1
 
     return count
