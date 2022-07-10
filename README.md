@@ -45,11 +45,15 @@ to ease the process of mental researching before defining the angle of an attack
 
 ### ❓ List of Problems with Tag Representations
 
-- Array rank transform 📃 
-- Absolute distinct count 📃 
-- Best time to buy and sell stock 📃 
+- Absolute distinct count 📃
+- Array rank transform 📃 🔣
+- Binary Gap 📃 
+- Check if array is circular 📃 
+- Closest 3 Sum 📃 
+- Container with Most Water 📃 
+- Contains Duplicate II 📃 
+- Cyclic Rotation 📃 
 - Calendar merge intervals 📃 
-- Container with most water  📃 
 - Find minimum in rotated sorted array 📃 
 - Find minimum in rotated sorted array 📃 
 - Flatten array 📃 
