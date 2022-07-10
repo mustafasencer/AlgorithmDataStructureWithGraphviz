@@ -1,9 +1,10 @@
-"""
-Binary Gap
-"""
-
-
 def solution(N):
+    """
+    1. Loop over the stringified binary number
+    2. If `1` is encountered initiliase the count
+    3. take max of ``count`` and ``max_gap``
+    4. If `0` is encountered bump count by one if initialised!
+    """
     max_gap = 0
     count = 0
     binary = f"{N:08b}"

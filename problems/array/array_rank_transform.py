@@ -1,6 +1,3 @@
-"""
-    Created by Mustafa Sencer Özcan on 22.05.2020.
-"""
 from typing import List
 
 
@@ -21,7 +18,7 @@ class Solution:
 
         return arr
 
-    def _test(self, arr):
+    def array_rank_transform_2(self, arr):
         store = {val: index + 1 for index, val in enumerate(sorted(set(arr)))}
 
         for i in range(len(arr)):
@@ -32,6 +29,6 @@ class Solution:
 
 if __name__ == "__main__":
     result = Solution().array_rank_transform([40, 10, 20, 30])
-    _result = Solution()._test([40, 10, 20, 30])
+    _result = Solution().array_rank_transform_2([40, 10, 20, 30])
     assert result == _result
     print(result)

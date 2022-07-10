@@ -6,6 +6,9 @@ from typing import List
 
 
 def solve(nums: List[int], target: int):
+    """
+
+    """
     nums.sort()
     sum_value = nums[0] + nums[1] + nums[2]
 

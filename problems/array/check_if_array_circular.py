@@ -1,8 +1,3 @@
-"""
-
-"""
-
-
 def solution(array):
     is_circular = True
     i = 0
