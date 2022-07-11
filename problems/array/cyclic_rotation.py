@@ -1,7 +1,10 @@
 """
     Created by Mustafa Sencer Özcan on 27.05.2020.
 
-    An array A consisting of N integers is given. Rotation of the array means that each element is shifted right by one index, and the last element of the array is moved to the first place. For example, the rotation of array A = [3, 8, 9, 7, 6] is [6, 3, 8, 9, 7] (elements are shifted right by one index and 6 is moved to the first place).
+    An array A consisting of N integers is given. Rotation of the array means that each element is shifted right by one
+    index, and the last element of the array is moved to the first place. For example, the rotation
+    of array A = [3, 8, 9, 7, 6] is [6, 3, 8, 9, 7]
+    (elements are shifted right by one index and 6 is moved to the first place).
 
     The goal is to rotate array A K times; that is, each element of A will be shifted to the right K times.
 
@@ -41,11 +44,13 @@
 """
 
 
-# you can write to stdout for debugging purposes, e.g.
-# print("this is a debug message")
-
-
 def solution(A, K):
+    """
+    1. loop over the array
+    2. add k to the current index
+    3. find the mod of the addition based on the array length
+    4. this forms the new_index and can be set in the result array
+    """
     length = len(A)
     result = [0] * length
 
@@ -62,4 +67,3 @@ if __name__ == "__main__":
     K = 4
     result = solution(A, K)
     assert result == [1, 2, 3, 4]
-    print(result)

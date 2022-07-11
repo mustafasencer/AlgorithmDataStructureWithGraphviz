@@ -1,9 +1,7 @@
-"""
-    Codility equi leader question
-"""
-
-
 def solution(A):
+    """
+    1. Hard: Not yet done
+    """
     mapper = {}
 
     for i in range(len(A)):
