@@ -50,37 +50,38 @@ to ease the process of mental researching before defining the angle of an attack
 - Binary Gap 📃 
 - Check if array is circular 📃 
 - Closest 3 Sum 📃 
-- Container with Most Water 📃 
-- Contains Duplicate II 📃 
-- Cyclic Rotation 📃 
-- Calendar merge intervals 📃 
-- Find minimum in rotated sorted array 📃 
-- Find minimum in rotated sorted array 📃 
+- Container with most water 📃 
+- Contains duplicate II 📃 
+- Cyclic rotation 📃 
+- Equi leader 📃 
+- Find minimum in rotated sorted array 📃
+- Find minimum average slice 📃
+- Find pivot index 📃 
+- Find unpaired element in array 📃 
 - Flatten array 📃 
+- Frequency sort 📃 
+- Genomic range query 📃 
+- Group by given group size 📃 
+- H-index 📃
+- K-Closest distance origin 📃 
 - Longest consecutive sequence 📃 
-- Max product sub-array 📃 
-- Max sum contiguous sub-array 📃 
-- Median of 2 sorted Array 📃 
-- Remove duplicates from sorted array II 📃 
-- Search in rotated sorted array 📃 
-- 3 Sum 📃 
-- 2 Sum 📃
-- 0-1 Knapsack problem 📝 
-- Climbing stairs 📝 
-- Combination Sum 📝 
-- Number of decoding ways 📝 
-- House robber problem 📝 
-- Jump game 📝 
-- Min cost climbing stairs 📝 
-- Unique paths 📝 
-- Word break 📝 
-- A* algorithm (Shortest path) 📈 
-- Clone graph 📈 
-- Dijkstra's algorithm (Shortest path) 📈 
-- Kruskal's algorithm (Minimum spanning tree) 📈 
-- Number of islands 📈 
-- Prim's algorithm (Minimum spanning tree) 📈 
-- Merge K sorted lists 🌲 
+- Majority element 📃
+- Max counter 📝 
+- Max product sub-array 📝 
+- Max sum sub-array 📝 
+- Median of two sorted array 📝 
+- Non-decreasing by removing one 📝 
+- Number of disc intersections 📝 
+- Partition array into parts with equal sum 📝 
+- Passing cars 📝 
+- Permutation check 📝 
+- Permutation missing element 📈 
+- Permutations 📈 
+- Remove duplicates from sorted array II 📈 
+- Replace elements with greatest element on right side 📈 
+- Rotate array 📈 
+- Search in rotated sorted array 📈 
+- Shortest unsorted continuous array 🌲 
 - Insert interval
 - Merge intervals
 - Count & Length 🔗
