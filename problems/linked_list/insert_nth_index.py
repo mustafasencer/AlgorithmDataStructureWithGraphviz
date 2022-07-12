@@ -1,7 +1,7 @@
 import time
 
 from data_structures.linked_list import LinkedListNode
-from problems.build_linked_list import build_linked_list
+from problems.linked_list.build_linked_list import build_linked_list
 
 
 def insert_nth(head_node, index, data):

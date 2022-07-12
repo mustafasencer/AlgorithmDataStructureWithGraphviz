@@ -2,7 +2,7 @@
     Created by Mustafa Sencer Özcan on 26.05.2020.
 """
 from data_structures.linked_list import LinkedListNode
-from problems.build_linked_list import build_linked_list
+from problems.linked_list.build_linked_list import build_linked_list
 
 
 class Solution:

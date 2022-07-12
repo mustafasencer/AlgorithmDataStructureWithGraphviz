@@ -1,6 +1,6 @@
 from heapq import heapify
 
-from problems.max_heapify import heapify as heapify_
+from problems.heap.max_heapify import heapify as heapify_
 
 
 def heap_sort(arr):

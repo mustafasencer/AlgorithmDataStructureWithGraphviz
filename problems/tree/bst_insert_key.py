@@ -1,6 +1,6 @@
 from data_structures.tree import TreeNode
 from graphviz.tree import TreeDrawer
-from problems.bst_build_from_array import build_bst
+from problems.tree.bst_build_from_array import build_bst
 
 
 def insert_key(root, node):

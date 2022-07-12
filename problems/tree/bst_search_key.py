@@ -1,5 +1,5 @@
 from graphviz.tree import TreeDrawer
-from problems.bst_build_from_array import build_bst
+from problems.tree.bst_build_from_array import build_bst
 
 
 def search_key(root, key):
