@@ -7,16 +7,18 @@ from typing import List
 
 
 def solution(nums: List[int]) -> int:
+    """ """
     result = 0
     for i in range(len(nums)):
         k = i + 1
         while k < len(nums):
-            result = max(reduce(lambda x, y: x * y, nums[i: k + 1]), result, 0)
+            result = max(reduce(lambda x, y: x * y, nums[i : k + 1]), result, 0)
             k += 1
     return result
 
 
 def solution_1(nums):
+    """ """
     nums_copy = nums[::-1]
     for i in range(len(nums)):
         nums[i] *= nums[i - 1] or 1
@@ -25,6 +27,7 @@ def solution_1(nums):
 
 
 def solution_2(nums):
+    """ """
     max_product = 0
     for i in range(len(nums)):
         k = i + 1
