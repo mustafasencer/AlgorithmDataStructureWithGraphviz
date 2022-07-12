@@ -8,17 +8,17 @@ class Graph:
     def add_edge(self, u, v):
         self.graph[u].append(v)
 
-    def dfs_util(self, v, visited):
+    def _dfs_util(self, v, visited):
         visited[v] = True
         print(v, end=" ")
 
         for i in self.graph[v]:
             if not visited[i]:
-                self.dfs_util(i, visited)
+                self._dfs_util(i, visited)
 
     def dfs(self, v):
         visited = [False] * (len(self.graph))
-        self.dfs_util(v, visited)
+        self._dfs_util(v, visited)
 
 
 if __name__ == "__main__":

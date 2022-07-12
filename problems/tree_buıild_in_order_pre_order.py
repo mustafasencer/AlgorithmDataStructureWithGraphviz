@@ -32,23 +32,12 @@ def recursive(pre_order, in_order):
         ind = in_order.index(pre_order.pop(0))
         root = TreeNode(in_order[ind])
         root.left = recursive(pre_order, in_order[0:ind])
-        root.right = recursive(pre_order, in_order[ind + 1 :])
-        return root
-
-
-def _test(pre_order, in_order):
-    if in_order:
-        mid = in_order.index(pre_order[0])
-        root = TreeNode(pre_order.pop(0))
-        root.left = _test(pre_order, in_order[:mid])
-        root.right = _test(pre_order, in_order[mid + 1 :])
+        root.right = recursive(pre_order, in_order[ind + 1:])
         return root
 
 
 if __name__ == "__main__":
     in_order = [4, 2, 5, 1, 6, 3, 7]
     pre_order = [1, 2, 4, 5, 3, 6, 7]
-    # root = recursive(pre_order, in_order)
-    root_ = _test(pre_order, in_order)
-    # TreeDrawer().visualize(root)
-    TreeDrawer().visualize(root_)
+    root = recursive(pre_order, in_order)
+    TreeDrawer().visualize(root)

@@ -1,10 +1,7 @@
-"""
-    Created by Mustafa Sencer Özcan on 20.05.2020.
-"""
 import heapq
 
 
-class MyHeap(object):
+class MyHeap:
     def __init__(self, initial=None, key=lambda x: x):
         self.key = key
         self.index = 0

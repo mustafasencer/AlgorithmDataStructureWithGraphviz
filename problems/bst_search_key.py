@@ -12,19 +12,8 @@ def search_key(root, key):
     return search_key(root.left, key)
 
 
-def search_deneme(root, key):
-    if not root:
-        return None
-    if root.val == key:
-        return root
-
-    if root.val > key:
-        return search_deneme(root.left, key)
-    return search_deneme(root.right, key)
-
-
 if __name__ == "__main__":
     array = [1, 2, 3, 4, 2, 4]
     root = build_bst(array)
-    node = search_deneme(root, 4)
+    node = search_key(root, 4)
     TreeDrawer().visualize(node)

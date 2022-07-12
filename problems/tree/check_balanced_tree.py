@@ -1,7 +1,8 @@
-from problems.tre_build_level_order import build_tree
+from problems.tree_build_level_order import build_tree
 
 
-def check_balanced(root):
+def is_balanced(root):
+
     def check(root):
         if not root:
             return 0
@@ -17,5 +18,5 @@ def check_balanced(root):
 if __name__ == "__main__":
     array = [1, 2, 3, 4, 5, None, 6]
     root = build_tree(array, None, 0, len(array))
-    result = check_balanced(root)
+    result = is_balanced(root)
     print(result)

@@ -2,30 +2,30 @@ from data_structures.tree import TreeNode
 from graphviz.tree import TreeDrawer
 
 
-def build_bst(array):
-    if not array:
+def build_bst(nums):
+    if not nums:
         return None
-    array = [i for i in array if i is not None]
+    nums = [i for i in nums if i is not None]
 
-    array.sort()
+    nums.sort()
 
     # find middle
-    mid = int((len(array)) / 2)
+    mid = int((len(nums)) / 2)
 
     # make the middle element the root
-    root = TreeNode(array[mid])
+    root = TreeNode(nums[mid])
 
     # left subtree of root has all
     # values <arr[mid]
-    root.left = build_bst(array[:mid])
+    root.left = build_bst(nums[:mid])
 
     # right subtree of root has all
     # values >arr[mid]
-    root.right = build_bst(array[mid + 1 :])
+    root.right = build_bst(nums[mid + 1:])
     return root
 
 
 if __name__ == "__main__":
-    array = [1, 3, 5, 4, 2, 6, 7]
-    root = build_bst(array)
+    nums = [1, 3, 5, 4, 2, 6, 7]
+    root = build_bst(nums)
     TreeDrawer().visualize(root)

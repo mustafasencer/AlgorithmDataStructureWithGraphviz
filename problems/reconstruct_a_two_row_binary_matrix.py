@@ -4,8 +4,6 @@ https://leetcode.com/problems/reconstruct-a-2-row-binary-matrix/
 
 
 def solution(U, L, C):
-    # write your code in Python 3.6
-
     n = len(C)
     upper_row = [0 for _ in range(n)]
     lower_row = [0 for _ in range(n)]
@@ -29,7 +27,7 @@ def solution(U, L, C):
     return "IMPOSSIBLE"
 
 
-def sol_2(U, L, C):
+def solution_1(U, L, C):
     upper_row = [0 for _ in range(len(C))]
     lower_row = [0 for _ in range(len(C))]
 
@@ -62,5 +60,5 @@ if __name__ == "__main__":
     U = 3
     L = 2
     C = [2, 1, 1, 0, 1]
-    result = sol_2(U, L, C)
+    result = solution_1(U, L, C)
     assert result == "11001,10100"
