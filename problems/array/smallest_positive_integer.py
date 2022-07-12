@@ -3,10 +3,10 @@ Find the missing smallest positive integer
 """
 
 
-def solution(A):
-    B = set(A)
+def solution(nums):
+    B = set(nums)
     min_value = 1
-    for i in range(1, len(A) + 1):
+    for i in range(1, len(nums) + 1):
         if i not in B:
             return i
         else:
@@ -14,10 +14,10 @@ def solution(A):
     return min_value
 
 
-def sol_2(A):
-    distinct = set(A)
+def solution_1(nums):
+    distinct = set(nums)
     min_value = 1
-    for _ in A:
+    for _ in nums:
         if min_value not in distinct:
             return min_value
         min_value += 1
@@ -25,7 +25,7 @@ def sol_2(A):
 
 
 if __name__ == "__main__":
-    A = [1, 2, 3, 4]
-    result = sol_2(A)
+    nums = [1, 2, 3, 4]
+    result = solution_1(nums)
     assert result == 5
     print(result)

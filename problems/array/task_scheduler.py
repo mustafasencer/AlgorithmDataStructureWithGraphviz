@@ -39,4 +39,3 @@ if __name__ == "__main__":
     n = 2
     result = solution(tasks, n)
     assert result == 16
-    print(result)

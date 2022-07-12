@@ -4,11 +4,12 @@ Given an array arr, replace every element in that array with the greatest elemen
 
 After doing so, return the array.
 """
+from typing import List
 
 
-def solution(nums):
+def solution(nums: List[int]):
     """
-    1.
+    1. no explanation!
     """
     result = []
 
@@ -21,14 +22,14 @@ def solution(nums):
     return result
 
 
-def solution_2(nums):
+def solution_2(nums: List[int]):
     mx = -1
     for i in range(len(nums) - 1, -1, -1):
         nums[i], mx = mx, max(mx, nums[i])
     return nums
 
 
-def solution_3(nums):
+def solution_3(nums: List[int]):
     """
     1. O(1) extra space
     2. best solution in my opinion!
@@ -37,7 +38,7 @@ def solution_3(nums):
         if i == len(nums) - 1:
             value = -1
         else:
-            value = max(nums[i + 1 :])
+            value = max(nums[i + 1:])
         nums[i] = value
 
     return nums

@@ -43,7 +43,6 @@ each element of array A is an integer within the range [−1,000..1,000].
 
 
 def solution(A):
-    # write your code in Python 3.6
     all_sum = sum(A)
     sum_first = 0
 
