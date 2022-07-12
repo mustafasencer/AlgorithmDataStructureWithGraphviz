@@ -34,8 +34,8 @@ B[K] ≤ B[K + 1], for each K (0 ≤ K < N − 1).
 """
 
 
+# Greedy Approach
 def solution(A, B):
-    # write your code in Python 3.6
     count = 1
     prev_end = B[0]
 

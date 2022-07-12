@@ -1,9 +1,15 @@
-def majorityElement1(nums):
+def solution(nums):
+    """
+    1. No explanation!
+    """
     nums.sort()
     return nums[len(nums) // 2]
 
 
-def majorityElement2(nums):
+def solution_2(nums):
+    """
+    1.
+    """
     m = {}
     for n in nums:
         m[n] = m.get(n, 0) + 1
@@ -11,7 +17,10 @@ def majorityElement2(nums):
             return n
 
 
-def majorityElement(nums):
+def solution_3(nums):
+    """
+    1. No explanation!
+    """
     candidate, count = nums[0], 0
     for num in nums:
         if num == candidate:
@@ -25,5 +34,5 @@ def majorityElement(nums):
 
 if __name__ == "__main__":
     nums = [1, 2, 3, 1, 2, 2, 2]
-    result = majorityElement(nums)
-    assert result == 0
+    result = solution(nums)
+    assert result == 2

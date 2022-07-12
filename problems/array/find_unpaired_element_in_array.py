@@ -33,6 +33,10 @@ all but one of the values in A occur an even number of times.
 
 
 def solution(A):
+    """
+    1. loop over and store the item in an hash table
+    2. find the element not divisible by 2
+    """
     dict_ = {}
     for item in A:
         if item not in dict_:

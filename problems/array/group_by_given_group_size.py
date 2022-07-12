@@ -1,13 +1,16 @@
 from collections import defaultdict
 
 
-def solve(group_sizes):
+def solve(nums):
+    """
+    1.
+    """
     groups = defaultdict(lambda: [])
 
-    for i in range(len(group_sizes)):
-        groups[group_sizes[i]].append(i)
+    for i in range(len(nums)):
+        groups[nums[i]].append(i)
 
-    return [v[i : i + k] for k, v in groups.items() for i in range(0, len(v), k)]
+    return [v[i : i + k] for k, v in groups.items() for i in range(len(v), k)]
 
 
 def chunk(list, size):

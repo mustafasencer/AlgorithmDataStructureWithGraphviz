@@ -3,6 +3,11 @@ from typing import List
 
 
 def solve(nums: List[int]):
+    """
+    1. build counter dict
+    2. loop over the counter and build an ordered dict based on the count value for each item
+    3. loop over the ordered dict and return the original array ordered
+    """
     counter = Counter(nums)
 
     sorted_dict = OrderedDict(sorted(counter.items(), key=lambda x: x[1]))

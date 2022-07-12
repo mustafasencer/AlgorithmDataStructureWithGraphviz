@@ -2,6 +2,10 @@ import heapq
 
 
 def solve(points, k):
+    """
+    1. loop over, calculate the distance and push into a heap (min heap by default)
+    2. return the result by popping each item from the list
+    """
     result = []
 
     for i in range(len(points)):

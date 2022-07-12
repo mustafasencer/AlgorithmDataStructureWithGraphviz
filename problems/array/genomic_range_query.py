@@ -39,6 +39,7 @@ string S consists only of upper-case English letters A, C, G, T.
 
 
 def solution(S, P, Q):
+    """ """
     # write your code in Python 3.6
     mapper = {"A": 1, "C": 2, "G": 3, "T": 4}
     result = [min([mapper[char] for char in S[p : q + 1]]) for p, q in zip(P, Q)]
@@ -46,8 +47,7 @@ def solution(S, P, Q):
 
 
 def solution_(S, P, Q):
-    # write your code in Python 3.6
-
+    """ """
     result = []
     for p, q in zip(P, Q):
         if "A" in S[p : q + 1]:

@@ -48,6 +48,9 @@ import sys
 
 
 def solution(A):
+    """
+    1. check the contiguous sub arrays having 2 and 3 items
+    """
     if len(A) == 2:
         return 0
 
