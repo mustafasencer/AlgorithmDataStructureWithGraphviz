@@ -35,9 +35,9 @@ each element of array A is an integer within the range [0..2,147,483,647].
 """
 
 
-def solution(A):
+def solution(nums):
     circle_endpoints = []
-    for i, a in enumerate(A):
+    for i, a in enumerate(nums):
         circle_endpoints += [(i - a, True), (i + a, False)]
 
     circle_endpoints.sort(key=lambda x: (x[0], not x[1]))
@@ -56,13 +56,7 @@ def solution(A):
     return intersections
 
 
-def solution_2(A):
-    for i in range(len(A)):
-        pass
-
-
 if __name__ == "__main__":
     A = [1, 5, 2, 1, 4, 0]
     result = solution(A)
     assert result == 11
-    print(result)

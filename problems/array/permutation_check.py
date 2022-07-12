@@ -46,15 +46,13 @@ each element of array A is an integer within the range [1..1,000,000,000].
 """
 
 
-# you can write to stdout for debugging purposes, e.g.
-# print("this is a debug message")
-
-
-def solution(A):
-    # write your code in Python 3.6
-    A.sort()
-    prev = A[0]
-    for item in A[1:]:
+def solution(nums):
+    """
+    1. sort the nums array and check if a value is missing from the sequence
+    """
+    nums.sort()
+    prev = nums[0]
+    for item in nums[1:]:
         subs = item - prev
         if subs != 1:
             return 0
@@ -62,16 +60,15 @@ def solution(A):
     return 1
 
 
-def solution_1(A):
-    A.sort()
-    for i in range(1, len(A)):
-        if not A[i] - A[i - 1] == 1:
+def solution_1(nums):
+    nums.sort()
+    for i in range(1, len(nums)):
+        if not nums[i] - nums[i - 1] == 1:
             return 0
     return 1
 
 
 if __name__ == "__main__":
-    A = [1, 3, 4]
-    result = solution_1(A)
+    nums = [1, 3, 4]
+    result = solution_1(nums)
     assert result == 0
-    print(result)

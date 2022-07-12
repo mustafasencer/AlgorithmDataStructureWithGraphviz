@@ -5,8 +5,7 @@ https://leetcode.com/problems/minimum-time-to-make-rope-colorful
 
 
 def solution(string, costs):
-    # write your code in Python 3.6
-
+    """ """
     min_cost = 0
 
     for i in range(len(string) - 1):

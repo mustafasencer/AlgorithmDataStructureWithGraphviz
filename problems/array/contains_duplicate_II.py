@@ -3,7 +3,7 @@ from typing import List
 
 def solve(nums: List[int], k: int) -> bool:
     """
-    1. Check if nums contains duplicates within an index distance <= k
+    1. Check if nums array contains duplicates within an index distance <= k
     """
     lookup = {}
     for i in range(len(nums)):

@@ -25,6 +25,9 @@ def solution(N):
 
 
 def solution_2(N):
+    """
+    1. same approach!
+    """
     max_gap = 0
     count = 0
     binary = f"{N:08b}"

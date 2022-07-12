@@ -1,11 +1,13 @@
 """
-A non-empty array A consisting of N integers is given. The consecutive elements of array A represent consecutive cars on a road.
+A non-empty array A consisting of N integers is given.
+The consecutive elements of array A represent consecutive cars on a road.
 
 Array A contains only 0s and/or 1s:
 
 0 represents a car traveling east,
 1 represents a car traveling west.
-The goal is to count passing cars. We say that a pair of cars (P, Q), where 0 ≤ P < Q < N, is passing when P is traveling to the east and Q is traveling to the west.
+The goal is to count passing cars. We say that a pair of cars (P, Q), where 0 ≤ P < Q < N,
+is passing when P is traveling to the east and Q is traveling to the west.
 
 For example, consider array A such that:
 
@@ -40,27 +42,15 @@ each element of array A is an integer that can have one of the following values:
 """
 
 
-# def solution(A):
-#     # write your code in Python 3.6
-#     index = 0
-#     result = []
-#     for car in A:
-#         index_2 = index
-#         if car == 0:
-#             while index_2 < len(A):
-#                 if A[index_2] == 1:
-#                     result.append((index, index_2))
-#                 if len(result) > 1000000000:
-#                     return -1
-#                 index_2 += 1
-#         index += 1
-#     return len(result)
-
-
-def solution(A):
+def solution(nums):
+    """
+    1. take into account that the most import value here is the 0 values
+    2. loop over the nums array
+    3. increase the passing cars count by the zeros that have been encountered so far
+    """
     zero_count = 0
     combinations = 0
-    for item in A:
+    for item in nums:
         if item == 0:
             zero_count += 1
         else:
@@ -72,13 +62,17 @@ def solution(A):
     return combinations
 
 
-def solution_1(A):
+def solution_1(nums):
+    """
+    1. another approach where anytime a 0 is encountered
+    2. go to the end of the array to increase the number of passing cars
+    """
     passing_cars = 0
-    for i in range(len(A)):
-        if A[i] == 0:
+    for i in range(len(nums)):
+        if nums[i] == 0:
             j = i + 1
-            while j < len(A):
-                if A[j] == 1:
+            while j < len(nums):
+                if nums[j] == 1:
                     passing_cars += 1
                     if passing_cars > 1e9:
                         return -1

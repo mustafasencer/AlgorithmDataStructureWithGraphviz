@@ -25,15 +25,16 @@ each element of array A is an integer within the range [1..(N + 1)].
 """
 
 
-def solution(A):
-    # write your code in Python 3.6
-    n = len(A)
+def solution(nums):
+    """
+    1. check if the sequence addition has a missing element
+    """
+    n = len(nums)
     sum_ = n * (n + 1) // 2
-    return sum_ - sum(A)
+    return sum_ - sum(nums)
 
 
 if __name__ == "__main__":
-    A = [2, 3, 1, 5]
-    result = solution(A)
+    nums = [2, 3, 1, 5]
+    result = solution(nums)
     assert result == 4
-    print(result)

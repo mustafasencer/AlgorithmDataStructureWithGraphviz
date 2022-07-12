@@ -7,7 +7,9 @@ from typing import List
 
 
 def solution(nums: List[int]) -> int:
-    """ """
+    """
+    1. No explanation!
+    """
     result = 0
     for i in range(len(nums)):
         k = i + 1
@@ -18,7 +20,9 @@ def solution(nums: List[int]) -> int:
 
 
 def solution_1(nums):
-    """ """
+    """
+    1. No explanation!
+    """
     nums_copy = nums[::-1]
     for i in range(len(nums)):
         nums[i] *= nums[i - 1] or 1
@@ -27,7 +31,12 @@ def solution_1(nums):
 
 
 def solution_2(nums):
-    """ """
+    """
+    1. loop over the nums array
+    2. keep a current product for each index in nums
+    3. start incrementing the index for each index and check the product value
+    4. Keep the max of it
+    """
     max_product = 0
     for i in range(len(nums)):
         k = i + 1
@@ -41,4 +50,5 @@ def solution_2(nums):
 
 if __name__ == "__main__":
     result = solution([-2, 2, 3, -1, 3, 9])
+    print(result)
     assert result == 2916
