@@ -2,7 +2,7 @@ import heapq
 from queue import PriorityQueue
 
 from data_structures.tree import TreeNode
-from problems.build_linked_list import build_linked_list
+from problems.linked_list.build_linked_list import build_linked_list
 
 
 def merge_k_sorted_lists(lists):

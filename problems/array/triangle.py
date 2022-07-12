@@ -14,7 +14,8 @@ Write a function:
 
 def solution(A)
 
-that, given an array A consisting of N integers, returns 1 if there exists a triangular triplet for this array and returns 0 otherwise.
+that, given an array A consisting of N integers,
+returns 1 if there exists a triangular triplet for this array and returns 0 otherwise.
 
 For example, given array A such that:
 

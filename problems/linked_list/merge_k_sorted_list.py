@@ -6,7 +6,7 @@ from typing import List
 
 from data_structures.doubly_linked_list.node import Node
 from graphviz.linked_list import LinkedListDrawer
-from problems.build_linked_list import build_linked_list
+from problems.linked_list.build_linked_list import build_linked_list
 
 
 class Solution:

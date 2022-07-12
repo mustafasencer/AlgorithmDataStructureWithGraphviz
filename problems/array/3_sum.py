@@ -35,6 +35,11 @@ def solution(nums: List[int]) -> List[List[int]]:
 
 
 def solution_1(nums: List[int]) -> Set:
+    """
+    1. loop over the nums array
+    2. create left and right pointers and just move them according to the sum value
+    3. if sum == 0 is found just add it to the set and move both pointers
+    """
     result = set()
     nums.sort()
     for i in range(1, len(nums) - 1):

@@ -62,6 +62,11 @@ def solution(nums: List[int]) -> int:
 
 
 def solution_2(nums: List[int]) -> int:
+    """
+    🥉
+    1. loop over the nums array
+    2. find the diff for each required index
+    """
     min_value = abs(sum(nums[:1]) - sum(nums[1:]))
     for i in range(2, len(nums)):
         min_value = min(abs(sum(nums[:i]) - sum(nums[i:])), min_value)
