@@ -4,25 +4,25 @@ from typing import List
 
 def solution(nums: List[int]) -> int:
     """
-    1. loop over the nums array and check if `min_ending_here` is bigger than 0
+    1. loop over the nums array and check if `current_min` is bigger than 0
     2. > 0 means that the item does not contribute to the smallest value (single positive is already smaller!)
      then refresh the value
     3. < 0 means the value is negative and consequently should be added to get an even smaller number
     """
-    min_ending_here = sys.maxsize
+    current_min = sys.maxsize
 
-    min_so_far = sys.maxsize
+    ultimate_min = sys.maxsize
 
     for i in range(len(nums)):
 
-        if min_ending_here > 0:
-            min_ending_here = nums[i]
+        if current_min > 0:
+            current_min = nums[i]
         else:
-            min_ending_here += nums[i]
+            current_min += nums[i]
 
-        min_so_far = min(min_ending_here, min_so_far)
+        ultimate_min = min(current_min, ultimate_min)
 
-    return min_so_far
+    return ultimate_min
 
 
 if __name__ == "__main__":

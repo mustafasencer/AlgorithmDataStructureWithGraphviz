@@ -8,7 +8,9 @@ from typing import List
 
 
 def solution(nums: List[int]) -> int:
-    """ """
+    """
+    1.
+    """
     if len(nums) < 2:
         return 0
 

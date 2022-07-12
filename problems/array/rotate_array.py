@@ -18,7 +18,7 @@ def solution_1(nums, k):
     """
     l = len(nums)
     k = k % l
-    nums[:] = nums[l - k:] + nums[: l - k]
+    nums[:] = nums[l - k :] + nums[: l - k]
     return nums
 
 

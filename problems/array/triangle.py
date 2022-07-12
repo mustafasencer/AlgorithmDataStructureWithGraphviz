@@ -34,9 +34,7 @@ each element of array A is an integer within the range [−2,147,483,648..2,147,
 
 
 def solution(nums) -> int:
-    """
-
-    """
+    """ """
     if len(nums) < 3:
         return 0
 

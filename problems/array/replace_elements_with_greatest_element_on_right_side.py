@@ -38,7 +38,7 @@ def solution_3(nums: List[int]):
         if i == len(nums) - 1:
             value = -1
         else:
-            value = max(nums[i + 1:])
+            value = max(nums[i + 1 :])
         nums[i] = value
 
     return nums

@@ -14,8 +14,13 @@ from typing import List
 
 def solution(nums: List[int], target: int) -> int:
     """
-
+    1. binary search the smallest element in the nums array
+    2. this will give the rotation shift
+    3. the rotation value should be used to find the target
+        (now we can think of the shifted mid values as sorted array indices)
+    4. return -1 if target not found
     """
+
     low = 0
     high = len(nums) - 1
     while low < high:
@@ -24,6 +29,7 @@ def solution(nums: List[int], target: int) -> int:
             low = mid + 1
         else:
             high = mid
+
     rot = low
     low = 0
     high = len(nums) - 1
@@ -31,14 +37,15 @@ def solution(nums: List[int], target: int) -> int:
         mid = int((high + low) / 2)
         real_mid = (mid + rot) % len(nums)
         if nums[real_mid] == target:
-            return target
+            return real_mid
         if nums[real_mid] < target:
             low = mid + 1
         else:
             high = mid - 1
+
     return -1
 
 
 if __name__ == "__main__":
     result = solution([4, 5, 6, 7, 0, 1, 2], 0)
-    print(result)
+    assert result == 4

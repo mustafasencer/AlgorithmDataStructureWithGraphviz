@@ -1,9 +1,11 @@
 """
 A non-empty array A consisting of N integers is given. Array A represents numbers on a tape.
 
-Any integer P, such that 0 < P < N, splits this tape into two non-empty parts: A[0], A[1], ..., A[P − 1] and A[P], A[P + 1], ..., A[N − 1].
+Any integer P, such that 0 < P < N, splits this tape into two non-empty parts:
+    A[0], A[1], ..., A[P − 1] and A[P], A[P + 1], ..., A[N − 1].
 
-The difference between the two parts is the value of: |(A[0] + A[1] + ... + A[P − 1]) − (A[P] + A[P + 1] + ... + A[N − 1])|
+The difference between the two parts is the value of:
+    |(A[0] + A[1] + ... + A[P − 1]) − (A[P] + A[P + 1] + ... + A[N − 1])|
 
 In other words, it is the absolute difference between the sum of the first part and the sum of the second part.
 
@@ -40,16 +42,17 @@ Write an efficient algorithm for the following assumptions:
 N is an integer within the range [2..100,000];
 each element of array A is an integer within the range [−1,000..1,000].
 """
+from typing import List
 
 
-def solution(A):
-    all_sum = sum(A)
+def solution(nums: List[int]) -> int:
+    all_sum = sum(nums)
     sum_first = 0
 
     min_value = float("inf")
 
-    for i in range(1, len(A)):
-        sum_first += A[i]
+    for i in range(1, len(nums)):
+        sum_first += nums[i]
         sum_second = all_sum - sum_first
 
         difference = abs(sum_first - sum_second)
@@ -58,15 +61,14 @@ def solution(A):
     return min_value
 
 
-def solution_2(A) -> int:
-    min_value = abs(sum(A[:1]) - sum(A[1:]))
-    for i in range(2, len(A)):
-        min_value = min(abs(sum(A[:i]) - sum(A[i:])), min_value)
+def solution_2(nums: List[int]) -> int:
+    min_value = abs(sum(nums[:1]) - sum(nums[1:]))
+    for i in range(2, len(nums)):
+        min_value = min(abs(sum(nums[:i]) - sum(nums[i:])), min_value)
     return min_value
 
 
 if __name__ == "__main__":
-    A = [3, 1, 2, 4, 3]
-    result = solution_2(A)
+    nums = [3, 1, 2, 4, 3]
+    result = solution_2(nums)
     assert result == 1
-    print(result)
