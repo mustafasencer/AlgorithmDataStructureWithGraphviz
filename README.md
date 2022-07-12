@@ -21,7 +21,9 @@ Below are the **tags** related to the relevant
 _techniques, approaches, data structures, etc._
 to ease the process of mental researching before defining the angle of an attack to a problem.
 
-### 🏷️ Tags for Approaches
+### 🏷️ Tags
+
+#### Approaches:
 
 * 📃 **Array**
 * 👉 **BFS**
@@ -43,9 +45,20 @@ to ease the process of mental researching before defining the angle of an attack
 * 🌿 **Trie**
 * 2️⃣ **Two Pointers**
 
+---
+
+#### Difficulties:
+
+* 🥉 Easy
+* 🥈 Medium
+* 🥇 Hard
+* 🏅 Very Hard
+
+
+
 ### ❓ List of Problems with Tag Representations
 
-- Absolute distinct count 📃
+- Absolute distinct count 📃 | 🥉
 - Array rank transform 📃 🔣
 - Binary Gap 📃 
 - Check if array is circular 📃 
