@@ -1,8 +1,7 @@
-.PHONY: dev-deps deps format lint build-docker run-docker run-cli run-api test test-with-coverage help
+.PHONY: dev-deps deps format lint help
 .DEFAULT_GOAL := help
 
-SERVICE=kayak-challenge
-IMAGE=$(SERVICE):latest
+SERVICE=algorithms
 
 ## dev-deps: Install python dev packages
 dev-deps:
