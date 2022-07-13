@@ -2,7 +2,6 @@ from problems.tree.tree_build_level_order import build_tree
 
 
 def is_balanced(root):
-
     def check(root):
         if not root:
             return 0

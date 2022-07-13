@@ -1,5 +1,6 @@
 """
 Longest common sub sequence
+https://leetcode.com/problems/longest-common-subsequence/
 """
 
 
@@ -11,8 +12,7 @@ def lcs(str0, str1):
 
     """
     Following steps build L[m+1][n+1] in bottom up fashion 
-    Note: L[i][j] contains length of LCS of X[0..i-1] 
-    and Y[0..j-1]
+    Note: L[i][j] contains length of LCS of X[0..i-1] and Y[0..j-1]
     """
     for i in range(m + 1):
         for j in range(n + 1):

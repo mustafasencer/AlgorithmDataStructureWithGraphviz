@@ -1,6 +1,4 @@
 """
-    Created by Mustafa Sencer Özcan on 27.05.2020.
-
     You are a professional robber planning to rob houses along a street.
     Each house has a certain amount of money stashed, the only constraint stopping you from robbing each
     of them is that adjacent houses have security system connected and it will automatically contact the police if
@@ -12,31 +10,30 @@
 from typing import List
 
 
-class Solution:
-    def rob(self, nums: List[int]) -> int:
-        if not nums:
-            return 0
-        dp = [0] * len(nums)
-        for i in range(len(nums)):
-            if i < 2:
-                dp[i] = nums[i]
-            else:
-                dp[i] = nums[i] + max(dp[: i - 1])
-        return max(dp)
+def solution(nums: List[int]) -> int:
+    if not nums:
+        return 0
+    dp = [0] * len(nums)
+    for i in range(len(nums)):
+        if i < 2:
+            dp[i] = nums[i]
+        else:
+            dp[i] = nums[i] + max(dp[: i - 1])
+    return max(dp)
 
-    def solution_1(self, nums) -> int:
-        dp = [0] * len(nums)
 
-        for i in range(len(nums)):
-            if i < 2:
-                dp[i] = nums[i]
-            else:
-                dp[i] = nums[i] + max(dp[: i - 1])
+def solution_1(nums) -> int:
+    dp = [0] * len(nums)
 
-        return max(dp)
+    for i in range(len(nums)):
+        if i < 2:
+            dp[i] = nums[i]
+        else:
+            dp[i] = nums[i] + max(dp[: i - 1])
+
+    return max(dp)
 
 
 if __name__ == "__main__":
-    result = Solution().rob([2, 1, 8, 1, 2, 7])
+    result = solution([2, 1, 8, 1, 2, 7])
     assert result == 17
-    print(result)

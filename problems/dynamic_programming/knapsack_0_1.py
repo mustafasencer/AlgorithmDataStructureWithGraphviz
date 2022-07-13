@@ -1,6 +1,4 @@
 """
-    Created by Mustafa Sencer Özcan on 30.05.2020.
-
     Dynamic programming solution -> O(N*W)
 """
 

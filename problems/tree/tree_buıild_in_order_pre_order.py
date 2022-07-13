@@ -32,7 +32,7 @@ def recursive(pre_order, in_order):
         ind = in_order.index(pre_order.pop(0))
         root = TreeNode(in_order[ind])
         root.left = recursive(pre_order, in_order[0:ind])
-        root.right = recursive(pre_order, in_order[ind + 1:])
+        root.right = recursive(pre_order, in_order[ind + 1 :])
         return root
 
 

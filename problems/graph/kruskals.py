@@ -1,11 +1,3 @@
-"""
-    Created by Mustafa Sencer Özcan on 01.06.2020.
-"""
-
-
-# Kruskal's algorithm in Python
-
-
 class Graph:
     def __init__(self, vertices):
         self.V = vertices

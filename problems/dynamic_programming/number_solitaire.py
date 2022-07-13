@@ -55,7 +55,6 @@ each element of array A is an integer within the range [−10,000..10,000].
 
 
 def solution(A):  # false
-    # write your code in Python 3.6
     dp = [A[0]] * len(A)
 
     for i in range(1, len(A)):
@@ -96,4 +95,3 @@ if __name__ == "__main__":
     A = [1, -2, 0, 9, -1, -2]
     result = solution_2(A)
     assert result == 8
-    print(result)

@@ -1,6 +1,3 @@
-"""
-    Created by Mustafa Sencer Özcan on 27.05.2020.
-"""
 from typing import List
 
 

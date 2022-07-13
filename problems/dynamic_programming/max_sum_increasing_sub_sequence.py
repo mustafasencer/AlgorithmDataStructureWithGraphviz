@@ -4,21 +4,20 @@ https://www.geeksforgeeks.org/maximum-sum-increasing-subsequence-dp-14/
 """
 
 
-def solution(input):
-    dp = [0] * len(input)
+def solution(nums):
+    dp = [0] * len(nums)
 
-    for i in range(len(input)):
-        dp[i] = input[i]
+    for i in range(len(nums)):
+        dp[i] = nums[i]
 
-    for i in range(1, len(input)):
+    for i in range(1, len(nums)):
         for j in range(i):
-            if input[j] < input[i] and dp[i] < (dp[i] + input[j]):
-                dp[i] = dp[i] + input[j]
+            if nums[j] < nums[i] and dp[i] < (dp[i] + nums[j]):
+                dp[i] = dp[i] + nums[j]
     return max(dp)
 
 
 if __name__ == "__main__":
-    input = [1, 101, 2, 3, 100, 4, 5]
-    result = solution(input)
+    nums = [1, 101, 2, 3, 100, 4, 5]
+    result = solution(nums)
     assert result == 106
-    print(result)

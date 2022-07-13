@@ -1,6 +1,3 @@
-"""
-    Created by Mustafa Sencer Özcan on 01.06.2020.
-"""
 from heapq import heappop, heappush
 from itertools import count
 

@@ -1,6 +1,4 @@
 """
-    Created by Mustafa Sencer Özcan on 25.05.2020.
-
     Not completed yet!
     Check again.
 """
