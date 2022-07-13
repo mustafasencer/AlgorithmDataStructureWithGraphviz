@@ -1,4 +1,4 @@
 class LinkedListNode(object):
-    def __init__(self, val=None):
+    def __init__(self, val=None, nxt=None):
         self.val = val
-        self.next = None
+        self.next = nxt

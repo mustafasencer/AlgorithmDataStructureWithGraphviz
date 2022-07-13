@@ -5,7 +5,6 @@ from problems.linked_list.build_linked_list import build_linked_list
 
 
 def insert_nth(head_node, index, data):
-    # Your code goes here.
     # Return the head of the list.
     head = head_node
     if not head_node:
@@ -52,15 +51,9 @@ def insert_nth_(head_node, index, data):
     return head
 
 
-class __Node(object):
-    def __init__(self, data, nxt=None):
-        self.data = data
-        self.next = nxt
-
-
 def insert_nth_codewars(head, index, data):
     if index == 0:
-        return __Node(data, head)
+        return LinkedListNode(data, head)
     if head and index > 0:
         head.next = insert_nth(head.next, index - 1, data)
         return head
@@ -69,9 +62,9 @@ def insert_nth_codewars(head, index, data):
 
 def insert_nth__(head, index, data):
     return (
-        __Node(data, head)
+        LinkedListNode(data, head)
         if not index
-        else __Node(head.data, insert_nth__(head.next, index - 1, data))
+        else LinkedListNode(head.data, insert_nth__(head.next, index - 1, data))
     )
 
 
