@@ -37,6 +37,29 @@ def solution_1(s):
     return d
 
 
+def solution_2(s):
+    lookup = {}
+    dp = [1] * len(s)
+    start = 0
+
+    for i in range(len(s)):
+        current = s[i]
+
+        if current in lookup:
+            if start < lookup[current]:
+                start = i
+            else:
+                dp[i] = i - start + 1
+        else:
+            if i != 0:
+                dp[i] = dp[i - 1] + 1
+
+        lookup[current] = i
+
+    return max(dp)
+
+
 if __name__ == "__main__":
-    result = solution("abbacdabc")
+    result = solution_2("abbacdabc")
+    print(result)
     assert result == 4

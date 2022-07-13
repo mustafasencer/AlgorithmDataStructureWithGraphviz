@@ -10,8 +10,7 @@ def solution(strs: List[str]) -> List[List[str]]:
             memo[sort_].append(item)
         else:
             memo[sort_] = [item]
-    result = [v for k, v in memo.items()]
-    return result
+    return [v for k, v in memo.items()]
 
 
 def solution_1(strs: List[str]):
@@ -26,4 +25,4 @@ def solution_1(strs: List[str]):
 
 if __name__ == "__main__":
     result = solution_1(["eat", "tea", "tan", "ate", "nat", "bat"])
-    assert result == []
+    assert result == [["eat", "tea", "ate"], ["tan", "nat"], ["bat"]]

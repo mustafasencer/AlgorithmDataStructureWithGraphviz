@@ -15,4 +15,4 @@ def check_sequence(sequence):
 if __name__ == "__main__":
     sequence = "{{{}}}()[][]"
     result = check_sequence(sequence)
-    print(result)
+    assert result is True

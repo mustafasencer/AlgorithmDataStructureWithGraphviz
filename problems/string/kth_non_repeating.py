@@ -1,7 +1,3 @@
-"""
-Geek for geeks
-"""
-
 from collections import OrderedDict
 
 
@@ -25,4 +21,3 @@ if __name__ == "__main__":
     k = 3
     result = solution(array, k)
     assert result == "a"
-    print(result)

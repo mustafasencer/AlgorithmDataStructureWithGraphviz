@@ -1,11 +1,13 @@
-from data_structures.tree import TreeNode
+from typing import List
+
+from data_structures.linked_list import LinkedListNode
 from graphviz.linked_list import LinkedListDrawer
 
 
-def build_linked_list(nums):
+def build_linked_list(nums: List[int]):
     head = None
     for item in nums[::-1]:
-        new_node = TreeNode(item)
+        new_node = LinkedListNode(item)
         new_node.next = head
         head = new_node
     return head
