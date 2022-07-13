@@ -4,7 +4,7 @@ from data_structures.linked_list import LinkedListNode
 from graphviz.linked_list import LinkedListDrawer
 
 
-def build_linked_list(nums: List[int]):
+def build_linked_list(nums: List[int]) -> LinkedListNode:
     head = None
     for item in nums[::-1]:
         new_node = LinkedListNode(item)
