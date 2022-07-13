@@ -1,6 +1,7 @@
-def get_all_the_permutations(chars):
+def solution(chars):
     raise NotImplementedError
 
 
 if __name__ == "__main":
-    pass
+    result = solution("")
+    assert result == ""

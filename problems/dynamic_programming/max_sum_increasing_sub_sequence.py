@@ -5,6 +5,9 @@ https://www.geeksforgeeks.org/maximum-sum-increasing-subsequence-dp-14/
 
 
 def solution(nums):
+    """
+    1.
+    """
     dp = [0] * len(nums)
 
     for i in range(len(nums)):

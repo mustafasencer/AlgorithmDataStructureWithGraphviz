@@ -1,4 +1,8 @@
-def first_non_repeating_char(chars):
+def solution(chars):
+    """
+    1. Append the dict
+    2. reloop and find the char that appears only once
+    """
     mapper = {}
     for char in chars:
         if char in mapper:
@@ -13,6 +17,5 @@ def first_non_repeating_char(chars):
 
 if __name__ == "__main__":
     chars = "hkgkadahskdh"
-    result = first_non_repeating_char(chars)
+    result = solution(chars)
     assert result == "g"
-    print(result)

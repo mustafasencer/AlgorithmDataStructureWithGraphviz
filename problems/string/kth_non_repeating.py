@@ -5,7 +5,7 @@ Geek for geeks
 from collections import OrderedDict
 
 
-def kth_non_repeating(array: str, k: int):
+def solution(array: str, k: int):
     # returns a dictionary data
     lookup = OrderedDict.fromkeys(array, 0)
     # frequency of each character
@@ -20,10 +20,9 @@ def kth_non_repeating(array: str, k: int):
         return non_repeated_dict[k - 1]
 
 
-# Driver function
 if __name__ == "__main__":
     array = "tutorialspoint"
     k = 3
-    result = kth_non_repeating(array, k)
+    result = solution(array, k)
     assert result == "a"
     print(result)
