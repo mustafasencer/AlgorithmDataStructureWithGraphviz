@@ -6,14 +6,14 @@ from problems.tree.tree_build_level_order import build_tree
 def recursive(root):
     result = []
 
-    def helper(root, result):
+    def helper(root):
         if root:
             result.append(root.val)
-            helper(root.left, result)
-            helper(root.right, result)
-        return result
+            helper(root.left)
+            helper(root.right)
 
-    return helper(root, result)
+    helper(root)
+    return result
 
 
 def stack(root):

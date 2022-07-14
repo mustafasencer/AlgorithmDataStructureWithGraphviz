@@ -1,4 +1,4 @@
-from graphviz.tree import TreeDrawer
+from visualization.tree import TreeDrawer
 
 from data_structures.tree import TreeNode
 from problems.tree.tree_build_level_order import build_tree
@@ -71,5 +71,4 @@ if __name__ == "__main__":
     array = [1, 2, 3, 4, 5, 6, 7]
     root = build_tree(array, None, 0, len(array))
     result = flatten(root)
-    # LinkedListDrawer().visualize(result)
     TreeDrawer().visualize(result)

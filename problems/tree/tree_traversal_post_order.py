@@ -7,15 +7,14 @@ from problems.tree.tree_build_level_order import build_tree
 def recursive(root):
     result = []
 
-    def helper(root, result):
-        if not root:
-            return result
-        helper(root.left, result)
-        helper(root.right, result)
-        result.append(root.val)
-        return result
+    def helper(root):
+        if root:
+            helper(root.left)
+            helper(root.right)
+            result.append(root.val)
 
-    return helper(root, result)
+    helper(root)
+    return result
 
 
 def stack(root):

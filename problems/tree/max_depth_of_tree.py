@@ -1,4 +1,5 @@
 from data_structures.tree import TreeNode
+from problems.tree.tree_build_level_order import build_tree
 
 
 def max_depth(root: TreeNode) -> int:
@@ -8,5 +9,7 @@ def max_depth(root: TreeNode) -> int:
 
 
 if __name__ == "__main__":
-    root = None
-    max_depth(root)
+    array = [1, 2, 3, 4, 5, None, 6]
+    root = build_tree(array, None, 0, len(array))
+    result = max_depth(root)
+    assert result == 3

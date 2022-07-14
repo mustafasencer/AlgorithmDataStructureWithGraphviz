@@ -2,10 +2,16 @@ from problems.tree.tree_build_level_order import build_tree
 
 
 def recursion(root):
-    if root:
-        recursion(root.left)
-        print(root.val)
-        recursion(root.right)
+    result = []
+
+    def helper(root):
+        if root:
+            helper(root.left)
+            result.append(root.val)
+            helper(root.right)
+
+    helper(root)
+    return result
 
 
 def stack(root):
@@ -43,6 +49,6 @@ if __name__ == "__main__":
     array = [1, 2, 3, 4, 5, 6, 7]
     root = build_tree(array, None, 0, len(array))
     result = stack(root)
-    result_ = stack_(root)
+    result_ = recursion(root)
     assert result == result_
     print(result)

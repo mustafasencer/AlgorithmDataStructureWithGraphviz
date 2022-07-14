@@ -1,32 +1,22 @@
-"""
-    Created by Mustafa Sencer Özcan on 24.05.2020.
-"""
-from graphviz.tree import TreeDrawer
+from visualization.tree import TreeDrawer
 
 from data_structures.tree import TreeNode
 from problems.tree.bst_build_from_array import build_bst
 
 
-class Solution:
-    def kthSmallest(self, root: TreeNode, k: int) -> int:
-        stack = []
-        while root or stack:
-            while root and root.val is not None:
-                stack.append(root)
-                root = root.left
+def solution(root: TreeNode, k: int) -> int:
+    stack = []
+    while root or stack:
+        while root and root.val is not None:
+            stack.append(root)
+            root = root.left
 
-            root = stack.pop()
-            k -= 1
-            if k == 0:
-                return root.val
-            root = root.right
-        return 0
-
-    def recursive(self, root: TreeNode, k: int):
-        pass
-
-    def recur_helper(self, root):
-        pass
+        root = stack.pop()
+        k -= 1
+        if k == 0:
+            return root.val
+        root = root.right
+    return 0
 
 
 if __name__ == "__main__":
@@ -129,5 +119,5 @@ if __name__ == "__main__":
     ]
     root = build_bst(array)
     TreeDrawer().visualize(root)
-    result = Solution().kthSmallest(root, 25)
+    result = solution(root, 25)
     print(result)
