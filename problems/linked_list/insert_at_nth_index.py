@@ -1,6 +1,4 @@
-import time
-
-from data_structures.linked_list import LinkedListNode
+from data_structures.linked_list import LinkedListNode, print_linked_list
 from problems.linked_list.build_linked_list import build_linked_list
 
 
@@ -48,16 +46,8 @@ def insert_nth_(head_node, index, data):
             break
         head_node = head_node.next
         index -= 1
+
     return head
-
-
-def insert_nth_codewars(head, index, data):
-    if index == 0:
-        return LinkedListNode(data, head)
-    if head and index > 0:
-        head.next = insert_nth(head.next, index - 1, data)
-        return head
-    raise ValueError
 
 
 def insert_nth__(head, index, data):
@@ -68,22 +58,11 @@ def insert_nth__(head, index, data):
     )
 
 
-def print_list(head):
-    node = head
-    while node is not None:
-        print(node.data, end=" -> ")
-        node = node.next
-    print("NULL")
-
-
 if __name__ == "__main__":
     INDEX = 3
     VALUE = 100
     RANGE = 5
-    head = None
-    for i in range(RANGE, 0, -1):
-        build_linked_list(i)
-    start = time.time()
+    nums = [i for i in range(RANGE)]
+    head = build_linked_list(nums)
     result = insert_nth_(head, INDEX, VALUE)
-    print_list(result)
-    print(time.time() - start)
+    print_linked_list(result)

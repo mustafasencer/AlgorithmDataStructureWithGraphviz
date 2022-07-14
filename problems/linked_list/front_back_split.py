@@ -1,7 +1,7 @@
-from data_structures.linked_list import LinkedListNode
+from data_structures.linked_list import LinkedListNode, print_linked_list
 
 
-def front_back_split(source, front, back):
+def front_back_split(source):
     if not source:
         front = source
         back = None
@@ -23,14 +23,6 @@ def front_back_split(source, front, back):
     return front, back
 
 
-def print_list(head):
-    node = head
-    while node is not None:
-        print(node.val, end=" -> ")
-        node = node.next
-    print("NULL")
-
-
 def push(value):
     global head
     new_node = LinkedListNode(value)
@@ -40,10 +32,8 @@ def push(value):
 
 if __name__ == "__main__":
     head = None
-    front = LinkedListNode()
-    back = LinkedListNode()
-    for i in range(2, 0, -1):
+    for i in range(10, 0, -1):  # construct the linked list by looping in reverse order
         push(i)
-    front, back = front_back_split(head, front, back)
-    print_list(front)
-    print_list(back)
+    front, back = front_back_split(head)
+    print_linked_list(front)
+    print_linked_list(back)

@@ -1,8 +1,9 @@
 """
     Created by Mustafa Sencer Özcan on 20.05.2020.
 """
-from data_structures.linked_list import LinkedListNode
 from graphviz.linked_list import LinkedListDrawer
+
+from data_structures.linked_list import LinkedListNode
 from problems.linked_list.build_linked_list import build_linked_list
 
 

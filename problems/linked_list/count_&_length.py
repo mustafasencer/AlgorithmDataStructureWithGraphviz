@@ -22,14 +22,6 @@ def count(node, data):
     return count
 
 
-def print_list(head):
-    node = head
-    while node is not None:
-        print(node.data, end=" -> ")
-        node = node.next
-    print("NULL")
-
-
 def push(value):
     global head
     new_node = LinkedListNode(value)

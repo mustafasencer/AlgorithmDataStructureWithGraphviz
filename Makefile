@@ -13,11 +13,11 @@ deps:
 
 ## format: Format codebase
 format:
-	autoflake --remove-all-unused-imports --recursive --remove-unused-variables --in-place problems data_structures graphviz --exclude=__init__.py
-	black problems data_structures graphviz
-	isort problems data_structures graphviz --profile black
+	autoflake --remove-all-unused-imports --recursive --remove-unused-variables --in-place problems data_structures visualization --exclude=__init__.py
+	black problems data_structures visualization
+	isort problems data_structures visualization --profile black
 
 ## lint: Lint codebase
 lint:
-	black problems data_structures graphviz --check
-	isort problems data_structures graphviz --check-only --profile black
+	black problems data_structures visualization --check
+	isort problems data_structures visualization --check-only --profile black

@@ -1,8 +1,9 @@
 """
     Created by Mustafa Sencer Özcan on 24.05.2020.
 """
-from data_structures.tree import TreeNode
 from graphviz.tree import TreeDrawer
+
+from data_structures.tree import TreeNode
 from problems.tree.bst_build_from_array import build_bst
 
 

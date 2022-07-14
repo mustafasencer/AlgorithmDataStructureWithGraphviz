@@ -1,5 +1,6 @@
-from data_structures.tree import TreeNode
 from graphviz.tree import TreeDrawer
+
+from data_structures.tree import TreeNode
 
 
 def build_bst(nums):

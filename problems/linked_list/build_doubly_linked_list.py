@@ -1,7 +1,8 @@
 from typing import List
 
+from graphviz.linked_list import LinkedListDrawer
+
 from data_structures.linked_list import LinkedListNode
-from visualization.linked_list import LinkedListDrawer
 
 
 def build_linked_list(nums: List[int]) -> LinkedListNode:

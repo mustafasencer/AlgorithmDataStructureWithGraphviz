@@ -1,5 +1,6 @@
-from data_structures.tree import TreeNode
 from graphviz.tree import TreeDrawer
+
+from data_structures.tree import TreeNode
 from problems.tree.bst_build_from_array import build_bst
 
 

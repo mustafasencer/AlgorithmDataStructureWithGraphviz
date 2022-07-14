@@ -1,4 +1,4 @@
-from graphviz.base import DiGraphImpl
+from visualization.base import DiGraphImpl
 
 
 class LinkedListDrawer:
