@@ -1,4 +1,5 @@
 from data_structures.linked_list import LinkedListNode
+from problems.linked_list.build_linked_list import build_linked_list
 
 
 def get_intersection_node(headA: LinkedListNode, headB: LinkedListNode):
@@ -29,24 +30,17 @@ def get_intersection(d, Node1, Node2):
 
 def get_count(node: LinkedListNode):
     count = 0
-    while node.next != None:
+    while node.next is not None:
         count += 1
         node = node.next
     return count
 
 
 if __name__ == "__main__":
-    node_a = LinkedListNode(4)
-    node_a.next = LinkedListNode(1)
-    node_a.next.next = LinkedListNode(8)
-    node_a.next.next.next = LinkedListNode(4)
-    node_a.next.next.next.next = LinkedListNode(5)
+    nums = [4, 1, 8, 4, 5]
+    node_a = build_linked_list(nums)
 
-    node_b = LinkedListNode(5)
-    node_b.next = LinkedListNode(0)
-    node_b.next.next = LinkedListNode(1)
-    node_b.next.next.next = LinkedListNode(8)
-    node_b.next.next.next.next = LinkedListNode(4)
-    node_b.next.next.next.next.next = LinkedListNode(5)
+    nums = [5, 0, 1, 8, 4, 5]
+    node_b = build_linked_list(nums)
 
     get_intersection_node(node_a, node_b)

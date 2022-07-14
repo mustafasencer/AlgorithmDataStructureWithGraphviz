@@ -1,6 +1,3 @@
-"""
-    Created by Mustafa Sencer Özcan on 20.05.2020.
-"""
 from data_structures.linked_list import LinkedListNode
 
 

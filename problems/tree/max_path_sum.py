@@ -1,7 +1,3 @@
-"""
-    Created by Mustafa Sencer Özcan on 24.05.2020.
-    :arg Hard
-"""
 from data_structures.tree import TreeNode
 from problems.tree.tree_build_level_order import build_tree
 
@@ -22,16 +18,16 @@ class Solution:
         return max(root.val + left + right, 0)
 
     def maxPathSum_(self, root):
-        def maxend(node):
+        def max_end(node):
             if not node:
                 return 0
-            left = maxend(node.left)
-            right = maxend(node.right)
+            left = max_end(node.left)
+            right = max_end(node.right)
             self.max = max(self.max, left + node.val + right)
             return max(node.val + max(left, right), 0)
 
         self.max = 0
-        maxend(root)
+        max_end(root)
         return self.max
 
 
