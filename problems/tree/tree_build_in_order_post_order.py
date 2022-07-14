@@ -1,4 +1,4 @@
-from graphviz.tree import TreeDrawer
+from visualization.tree import TreeDrawer
 
 from data_structures.tree import TreeNode
 

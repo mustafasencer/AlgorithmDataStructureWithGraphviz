@@ -1,5 +1,6 @@
 """
-An array A consisting of N different integers is given. The array contains integers in the range [1..(N + 1)], which means that exactly one element is missing.
+An array A consisting of N different integers is given. The array contains integers in the range [1..(N + 1)],
+ which means that exactly one element is missing.
 
 Your goal is to find that missing element.
 
@@ -27,7 +28,8 @@ each element of array A is an integer within the range [1..(N + 1)].
 
 def solution(nums):
     """
-    1. check if the sequence addition has a missing element
+    https://leetcode.com/problems/missing-number/
+    1. check if the sequence overall sum has a missing element
     """
     n = len(nums)
     sum_ = n * (n + 1) // 2

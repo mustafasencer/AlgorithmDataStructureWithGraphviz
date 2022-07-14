@@ -5,19 +5,7 @@ from problems.tree.tree_build_level_order import build_tree
 class Solution:
     result = float("-inf")
 
-    def maxPathSum(self, root: TreeNode) -> int:
-        self.dfs(root)
-        return self.result
-
-    def dfs(self, root):
-        if root is None or root.val is None:
-            return 0
-        left = self.dfs(root.left)
-        right = self.dfs(root.right)
-        self.result = max(self.result, root.val + left + right, root.val)
-        return max(root.val + left + right, 0)
-
-    def maxPathSum_(self, root):
+    def max_path_sum(self, root):
         def max_end(node):
             if not node:
                 return 0
@@ -30,11 +18,23 @@ class Solution:
         max_end(root)
         return self.max
 
+    def max_path_sum_1(self, root: TreeNode) -> int:
+        self.dfs(root)
+        return self.result
+
+    def dfs(self, root):
+        if root is None or root.val is None:
+            return 0
+        left = self.dfs(root.left)
+        right = self.dfs(root.right)
+        self.result = max(self.result, root.val + left + right)
+        return max(root.val + max(left, right), 0)
+
 
 if __name__ == "__main__":
     array = [1, 2, 3, 4, 5, 6, 7]
     root = build_tree(array, None, 0, len(array))
-    result = Solution().maxPathSum(root)
-    result_ = Solution().maxPathSum_(root)
+    result = Solution().max_path_sum(root)
+    result_ = Solution().max_path_sum_1(root)
     print(result)
     print(result_)

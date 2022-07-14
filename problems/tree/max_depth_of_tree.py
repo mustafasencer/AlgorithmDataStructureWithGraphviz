@@ -8,4 +8,5 @@ def max_depth(root: TreeNode) -> int:
 
 
 if __name__ == "__main__":
-    pass
+    root = None
+    max_depth(root)

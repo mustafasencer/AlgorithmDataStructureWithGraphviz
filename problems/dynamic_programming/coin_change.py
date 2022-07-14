@@ -1,5 +1,5 @@
 def solution(coins, amount):
-    MAXs = [1e9] * len(amount)
+    MAXs = [1e9] * amount
     dp = [0] + MAXs
     for i in range(1, amount + 1):
         for coin in coins:
@@ -34,8 +34,31 @@ def solution_1(coins, amount):
     return -1
 
 
+def solution_2(coins, amount):
+    result = []
+    counter = 0
+
+    def dfs(coins, remain, ans, result):
+        nonlocal counter
+        counter += 1
+        print(counter)
+        if remain < 0:
+            return
+        if remain == 0:
+            return result.append(ans)
+        if not coins:
+            return
+
+        for i in range(len(coins)):
+            dfs(coins[i:], remain - coins[i], ans + [coins[i]], result)
+
+    dfs(coins, amount, [], result)
+    return min([len(i) for i in result])
+
+
 if __name__ == '__main__':
     coins = [1, 2, 5]
-    amount = 11
-    result = solution(coins, amount)
-    assert result == 3
+    amount = 6
+    result = solution_2(coins, amount)
+    print(result)
+    assert result == 2

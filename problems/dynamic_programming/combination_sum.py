@@ -56,5 +56,4 @@ def dfs(candidates, remain, path, result_):
 
 if __name__ == "__main__":
     result = solution_1([2, 3, 6, 7], 7)
-    print(result)
-    assert result == []
+    assert result == [[2, 2, 3], [7]]

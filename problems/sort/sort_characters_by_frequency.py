@@ -12,4 +12,4 @@ def solve(s: str) -> str:
 if __name__ == "__main__":
     s = "Aaaaaaabb"
     result = solve(s)
-    print(result)
+    assert result == "aaaaaabbA"
