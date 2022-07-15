@@ -1,9 +1,4 @@
-"""
-    Created by Mustafa Sencer Özcan on 24.05.2020.
-
-    Check again in Leetcode
-"""
-from graphviz.tree import TreeDrawer
+from visualization.tree import TreeDrawer
 
 from data_structures.tree import TreeNode
 from problems.tree.tree_build_level_order import build_tree
@@ -24,9 +19,6 @@ class Solution:
             result.append(node.val)
             node = node.right
         return result
-
-    def bfs(self, node):
-        pass
 
 
 if __name__ == "__main__":

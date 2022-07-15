@@ -3,19 +3,6 @@ from visualization.tree import TreeDrawer
 from problems.tree.tree_build_level_order import build_tree
 
 
-def queue_bottom_with_level(root):
-    queue, res = [(root, 0)], []
-    while queue:
-        node, level = queue.pop(0)
-        if node:
-            if len(res) < level + 1:
-                res.insert(0, [])
-            res[-(level + 1)].append(node.val)
-            queue.append((node.left, level + 1))
-            queue.append((node.right, level + 1))
-    return res
-
-
 def queue_multi_children(root):
     if not root:
         return
@@ -48,16 +35,6 @@ def queue(root):
     return result
 
 
-def queue_with_level(root):
-    result, level = [], [root]
-
-    while root and level:
-        result.extend([node.data for node in level])
-        pairs = [(node.left, node.right) for node in level]
-        level = [leaf for pair in pairs for leaf in pair if leaf]
-    return result
-
-
 def print_queue(root):
     if root is None:
         return
@@ -75,5 +52,5 @@ def print_queue(root):
 if __name__ == "__main__":
     array = [1, 2, 3, 4, 5]
     root = build_tree(array, None, 0, len(array))
-    result = queue_bottom_with_level(root)
+    result = queue(root)
     TreeDrawer().visualize(root)

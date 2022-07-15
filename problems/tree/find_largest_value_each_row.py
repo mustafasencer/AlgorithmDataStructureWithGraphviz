@@ -16,4 +16,3 @@ if __name__ == "__main__":
     array = [1, 2, 3, 4, 5, None, 6]
     root = build_tree(array, None, 0, len(array))
     result = largest_value(root)
-    print(result)

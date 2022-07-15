@@ -20,7 +20,7 @@ def bubble_sort(arr):
 
         # IF no two elements were swapped
         # by inner loop, then break
-        if swapped == False:
+        if swapped is False:
             break
 
 

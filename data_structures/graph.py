@@ -1,4 +1,3 @@
-# Adjacency list of a node
 from collections import defaultdict
 
 

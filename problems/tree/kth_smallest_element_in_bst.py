@@ -19,6 +19,33 @@ def solution(root: TreeNode, k: int) -> int:
     return 0
 
 
+def solution_1(root, k):
+    """
+    1. traverse in an inorder fashion the tree!
+    2. the kth item popped from the stack will be the response
+    """
+    if not root:
+        return
+    kth_value = 0
+    stack = []
+
+    while root or stack:
+        if root:
+            stack.append(root)
+            root = root.left
+
+        else:
+            kth_value += 1
+            root = stack.pop()
+
+            if kth_value == k:
+                return root.val
+
+            root = root.right
+
+    return -1
+
+
 if __name__ == "__main__":
     array = [
         41,
@@ -119,5 +146,6 @@ if __name__ == "__main__":
     ]
     root = build_bst(array)
     TreeDrawer().visualize(root)
-    result = solution(root, 25)
+    result = solution_1(root, 25)
     print(result)
+    assert result == 24

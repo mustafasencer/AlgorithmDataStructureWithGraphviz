@@ -1,7 +1,7 @@
 from data_structures.tree import TreeNode
 
 
-def build_tree(array, root, i, n):
+def build_tree(array, root, i, n) -> TreeNode:
     if i < n:
         new_node = TreeNode(array[i])
         root = new_node

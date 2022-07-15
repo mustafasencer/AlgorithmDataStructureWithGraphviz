@@ -1,4 +1,3 @@
-""" Not implemented yet. """
 from collections import defaultdict
 
 
@@ -31,6 +30,26 @@ class Graph:
                     visited[i] = True
         return result
 
+    def bfs_test(self, s):
+        visited = [False] * self.V
+
+        queue = []
+        result = []
+
+        queue.append(s)
+
+        while queue:
+            s = queue.pop(0)
+
+            result.append(s)
+
+            for i in self.graph[s]:
+                if not visited[i]:
+                    queue.append(i)
+                    visited[i] = True
+
+        return result
+
     def test_bfs_queue(self, start):
         visited = [False] * self.V
         queue = []
@@ -59,4 +78,3 @@ if __name__ == "__main__":
     g.add_edge(2, 3)
     g.add_edge(3, 3)
     assert g.test_bfs_queue(2) == g.bfs_queue(2)
-    print(g.test_bfs_queue(2))
