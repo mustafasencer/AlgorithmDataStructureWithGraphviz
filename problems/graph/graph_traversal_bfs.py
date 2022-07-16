@@ -30,42 +30,24 @@ class Graph:
                     visited[i] = True
         return result
 
-    def bfs_test(self, s):
+    def bfs_queue_1(self, s):
         visited = [False] * self.V
 
-        queue = []
         result = []
+        queue = []
 
         queue.append(s)
+        visited[s] = True
 
         while queue:
-            s = queue.pop(0)
+            vertex = queue.pop(0)
+            result.append(vertex)
 
-            result.append(s)
+            for v in self.graph[vertex]:
+                if v not in visited[v]:
+                    queue.append(v)
+                    visited[v] = True
 
-            for i in self.graph[s]:
-                if not visited[i]:
-                    queue.append(i)
-                    visited[i] = True
-
-        return result
-
-    def test_bfs_queue(self, start):
-        visited = [False] * self.V
-        queue = []
-        result = []
-
-        queue.append(start)
-
-        while queue:
-            s = queue.pop(0)
-
-            if not visited[s]:
-                result.append(s)
-                visited[s] = True
-            for i in self.graph[s]:
-                if not visited[i]:
-                    queue.append(i)
         return result
 
 

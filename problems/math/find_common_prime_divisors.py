@@ -32,7 +32,6 @@ each element of array A, B is an integer within the range [1..2,147,483,647].
 
 
 def solution(A, B):
-    # write your code in Python 3.6
     min_prime = 2
     result = 0
 

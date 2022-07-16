@@ -1,8 +1,3 @@
-"""
-
-"""
-
-
 def solution(digits):
     divisor = 10 ** (len(str(digits)) - 1)
     remaining = 10

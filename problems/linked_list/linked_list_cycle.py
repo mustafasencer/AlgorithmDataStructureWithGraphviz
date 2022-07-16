@@ -1,6 +1,3 @@
-"""
-    Created by Mustafa Sencer Özcan on 26.05.2020.
-"""
 from data_structures.linked_list import LinkedListNode
 from problems.linked_list.build_linked_list import build_linked_list
 
@@ -24,4 +21,3 @@ class Solution:
 if __name__ == "__main__":
     head = build_linked_list([3, 2, 0, -4])
     result = Solution().hasCycle(head)
-    print(result)

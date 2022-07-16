@@ -1,8 +1,3 @@
-"""
-    Created by Mustafa Sencer Özcan on 27.05.2020.
-"""
-
-
 class Solution:
     def reverseBits(self, number: int) -> int:
         output = 0
