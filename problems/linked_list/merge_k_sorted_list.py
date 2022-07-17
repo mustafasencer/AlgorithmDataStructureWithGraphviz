@@ -1,13 +1,13 @@
 from heapq import heappop, heappush
 from typing import List
 
-from graphviz.linked_list import LinkedListDrawer
+from visualization.linked_list import LinkedListDrawer
 
 from data_structures.linked_list import DoublyLinkedListNode
 from problems.linked_list.build_linked_list import build_linked_list
 
 
-def mergeKLists(lists: List[DoublyLinkedListNode]) -> DoublyLinkedListNode:
+def solution(lists: List[DoublyLinkedListNode]) -> DoublyLinkedListNode:
     queue = []
     fake = cur = DoublyLinkedListNode(-1)
     i = 0
@@ -27,5 +27,5 @@ if __name__ == "__main__":
     l1 = build_linked_list([1, 4, 5])
     l2 = build_linked_list([1, 3, 4])
     l3 = build_linked_list([2, 6])
-    result = mergeKLists([l1, l2, l3])
+    result = solution([l1, l2, l3])
     LinkedListDrawer().visualize(result)

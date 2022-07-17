@@ -2,39 +2,41 @@ from data_structures.tree import TreeNode
 from problems.tree.tree_build_level_order import build_tree
 
 
-class Solution:
-    result = float("-inf")
+def solution(root):
+    def max_end(root):
+        nonlocal max_value
+        if not root:
+            return 0
+        left = max_end(root.left)
+        right = max_end(root.right)
+        max_value = max(max_value, left + root.val + right)
+        return max(root.val + max(left, right), 0)
 
-    def max_path_sum(self, root):
-        def max_end(node):
-            if not node:
-                return 0
-            left = max_end(node.left)
-            right = max_end(node.right)
-            self.max = max(self.max, left + node.val + right)
-            return max(node.val + max(left, right), 0)
+    max_value = 0
+    max_end(root)
+    return max_value
 
-        self.max = 0
-        max_end(root)
-        return self.max
 
-    def max_path_sum_1(self, root: TreeNode) -> int:
-        self.dfs(root)
-        return self.result
+def solution_1(root: TreeNode) -> int:
+    result = 0
 
-    def dfs(self, root):
+    def dfs(root):
+        nonlocal result
         if root is None or root.val is None:
             return 0
-        left = self.dfs(root.left)
-        right = self.dfs(root.right)
-        self.result = max(self.result, root.val + left + right)
+
+        left = dfs(root.left)
+        right = dfs(root.right)
+        result = max(result, root.val + left + right)
         return max(root.val + max(left, right), 0)
+
+    dfs(root)
+    return result
 
 
 if __name__ == "__main__":
     array = [1, 2, 3, 4, 5, 6, 7]
     root = build_tree(array, None, 0, len(array))
-    result = Solution().max_path_sum(root)
-    result_ = Solution().max_path_sum_1(root)
-    print(result)
-    print(result_)
+    result = solution(root)
+    result_ = solution_1(root)
+    assert result_ == result

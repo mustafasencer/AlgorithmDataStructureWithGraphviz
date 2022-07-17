@@ -1,5 +1,5 @@
 """
-Longest increasing sub sequence
+Max sum increasing sub sequence
 https://www.geeksforgeeks.org/maximum-sum-increasing-subsequence-dp-14/
 """
 

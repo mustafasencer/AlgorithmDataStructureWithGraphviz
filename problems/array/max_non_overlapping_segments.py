@@ -53,4 +53,3 @@ if __name__ == "__main__":
     B = [5, 6, 8, 9, 10]
     result = solution(A, B)
     assert result == 3
-    print(result)

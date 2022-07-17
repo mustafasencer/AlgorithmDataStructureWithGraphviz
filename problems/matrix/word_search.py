@@ -1,6 +1,3 @@
-"""
-    Created by Mustafa Sencer Özcan on 23.05.2020.
-"""
 from typing import List
 
 """Backtracking / DFS """
