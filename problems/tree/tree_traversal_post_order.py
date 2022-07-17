@@ -1,7 +1,6 @@
-from visualization.tree import TreeDrawer
-
 from data_structures.tree import TreeNode
 from problems.tree.tree_build_level_order import build_tree
+from visualization.tree import TreeDrawer
 
 
 def recursive(root, p, q):  # post order recursive traversal

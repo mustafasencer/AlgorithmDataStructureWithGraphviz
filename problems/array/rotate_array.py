@@ -46,5 +46,5 @@ def solution_3(nums, k):
 if __name__ == "__main__":
     nums = [1, 2, 3, 4, 5, 6, 7]
     k = 3
-    result = test(nums, k)
+    result = solution_1(nums, k)
     assert nums == result

@@ -1,4 +1,4 @@
-from graphviz.tree import TreeDrawer
+from visualization.tree import TreeDrawer
 
 
 def heapify(arr, n, i):

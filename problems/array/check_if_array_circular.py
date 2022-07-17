@@ -12,15 +12,16 @@ def solution(nums: List[int]) -> bool:
 
     for i in range(len(nums)):
 
+        local = set()
+
         while True:
-            local = set()
+            if i in local:
+                return True
 
             if (
                 i in is_seen
             ):  # means that we have already been this path and it is not circular
                 break
-            if i in local:
-                return True
 
             is_seen.add(i)
             local.add(i)
@@ -41,4 +42,3 @@ if __name__ == "__main__":
     nums = [2, 3, 1, 4, 0]
     result = solution(nums)
     assert result is True
-    print(result)

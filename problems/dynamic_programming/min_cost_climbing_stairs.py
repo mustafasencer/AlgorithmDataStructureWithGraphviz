@@ -15,17 +15,7 @@ def solution(cost: List[int]) -> int:
     return min(min1, min2)
 
 
-def solution_1(cost):
-    cost_0, cost_1 = cost[0], cost[1]
-
-    for c in cost[2:]:
-        cost_0, cost_1 = cost_1, min(cost_0, cost_1) + c
-
-    return min(cost_0, cost_1)
-
-
 if __name__ == "__main__":
     nums = [10, 15, 20, 3, 7]
-    result = solution_1(nums)
+    result = solution(nums)
     assert result == 18
-    print(result)

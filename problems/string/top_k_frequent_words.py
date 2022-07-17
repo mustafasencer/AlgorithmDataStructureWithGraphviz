@@ -34,8 +34,20 @@ def solution_2(nums, k):
     return res[::-1]
 
 
-if __name__ == '__main__':
-    nums = ["the", "day", "is", "sunny", "the", "the", "the", "sunny", "is", "is", "kali"]
+if __name__ == "__main__":
+    nums = [
+        "the",
+        "day",
+        "is",
+        "sunny",
+        "the",
+        "the",
+        "the",
+        "sunny",
+        "is",
+        "is",
+        "kali",
+    ]
     k = 4
     result = solution_2(nums, k)
     print(result)

@@ -1,6 +1,5 @@
-from visualization.tree import TreeDrawer
-
 from problems.tree.tree_build_level_order import build_tree
+from visualization.tree import TreeDrawer
 
 
 def solution_1(root):

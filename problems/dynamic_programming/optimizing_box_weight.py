@@ -24,7 +24,7 @@ def solution(nums):
     return sorted(result, key=lambda x: (len(x), sum(x)))[0]
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     nums = [2, 3, 4, 2, 5]
     result = solution(nums)
     assert result == [5, 4]

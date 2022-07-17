@@ -1,6 +1,5 @@
-from visualization.tree import TreeDrawer
-
 from data_structures.tree import TreeNode
+from visualization.tree import TreeDrawer
 
 
 def build_bst(nums):
@@ -22,7 +21,7 @@ def build_bst(nums):
 
     # right subtree of root has all
     # values >arr[mid]
-    root.right = build_bst(nums[mid + 1:])
+    root.right = build_bst(nums[mid + 1 :])
     return root
 
 

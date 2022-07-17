@@ -56,9 +56,8 @@ def solution_2(coins, amount):
     return min([len(i) for i in result])
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     coins = [1, 2, 5]
     amount = 6
     result = solution_2(coins, amount)
-    print(result)
     assert result == 2

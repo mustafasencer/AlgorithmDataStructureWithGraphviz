@@ -52,4 +52,3 @@ def dp_approach(nums: List[int]) -> int:
 if __name__ == "__main__":
     result = longest_consecutive([1, 2, 0, 1, 4, 5, 6, 7])
     assert result == 4
-    print(result)

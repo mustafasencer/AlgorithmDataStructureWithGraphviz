@@ -1,6 +1,5 @@
-from visualization.tree import TreeDrawer
-
 from data_structures.tree import TreeNode
+from visualization.tree import TreeDrawer
 
 
 def recursive(post_order, in_order):

@@ -7,7 +7,6 @@ https://leetcode.com/problems/generate-parentheses/discuss/10369/Clean-Python-DP
 
 def solve(n: int):
     left, right = n, n
-
     result = []
     dfs(left, right, "", result)
     return result
@@ -26,7 +25,7 @@ def dfs(left, right, path, result):
 
 
 if __name__ == "__main__":
-    n = 3
+    n = 5
     result = solve(n)
     print(result)
     assert result == ["((()))", "(()())", "(())()", "()(())", "()()()"]

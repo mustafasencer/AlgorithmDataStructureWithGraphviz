@@ -23,7 +23,7 @@ def solution(nums, pattern):
     return True
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     nums = "dog cat cat dog"
     pattern = "abba"
     solution(nums, pattern)

@@ -1,6 +1,5 @@
-from visualization.tree import TreeDrawer
-
 from problems.tree.bst_build_from_array import build_bst
+from visualization.tree import TreeDrawer
 
 
 def search_key(root, key):
