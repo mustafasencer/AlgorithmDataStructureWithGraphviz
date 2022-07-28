@@ -24,18 +24,20 @@ class LRUCache:
         self.tail.prev = self.head
 
     # remove  node <-> target <-> node
-    def remove_dlink(self, node):
+    def remove_link(self, node):
         node.prev.next = node.next
         node.next.prev = node.prev
 
     # head <->  nxt
-    def add_dlink(self, node):
+    def add_link(self, node):
+        # o -> o -> o -> o -> None
         nxt = self.head.next
 
         self.head.next = node
-        node.prev = self.head
 
+        node.prev = self.head
         node.next = nxt
+
         nxt.prev = node
 
     # get and update

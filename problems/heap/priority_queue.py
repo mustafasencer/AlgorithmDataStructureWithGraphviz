@@ -1,4 +1,4 @@
-class PriorityQueue(object):
+class PriorityQueue:
     def __init__(self):
         self.queue = []
 
@@ -6,19 +6,19 @@ class PriorityQueue(object):
         return " ".join([str(i) for i in self.queue])
 
     def is_empty(self):
-        return len(self.queue) == []
+        return self.queue == []
 
     def insert(self, data):
         self.queue.append(data)
 
     def delete(self):
         try:
-            max = 0
+            max_value = 0
             for i in range(len(self.queue)):
-                if self.queue[i] > self.queue[max]:
-                    max = i
-            item = self.queue[max]
-            del self.queue[max]
+                if self.queue[i] > self.queue[max_value]:
+                    max_value = i
+            item = self.queue[max_value]
+            del self.queue[max_value]
             return item
         except IndexError:
             print()

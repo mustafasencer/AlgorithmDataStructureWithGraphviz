@@ -8,12 +8,13 @@ def level_order_bottom_recursion(root):
 
 
 def dfs(root, level, res):
-    if root:
-        if len(res) < level + 1:
-            res.insert(0, [])
-        res[-(level + 1)].append(root.val)
-        dfs(root.left, level + 1, res)
-        dfs(root.right, level + 1, res)
+    if not root:
+        return
+    if len(res) < level + 1:
+        res.insert(0, [])
+    res[-(level + 1)].append(root.val)
+    dfs(root.left, level + 1, res)
+    dfs(root.right, level + 1, res)
 
 
 def level_order_bottom_stack(root):
@@ -21,12 +22,14 @@ def level_order_bottom_stack(root):
     res = []
     while stack:
         node, level = stack.pop()
-        if node:
-            if len(res) < level + 1:
-                res.insert(0, [])
-            res[-(level + 1)].append(node.val)
-            stack.append((node.right, level + 1))
-            stack.append((node.left, level + 1))
+        if not node:
+            continue
+
+        if len(res) < level + 1:
+            res.insert(0, [])
+        res[-(level + 1)].append(node.val)
+        stack.append((node.right, level + 1))
+        stack.append((node.left, level + 1))
     return res
 
 
@@ -34,12 +37,14 @@ def queue_bottom_with_level_bfs_queue(root):
     queue, res = [(root, 0)], []
     while queue:
         node, level = queue.pop(0)
-        if node:
-            if len(res) < level + 1:
-                res.insert(0, [])
-            res[-(level + 1)].append(node.val)
-            queue.append((node.left, level + 1))
-            queue.append((node.right, level + 1))
+        if not node:
+            continue
+
+        if len(res) < level + 1:
+            res.insert(0, [])
+        res[-(level + 1)].append(node.val)
+        queue.append((node.left, level + 1))
+        queue.append((node.right, level + 1))
     return res
 
 

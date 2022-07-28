@@ -64,4 +64,3 @@ def solution_3(prices):
 if __name__ == "__main__":
     result = solution_3([7, 1, 5, 3, 6, 4])
     assert result == 5
-    print(result)

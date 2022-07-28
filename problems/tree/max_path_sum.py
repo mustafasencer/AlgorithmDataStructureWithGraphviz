@@ -34,6 +34,24 @@ def solution_1(root: TreeNode) -> int:
     return result
 
 
+def sol(root):
+    def dfs(root):
+        nonlocal result
+        if not root and root.val:
+            return 0
+
+        left = dfs(root.left)
+        right = dfs(root.right)
+
+        result = max(result, root.val + left + right)
+
+        return max(root.val + max(left, right), 0)
+
+    result = 0
+    dfs(root)
+    return result
+
+
 if __name__ == "__main__":
     array = [1, 2, 3, 4, 5, 6, 7]
     root = build_tree(array, None, 0, len(array))

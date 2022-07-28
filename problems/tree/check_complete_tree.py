@@ -2,7 +2,7 @@ from problems.tree.tree_build_level_order import build_tree
 from visualization.tree import TreeDrawer
 
 
-def solution_1(root):
+def solution(root):
     if not root:
         return False
 
@@ -19,6 +19,6 @@ def solution_1(root):
 if __name__ == "__main__":
     array = [1, None, 1, 3, None, 5]
     root = build_tree(array, None, 0, len(array))
-    result = solution_1(root)
+    result = solution(root)
     TreeDrawer().visualize(root)
     print(result)

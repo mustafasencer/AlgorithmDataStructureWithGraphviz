@@ -1,6 +1,6 @@
 from typing import List
 
-from graphviz.linked_list import LinkedListDrawer
+from visualization.linked_list import LinkedListDrawer
 
 from data_structures.linked_list import LinkedListNode
 

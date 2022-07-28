@@ -1,7 +1,4 @@
-"""
-    Created by Mustafa Sencer Özcan on 20.05.2020.
-"""
-from graphviz.linked_list import LinkedListDrawer
+from visualization.linked_list import LinkedListDrawer
 
 from data_structures.linked_list import LinkedListNode
 from problems.linked_list.build_linked_list import build_linked_list
@@ -40,5 +37,3 @@ if __name__ == "__main__":
     l2 = build_linked_list([1, 3, 4])
     result = Solution()._test(l1, l2)
     LinkedListDrawer().visualize(result)
-
-a = 3358.76
