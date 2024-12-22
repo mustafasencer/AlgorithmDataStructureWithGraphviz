@@ -1,6 +1,7 @@
 """
 Calculate max area based on the item at index i and the difference between i and j
 """
+
 from typing import List
 
 

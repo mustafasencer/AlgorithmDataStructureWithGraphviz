@@ -4,6 +4,7 @@ if you only sort this subarray in ascending order, then the whole array will be 
 
 Return the shortest such subarray and output its length.
 """
+
 from typing import List
 
 

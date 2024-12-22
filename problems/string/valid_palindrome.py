@@ -21,7 +21,6 @@ def test(string: str):
     right = len(string) - 1
 
     while left < right:
-
         while left < right and string[left].isalnum():
             left += 1
         while left < right and string[left].isalnum():

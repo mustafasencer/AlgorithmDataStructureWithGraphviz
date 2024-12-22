@@ -1,7 +1,8 @@
 """
-    Not completed yet!
-    Check again.
+Not completed yet!
+Check again.
 """
+
 import collections
 
 from data_structures.graph import GraphNode

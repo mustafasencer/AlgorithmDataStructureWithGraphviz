@@ -3,6 +3,7 @@ Absolute distinct count
 Array is sorted!
 Hint: Leveraging sorted array would enable the solution to use only O(1) extra space.
 """
+
 from typing import List
 
 
@@ -20,7 +21,6 @@ def solve_2(numbers: List[int]) -> int:
     i, j = 0, len(numbers) - 1
 
     while i < j:
-
         # Clear negative duplicates from the array
         while numbers[i] == numbers[i + 1]:
             count -= 1

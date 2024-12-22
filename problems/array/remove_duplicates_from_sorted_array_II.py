@@ -1,10 +1,11 @@
 """
-    Given a sorted array nums, remove the duplicates in-place such that duplicates appeared
-    at most twice and return the new length.
+Given a sorted array nums, remove the duplicates in-place such that duplicates appeared
+at most twice and return the new length.
 
-    Do not allocate extra space for another array; you must do this by modifying the input array
-    in-place with O(1) extra memory.
+Do not allocate extra space for another array; you must do this by modifying the input array
+in-place with O(1) extra memory.
 """
+
 from typing import List
 
 
@@ -26,7 +27,6 @@ def solution_1(nums: List[int]) -> int:
     i = 1
     count = 2
     while i < len(nums):
-
         if nums[i] - nums[i - 1] == 0 and count < 2:
             nums[:] = nums[:i] + nums[i + 1 :]
             count += 1

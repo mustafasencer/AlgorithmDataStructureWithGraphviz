@@ -1,6 +1,5 @@
 def binary_search(array, start_index, end_index, value):
     while start_index <= end_index:
-
         mid = start_index + (end_index - start_index)
 
         if array[mid] == value:

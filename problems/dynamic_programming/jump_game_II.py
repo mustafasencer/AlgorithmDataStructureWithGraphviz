@@ -1,6 +1,7 @@
 """
 https://leetcode.com/problems/jump-game-ii/
 """
+
 from typing import List
 
 

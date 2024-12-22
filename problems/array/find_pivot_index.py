@@ -10,7 +10,7 @@ def solution(nums: List[int]):
             sum_first = 0
         else:
             sum_first = sum(nums[:i])
-        if sum_first == sum(nums[i + 1:]):
+        if sum_first == sum(nums[i + 1 :]):
             return i
     return -1
 

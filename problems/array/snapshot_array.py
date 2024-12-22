@@ -6,6 +6,7 @@ SnapshotArray(length: int) initializes an array-like data structure with the giv
 int snap() takes a snapshot of the array and returns the snap_id: the total number of times we called snap() minus 1.
 int get(index, snap_id) returns the value at the given index, at the time we took the snapshot with the given snap_id
 """
+
 import bisect
 from collections import defaultdict
 from functools import lru_cache

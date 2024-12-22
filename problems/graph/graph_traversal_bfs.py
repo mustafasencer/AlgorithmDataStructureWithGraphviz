@@ -10,7 +10,6 @@ class Graph:
         self.graph[u].append(v)
 
     def bfs_queue(self, s):
-
         visited = [False] * self.V
 
         queue = []
@@ -20,7 +19,6 @@ class Graph:
         visited[s] = True
 
         while queue:
-
             s = queue.pop(0)
             result.append(s)
 

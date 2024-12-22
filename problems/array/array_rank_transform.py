@@ -10,7 +10,6 @@ def array_rank_transform(arr: List[int]) -> List[int]:
     store = {}
     counter = 1
     for i in copy_:
-
         if i not in store:
             store[i] = counter
             counter += 1

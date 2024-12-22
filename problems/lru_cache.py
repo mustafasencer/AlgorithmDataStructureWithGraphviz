@@ -68,7 +68,6 @@ class LRUCache:
         # non exist: create new node, add to lookup and add to linked list
 
         if key in self.lookup:
-
             # change the value and update state
             node = self.lookup[key]
             # change

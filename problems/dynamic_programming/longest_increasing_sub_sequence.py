@@ -3,6 +3,7 @@ Longest increasing sub sequence
 https://www.geeksforgeeks.org/longest-increasing-subsequence-dp-3/
 https://leetcode.com/problems/longest-increasing-subsequence/
 """
+
 from typing import List
 
 

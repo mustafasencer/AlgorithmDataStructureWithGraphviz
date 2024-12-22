@@ -29,7 +29,7 @@ def push(head, value):
     return head
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     l1, l2 = None, None
     for i in [1, 2, 3]:
         l1 = push(l1, i)

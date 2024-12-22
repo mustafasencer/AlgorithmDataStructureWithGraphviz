@@ -1,11 +1,11 @@
 """
-    A message containing letters from A-Z is being encoded to numbers using the following mapping:
+A message containing letters from A-Z is being encoded to numbers using the following mapping:
 
-    'A' -> 1
-    'B' -> 2
-    ...
-    'Z' -> 26
-    Given a non-empty string containing only digits, determine the total number of ways to decode it.
+'A' -> 1
+'B' -> 2
+...
+'Z' -> 26
+Given a non-empty string containing only digits, determine the total number of ways to decode it.
 """
 
 
@@ -23,7 +23,7 @@ def solution(s: str):
     for i in range(1, len(s)):
         dp[i] = dp[i - 1]
 
-        if 10 <= int(s[i - 1: i + 1]) <= 26:
+        if 10 <= int(s[i - 1 : i + 1]) <= 26:
             dp[i] += 1
 
         if s[i] != "0":

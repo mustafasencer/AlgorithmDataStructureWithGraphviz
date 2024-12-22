@@ -1,7 +1,8 @@
 """
-    Given a collection of interval, find the minimum number of interval you need to remove to make ,
-    the rest of the interval non-overlapping.
+Given a collection of interval, find the minimum number of interval you need to remove to make ,
+the rest of the interval non-overlapping.
 """
+
 from typing import List
 
 

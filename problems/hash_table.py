@@ -2,7 +2,6 @@ from typing import MutableSequence, Sequence
 
 
 class HashTable:
-
     # Create empty bucket list of given size
     def __init__(self, size):
         self.size = size
@@ -12,7 +11,6 @@ class HashTable:
         return [[] for _ in range(self.size)]
 
     def set_val(self, key, val):
-
         # Get the index from the key
         # using hash function
         hashed_key = hash(key) % self.size
@@ -39,7 +37,6 @@ class HashTable:
             bucket.append((key, val))
 
     def get_val(self, key):
-
         # Get the index from the key using
         # hash function
         hashed_key = hash(key) % self.size
@@ -67,7 +64,6 @@ class HashTable:
 
     # Remove a value with specific key
     def delete_val(self, key):
-
         # Get the index from the key using
         # hash function
         hashed_key = hash(key) % self.size

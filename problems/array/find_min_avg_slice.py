@@ -62,12 +62,12 @@ def solution(A):
     min_three_index = 0
 
     for i in range(2, len(A)):
-        slice_two = sum(A[i - 1: i + 1])
+        slice_two = sum(A[i - 1 : i + 1])
         if slice_two < min_slice_two:
             min_two_index = i - 1
             min_slice_two = slice_two
 
-        slice_three = sum(A[i - 2: i + 1])
+        slice_three = sum(A[i - 2 : i + 1])
         if slice_three < min_slice_three:
             min_three_index = i - 2
             min_slice_three = slice_three
@@ -102,7 +102,6 @@ def solution_1(nums, k):
 
     # Traverse from (k + 1)'th element to n'th element
     for i in range(k, n):
-
         # Add current item and remove first item of previous subarray
         curr_sum -= nums[i - k]
         curr_sum += nums[i]
@@ -110,9 +109,9 @@ def solution_1(nums, k):
         # Update result if needed
         if curr_sum < min_sum:
             min_sum = curr_sum
-            res_index = (i - k + 1)
+            res_index = i - k + 1
 
-    return nums[res_index:(res_index + k - 1)]
+    return nums[res_index : (res_index + k - 1)]
 
 
 if __name__ == "__main__":

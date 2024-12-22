@@ -40,7 +40,6 @@ def solution(A, B):
     prev_end = B[0]
 
     for i in range(1, len(A)):
-
         if A[i] > prev_end:
             count += 1
             prev_end = B[i]

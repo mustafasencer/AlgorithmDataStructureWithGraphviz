@@ -1,5 +1,5 @@
 """
-    Hint: Move pointers intelligently in order to solve it!
+Hint: Move pointers intelligently in order to solve it!
 """
 
 

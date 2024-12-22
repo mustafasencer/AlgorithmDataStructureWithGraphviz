@@ -14,7 +14,6 @@ def solution(nums: List[int]) -> int:
     ultimate_min = sys.maxsize
 
     for i in range(len(nums)):
-
         if current_min > 0:
             current_min = nums[i]
         else:

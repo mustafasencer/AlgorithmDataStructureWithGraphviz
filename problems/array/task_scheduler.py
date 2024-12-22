@@ -8,6 +8,7 @@ However, there is a non-negative integer n that represents the cooldown period b
 
 Return the least number of units of times that the CPU will take to finish all the given tasks.
 """
+
 import collections
 from heapq import heappop, heappush
 from typing import List

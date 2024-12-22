@@ -11,7 +11,6 @@ def solution(N):
     initialized = 0
 
     for char in binary:
-
         if char == "1":
             initialized = 1
             max_gap = max(max_gap, count)

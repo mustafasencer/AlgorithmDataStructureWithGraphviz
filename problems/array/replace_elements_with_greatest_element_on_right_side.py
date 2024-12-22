@@ -4,6 +4,7 @@ Given an array arr, replace every element in that array with the greatest elemen
 
 After doing so, return the array.
 """
+
 from typing import List
 
 

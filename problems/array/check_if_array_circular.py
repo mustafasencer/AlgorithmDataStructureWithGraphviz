@@ -11,7 +11,6 @@ def solution(nums: List[int]) -> bool:
     is_seen = set()
 
     for i in range(len(nums)):
-
         local = set()
 
         while True:
@@ -27,11 +26,11 @@ def solution(nums: List[int]) -> bool:
             local.add(i)
 
             prev = i
-            i = (i + nums[i]) % len(
-                nums
+            i = (
+                (i + nums[i]) % len(nums)
             )  # Add the value at index i and get the mod of it to find the next i in the path
-            if prev == i or (nums[i] > 0) != (
-                nums[prev] > 0
+            if (
+                prev == i or (nums[i] > 0) != (nums[prev] > 0)
             ):  # if current i ends up in the same i than no path (single item) and both the i and prev values are > 0
                 break
 
