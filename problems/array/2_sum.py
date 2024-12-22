@@ -1,7 +1,7 @@
 from typing import List
 
 
-def solution(nums: List[int], target: int) -> List[int]:
+def solution(nums: List[int], target: int) -> List[int] | None:
     dict_ = {}
     for i, value in enumerate(nums):
         n = target - value
@@ -11,7 +11,7 @@ def solution(nums: List[int], target: int) -> List[int]:
             dict_[value] = i
 
 
-def solution_1(nums: List[int], target: int) -> List[int]:
+def solution_1(nums: List[int], target: int) -> List[int] | None:
     lookup = {}
     for i in range(len(nums)):
         remaining = target - nums[i]

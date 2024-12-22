@@ -1,7 +1,6 @@
-from visualization.linked_list import LinkedListDrawer
-
 from data_structures.linked_list import LinkedListNode
 from problems.linked_list.build_linked_list import build_linked_list
+from visualization.linked_list import LinkedListDrawer
 
 
 class Solution:

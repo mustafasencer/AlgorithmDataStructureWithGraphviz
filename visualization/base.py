@@ -13,7 +13,6 @@ class DiGraphImpl:
         )
 
     def __init__(self, name="", format="pdf", is_vertical=False):
-
         self.digraph = Digraph(format=format)
         self.digraph.attr(name=name, rankdir="TB" if is_vertical else "LR")
 

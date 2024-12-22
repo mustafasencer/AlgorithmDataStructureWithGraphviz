@@ -1,4 +1,4 @@
 aiohttp==3.10.11
 attrs==19.3.0
 chardet==3.0.4
-graphviz==0.14
+graphviz==0.20.3

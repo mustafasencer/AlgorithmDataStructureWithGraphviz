@@ -1,11 +1,10 @@
 from typing import List
 
+from data_structures.linked_list import LinkedListNode
 from visualization.linked_list import LinkedListDrawer
 
-from data_structures.linked_list import LinkedListNode
 
-
-def build_linked_list(nums: List[int]) -> LinkedListNode:
+def build_linked_list(nums: List[int]) -> LinkedListNode | None:
     head = None
     for item in nums[::-1]:
         new_node = LinkedListNode(item)
