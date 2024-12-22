@@ -39,32 +39,32 @@ string S consists only of upper-case English letters A, C, G, T.
 
 
 def solution(S, P, Q):
-	""" """
-	# write your code in Python 3.6
-	mapper = {"A": 1, "C": 2, "G": 3, "T": 4}
-	result = [min([mapper[char] for char in S[p : q + 1]]) for p, q in zip(P, Q)]
-	return result
+    """ """
+    # write your code in Python 3.6
+    mapper = {"A": 1, "C": 2, "G": 3, "T": 4}
+    result = [min([mapper[char] for char in S[p : q + 1]]) for p, q in zip(P, Q)]
+    return result
 
 
 def solution_(S, P, Q):
-	""" """
-	result = []
-	for p, q in zip(P, Q):
-		if "A" in S[p : q + 1]:
-			result.append(1)
-		elif "C" in S[p : q + 1]:
-			result.append(2)
-		elif "G" in S[p : q + 1]:
-			result.append(3)
-		else:
-			result.append(4)
-	return result
+    """ """
+    result = []
+    for p, q in zip(P, Q):
+        if "A" in S[p : q + 1]:
+            result.append(1)
+        elif "C" in S[p : q + 1]:
+            result.append(2)
+        elif "G" in S[p : q + 1]:
+            result.append(3)
+        else:
+            result.append(4)
+    return result
 
 
 if __name__ == "__main__":
-	S = "CAGCCTA"
-	P = [2, 5, 0]
-	Q = [4, 5, 6]
-	result = solution(S, P, Q)
-	assert result == [2, 4, 1]
-	print(result)
+    S = "CAGCCTA"
+    P = [2, 5, 0]
+    Q = [4, 5, 6]
+    result = solution(S, P, Q)
+    assert result == [2, 4, 1]
+    print(result)

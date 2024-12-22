@@ -12,23 +12,23 @@ from typing import List
 
 
 def find_min(nums: List[int]) -> int:
-	"""
-	1. take a binary search approach as the array is sorted
-	2. try to find the lowest element possible
-	"""
-	low = 0
-	high = len(nums) - 1
+    """
+    1. take a binary search approach as the array is sorted
+    2. try to find the lowest element possible
+    """
+    low = 0
+    high = len(nums) - 1
 
-	while low < high:
-		mid = int((high + low) / 2)
-		if nums[mid] > nums[high]:
-			low = mid + 1
-		else:
-			high = mid
+    while low < high:
+        mid = int((high + low) / 2)
+        if nums[mid] > nums[high]:
+            low = mid + 1
+        else:
+            high = mid
 
-	return nums[low]
+    return nums[low]
 
 
 if __name__ == "__main__":
-	result = find_min([3, 4, 5, 0, 1, 2])
-	print(result)
+    result = find_min([3, 4, 5, 0, 1, 2])
+    print(result)

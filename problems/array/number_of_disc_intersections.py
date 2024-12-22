@@ -36,27 +36,27 @@ each element of array A is an integer within the range [0..2,147,483,647].
 
 
 def solution(nums):
-	circle_endpoints = []
-	for i, a in enumerate(nums):
-		circle_endpoints += [(i - a, True), (i + a, False)]
+    circle_endpoints = []
+    for i, a in enumerate(nums):
+        circle_endpoints += [(i - a, True), (i + a, False)]
 
-	circle_endpoints.sort(key=lambda x: (x[0], not x[1]))
+    circle_endpoints.sort(key=lambda x: (x[0], not x[1]))
 
-	intersections, active_circles = 0, 0
+    intersections, active_circles = 0, 0
 
-	for _, is_beginning in circle_endpoints:
-		if is_beginning:
-			intersections += active_circles
-			active_circles += 1
-		else:
-			active_circles -= 1
-		if intersections > 10e6:
-			return -1
+    for _, is_beginning in circle_endpoints:
+        if is_beginning:
+            intersections += active_circles
+            active_circles += 1
+        else:
+            active_circles -= 1
+        if intersections > 10e6:
+            return -1
 
-	return intersections
+    return intersections
 
 
 if __name__ == "__main__":
-	A = [1, 5, 2, 1, 4, 0]
-	result = solution(A)
-	assert result == 11
+    A = [1, 5, 2, 1, 4, 0]
+    result = solution(A)
+    assert result == 11

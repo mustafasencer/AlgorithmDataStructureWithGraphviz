@@ -4,8 +4,8 @@ https://leetcode.com/problems/ways-to-split-array-into-three-subarrays/
 
 
 def solution():
-	pass
+    pass
 
 
 if __name__ == "__main__":
-	solution()
+    solution()

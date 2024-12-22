@@ -47,34 +47,34 @@ from typing import List
 
 
 def solution(nums: List[int]) -> int:
-	all_sum = sum(nums)
-	sum_first = 0
+    all_sum = sum(nums)
+    sum_first = 0
 
-	min_value = float("inf")
+    min_value = float("inf")
 
-	for i in range(1, len(nums)):
-		sum_first += nums[i]
-		sum_second = all_sum - sum_first
+    for i in range(1, len(nums)):
+        sum_first += nums[i]
+        sum_second = all_sum - sum_first
 
-		difference = abs(sum_first - sum_second)
-		min_value = min(min_value, difference)
+        difference = abs(sum_first - sum_second)
+        min_value = min(min_value, difference)
 
-	return min_value
+    return min_value
 
 
 def solution_2(nums: List[int]) -> int:
-	"""
-	🥉
-	1. loop over the nums array
-	2. find the diff for each required index
-	"""
-	min_value = abs(sum(nums[:1]) - sum(nums[1:]))
-	for i in range(2, len(nums)):
-		min_value = min(abs(sum(nums[:i]) - sum(nums[i:])), min_value)
-	return min_value
+    """
+    🥉
+    1. loop over the nums array
+    2. find the diff for each required index
+    """
+    min_value = abs(sum(nums[:1]) - sum(nums[1:]))
+    for i in range(2, len(nums)):
+        min_value = min(abs(sum(nums[:i]) - sum(nums[i:])), min_value)
+    return min_value
 
 
 if __name__ == "__main__":
-	nums = [3, 1, 2, 4, 3]
-	result = solution_2(nums)
-	assert result == 1
+    nums = [3, 1, 2, 4, 3]
+    result = solution_2(nums)
+    assert result == 1

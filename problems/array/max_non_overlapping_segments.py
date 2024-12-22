@@ -36,19 +36,19 @@ B[K] ≤ B[K + 1], for each K (0 ≤ K < N − 1).
 
 # Greedy Approach
 def solution(A, B):
-	count = 1
-	prev_end = B[0]
+    count = 1
+    prev_end = B[0]
 
-	for i in range(1, len(A)):
-		if A[i] > prev_end:
-			count += 1
-			prev_end = B[i]
+    for i in range(1, len(A)):
+        if A[i] > prev_end:
+            count += 1
+            prev_end = B[i]
 
-	return count
+    return count
 
 
 if __name__ == "__main__":
-	A = [1, 3, 7, 9, 9]
-	B = [5, 6, 8, 9, 10]
-	result = solution(A, B)
-	assert result == 3
+    A = [1, 3, 7, 9, 9]
+    B = [5, 6, 8, 9, 10]
+    result = solution(A, B)
+    assert result == 3

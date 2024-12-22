@@ -35,19 +35,19 @@ each element of array A is an integer within the range [−2,147,483,648..2,147,
 
 
 def solution(nums) -> int:
-	""" """
-	if len(nums) < 3:
-		return 0
+    """ """
+    if len(nums) < 3:
+        return 0
 
-	nums.sort()
-	for i in range(len(nums) - 2):
-		# Only check if the biggest of the triplet if smaller!
-		if nums[i] + nums[i + 1] > nums[i + 2]:
-			return 1
-	return 0
+    nums.sort()
+    for i in range(len(nums) - 2):
+        # Only check if the biggest of the triplet if smaller!
+        if nums[i] + nums[i + 1] > nums[i + 2]:
+            return 1
+    return 0
 
 
 if __name__ == "__main__":
-	nums = [10, 2, 5, 1, 8, 20]
-	result = solution(nums)
-	assert result == 1
+    nums = [10, 2, 5, 1, 8, 20]
+    result = solution(nums)
+    assert result == 1

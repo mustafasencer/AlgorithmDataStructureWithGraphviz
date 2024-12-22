@@ -45,25 +45,25 @@ In your solution, focus on correctness. The performance of your solution will no
 
 
 def solution(A, K):
-	"""
-	1. loop over the array
-	2. add k to the current index
-	3. find the mod of the addition based on the array length
-	4. this forms the new_index and can be set in the result array
-	"""
-	length = len(A)
-	result = [0] * length
+    """
+    1. loop over the array
+    2. add k to the current index
+    3. find the mod of the addition based on the array length
+    4. this forms the new_index and can be set in the result array
+    """
+    length = len(A)
+    result = [0] * length
 
-	for index, item in enumerate(A):
-		remaining = index % length
-		new_index = (remaining + K) % length
-		result[new_index] = item
+    for index, item in enumerate(A):
+        remaining = index % length
+        new_index = (remaining + K) % length
+        result[new_index] = item
 
-	return result
+    return result
 
 
 if __name__ == "__main__":
-	A = [1, 2, 3, 4]
-	K = 4
-	result = solution(A, K)
-	assert result == [1, 2, 3, 4]
+    A = [1, 2, 3, 4]
+    K = 4
+    result = solution(A, K)
+    assert result == [1, 2, 3, 4]

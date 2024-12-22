@@ -3,40 +3,40 @@ from collections import Counter
 
 
 def solve(s: str) -> str:
-	a = sorted(sorted(s), key=s.count)
-	h = len(s) // 2
-	a[1::2], a[0::2] = a[:h], a[h:]
-	return "".join(a) * (a[-1] != a[-2])
+    a = sorted(sorted(s), key=s.count)
+    h = len(s) // 2
+    a[1::2], a[0::2] = a[:h], a[h:]
+    return "".join(a) * (a[-1] != a[-2])
 
 
 # [a: 2, b: 2, c: 1]
 def solve_2(s: str) -> str:
-	result = []
-	counter = Counter(s)
-	counter = [(-value, key) for key, value in counter.items()]
+    result = []
+    counter = Counter(s)
+    counter = [(-value, key) for key, value in counter.items()]
 
-	heapq.heapify(counter)
+    heapq.heapify(counter)
 
-	prev_key, prev_value = "", 0
+    prev_key, prev_value = "", 0
 
-	while counter:
-		value, key = heapq.heappop(counter)
+    while counter:
+        value, key = heapq.heappop(counter)
 
-		result.append(key)
+        result.append(key)
 
-		if prev_value < 0:
-			heapq.heappush(counter, (prev_value, prev_key))
+        if prev_value < 0:
+            heapq.heappush(counter, (prev_value, prev_key))
 
-		value += 1
-		prev_value = value
-		prev_key = key
+        value += 1
+        prev_value = value
+        prev_key = key
 
-	if len(result) != len(s):
-		return ""
-	return "".join(result)
+    if len(result) != len(s):
+        return ""
+    return "".join(result)
 
 
 if __name__ == "__main__":
-	s = "aaaab"
-	result = solve_2(s)
-	assert result == ""
+    s = "aaaab"
+    result = solve_2(s)
+    assert result == ""

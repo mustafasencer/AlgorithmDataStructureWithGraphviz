@@ -13,58 +13,58 @@ from functools import lru_cache
 
 
 class SnapshotArray:
-	def __init__(self, n):
-		self.cache = [[[-1, 0]] for _ in range(n)]
-		self.snap_id = 0
+    def __init__(self, n):
+        self.cache = [[[-1, 0]] for _ in range(n)]
+        self.snap_id = 0
 
-	def set(self, index, val):
-		self.cache[index].append([self.snap_id, val])
+    def set(self, index, val):
+        self.cache[index].append([self.snap_id, val])
 
-	def snap(self):
-		self.snap_id += 1
-		return self.snap_id - 1
+    def snap(self):
+        self.snap_id += 1
+        return self.snap_id - 1
 
-	@lru_cache(maxsize=None)
-	def get(self, index, snap_id):
-		i = bisect.bisect(self.cache[index], [snap_id + 1]) - 1
-		return self.cache[index][i][1]
+    @lru_cache(maxsize=None)
+    def get(self, index, snap_id):
+        i = bisect.bisect(self.cache[index], [snap_id + 1]) - 1
+        return self.cache[index][i][1]
 
 
 class SnapshotArray1:
-	def __init__(self, length: int):
-		self.map = defaultdict(list)
-		self.snapId = 0
+    def __init__(self, length: int):
+        self.map = defaultdict(list)
+        self.snapId = 0
 
-	def set(self, index: int, val: int) -> None:
-		if self.map[index] and self.map[index][-1][0] == self.snapId:
-			self.map[index][-1][1] = val
-			return
-		self.map[index].append([self.snapId, val])
+    def set(self, index: int, val: int) -> None:
+        if self.map[index] and self.map[index][-1][0] == self.snapId:
+            self.map[index][-1][1] = val
+            return
+        self.map[index].append([self.snapId, val])
 
-	def snap(self) -> int:
-		self.snapId += 1
-		return self.snapId - 1
+    def snap(self) -> int:
+        self.snapId += 1
+        return self.snapId - 1
 
-	def get(self, index: int, snap_id: int) -> int:
-		arr = self.map[index]
-		left, right, ans = 0, len(arr) - 1, -1
-		while left <= right:
-			mid = (left + right) // 2
-			if arr[mid][0] <= snap_id:
-				ans = mid
-				left = mid + 1
-			else:
-				right = mid - 1
-		if ans == -1:
-			return 0
-		return arr[ans][1]
+    def get(self, index: int, snap_id: int) -> int:
+        arr = self.map[index]
+        left, right, ans = 0, len(arr) - 1, -1
+        while left <= right:
+            mid = (left + right) // 2
+            if arr[mid][0] <= snap_id:
+                ans = mid
+                left = mid + 1
+            else:
+                right = mid - 1
+        if ans == -1:
+            return 0
+        return arr[ans][1]
 
 
 if __name__ == "__main__":
-	obj = SnapshotArray(3)
-	obj.set(0, 5)
-	snap_id = obj.snap()
-	obj.set(0, 6)
-	result = obj.get(0, 0)
-	assert snap_id == 0
-	assert result == 5
+    obj = SnapshotArray(3)
+    obj.set(0, 5)
+    snap_id = obj.snap()
+    obj.set(0, 6)
+    result = obj.get(0, 0)
+    assert snap_id == 0
+    assert result == 5

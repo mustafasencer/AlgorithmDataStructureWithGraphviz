@@ -3,22 +3,22 @@ from visualization.tree import TreeDrawer
 
 
 def solution(root):
-	if not root:
-		return False
+    if not root:
+        return False
 
-	queue = [root]
-	level = 0
+    queue = [root]
+    level = 0
 
-	while queue[level] and queue[level].val:
-		queue.append(queue[level].left)
-		queue.append(queue[level].right)
-		level += 1
-	return not any(queue[level:])
+    while queue[level] and queue[level].val:
+        queue.append(queue[level].left)
+        queue.append(queue[level].right)
+        level += 1
+    return not any(queue[level:])
 
 
 if __name__ == "__main__":
-	array = [1, None, 1, 3, None, 5]
-	root = build_tree(array, None, 0, len(array))
-	result = solution(root)
-	TreeDrawer().visualize(root)
-	print(result)
+    array = [1, None, 1, 3, None, 5]
+    root = build_tree(array, None, 0, len(array))
+    result = solution(root)
+    TreeDrawer().visualize(root)
+    print(result)

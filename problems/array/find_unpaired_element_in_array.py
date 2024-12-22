@@ -33,20 +33,20 @@ all but one of the values in nums occur an even number of times.
 
 
 def solution(nums):
-	"""
-	1. loop over and store the item in an hash table
-	2. find the element not divisible by 2
-	"""
-	lookup = {}
-	for item in nums:
-		lookup[item] = lookup.get(item, 0) + 1
+    """
+    1. loop over and store the item in an hash table
+    2. find the element not divisible by 2
+    """
+    lookup = {}
+    for item in nums:
+        lookup[item] = lookup.get(item, 0) + 1
 
-	for key, value in lookup.items():
-		if value % 2:
-			return key
+    for key, value in lookup.items():
+        if value % 2:
+            return key
 
 
 if __name__ == "__main__":
-	nums = [9, 3, 9, 3, 9, 7, 9]
-	result = solution(nums)
-	assert result == 7
+    nums = [9, 3, 9, 3, 9, 7, 9]
+    result = solution(nums)
+    assert result == 7
