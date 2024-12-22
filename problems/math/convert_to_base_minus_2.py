@@ -6,14 +6,14 @@ The returned string must have no leading zeroes, unless the string is "0".
 
 
 class Solution:
-    def solve(self, N):
-        ans = []
-        while N:
-            ans.append(N & 1)
-            N = (1 - N) >> 1
-        return "".join(map(str, ans[::-1] or [0]))
+	def solve(self, N):
+		ans = []
+		while N:
+			ans.append(N & 1)
+			N = (1 - N) >> 1
+		return "".join(map(str, ans[::-1] or [0]))
 
 
 if __name__ == "__main__":
-    N = 20
-    Solution().solve(N)
+	N = 20
+	Solution().solve(N)

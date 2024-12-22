@@ -32,71 +32,71 @@ each element of array A, B is an integer within the range [1..2,147,483,647].
 
 
 def solution(A, B):
-    min_prime = 2
-    result = 0
+	min_prime = 2
+	result = 0
 
-    for i, j in zip(A, B):
-        i_primes = set()
-        j_primes = set()
+	for i, j in zip(A, B):
+		i_primes = set()
+		j_primes = set()
 
-        while min_prime <= i:
-            if i % min_prime == 0:
-                i_primes.add(min_prime)
-                i /= min_prime
-            else:
-                min_prime += 1
+		while min_prime <= i:
+			if i % min_prime == 0:
+				i_primes.add(min_prime)
+				i /= min_prime
+			else:
+				min_prime += 1
 
-        min_prime = 2
-        while min_prime <= j:
-            if j % min_prime == 0:
-                j_primes.add(min_prime)
-                j /= min_prime
-            else:
-                min_prime += 1
+		min_prime = 2
+		while min_prime <= j:
+			if j % min_prime == 0:
+				j_primes.add(min_prime)
+				j /= min_prime
+			else:
+				min_prime += 1
 
-        if i_primes and j_primes and i_primes == j_primes:
-            result += 1
-    return 1
+		if i_primes and j_primes and i_primes == j_primes:
+			result += 1
+	return 1
 
 
 def solution_(A, B):
-    z = len(A)
-    result = 0
-    for index in range(z):
-        a = A[index]
-        b = B[index]
-        d = gcd(a, b)
-        if has_diff_factor(d, a):
-            continue
-        if has_diff_factor(d, b):
-            continue
-        result += 1
+	z = len(A)
+	result = 0
+	for index in range(z):
+		a = A[index]
+		b = B[index]
+		d = gcd(a, b)
+		if has_diff_factor(d, a):
+			continue
+		if has_diff_factor(d, b):
+			continue
+		result += 1
 
-    return result
+	return result
 
 
 def has_diff_factor(a, b):
-    div = gcd(a, b)
-    while div != 1:
-        b /= div
-        div = gcd(a, b)
-    return a % b != 0
+	div = gcd(a, b)
+	while div != 1:
+		b /= div
+		div = gcd(a, b)
+	return a % b != 0
 
 
 def gcd(a, b):
-    while a >= 0 and b >= 0:
-        a_mod_b = a % b
-        if a_mod_b == 0:
-            return b
-        a = b
-        b = a_mod_b
+	while a >= 0 and b >= 0:
+		a_mod_b = a % b
+		if a_mod_b == 0:
+			return b
+		a = b
+		b = a_mod_b
 
-    return 1
+	return 1
 
 
 if __name__ == "__main__":
-    A = [15, 10, 3]
-    B = [75, 30, 5]
-    result = solution_(A, B)
-    assert result == 1
-    print(result)
+	A = [15, 10, 3]
+	B = [75, 30, 5]
+	result = solution_(A, B)
+	assert result == 1
+	print(result)

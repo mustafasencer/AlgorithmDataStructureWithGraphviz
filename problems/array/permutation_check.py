@@ -47,28 +47,28 @@ each element of array A is an integer within the range [1..1,000,000,000].
 
 
 def solution(nums):
-    """
-    1. sort the nums array and check if a value is missing from the sequence
-    """
-    nums.sort()
-    prev = nums[0]
-    for item in nums[1:]:
-        subs = item - prev
-        if subs != 1:
-            return 0
-        prev = item
-    return 1
+	"""
+	1. sort the nums array and check if a value is missing from the sequence
+	"""
+	nums.sort()
+	prev = nums[0]
+	for item in nums[1:]:
+		subs = item - prev
+		if subs != 1:
+			return 0
+		prev = item
+	return 1
 
 
 def solution_1(nums):
-    nums.sort()
-    for i in range(1, len(nums)):
-        if not nums[i] - nums[i - 1] == 1:
-            return 0
-    return 1
+	nums.sort()
+	for i in range(1, len(nums)):
+		if not nums[i] - nums[i - 1] == 1:
+			return 0
+	return 1
 
 
 if __name__ == "__main__":
-    nums = [1, 3, 4]
-    result = solution_1(nums)
-    assert result == 0
+	nums = [1, 3, 4]
+	result = solution_1(nums)
+	assert result == 0

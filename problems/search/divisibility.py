@@ -52,50 +52,50 @@ each element of array A is an integer within the range [0..M].
 # you can write to stdout for debugging purposes, e.g.
 # print("this is a debug message")
 def solution(K, M, A):
-    # write your code in Python 3.6
-    max_sum = 0
-    min_sum = 0
-    for item in A:
-        max_sum += item
-        min_sum = max(min_sum, item)
+	# write your code in Python 3.6
+	max_sum = 0
+	min_sum = 0
+	for item in A:
+		max_sum += item
+		min_sum = max(min_sum, item)
 
-    result = min_sum
+	result = min_sum
 
-    while min_sum <= max_sum:
-        mid_sum = int((max_sum + min_sum) / 2)
+	while min_sum <= max_sum:
+		mid_sum = int((max_sum + min_sum) / 2)
 
-        ok = check_divisibility(mid_sum, K, A)
+		ok = check_divisibility(mid_sum, K, A)
 
-        if ok:
-            result = mid_sum
+		if ok:
+			result = mid_sum
 
-            max_sum = mid_sum - 1
+			max_sum = mid_sum - 1
 
-        else:
-            min_sum = mid_sum + 1
-    return result
+		else:
+			min_sum = mid_sum + 1
+	return result
 
 
 def check_divisibility(mid_sum, K, A):
-    remaining_block_count = K
-    current_block_sum = 0
+	remaining_block_count = K
+	current_block_sum = 0
 
-    for item in A:
-        current_block_sum += item
+	for item in A:
+		current_block_sum += item
 
-        if current_block_sum > mid_sum:
-            remaining_block_count -= 1
-            current_block_sum = item
+		if current_block_sum > mid_sum:
+			remaining_block_count -= 1
+			current_block_sum = item
 
-        if not remaining_block_count:
-            return False
+		if not remaining_block_count:
+			return False
 
-    return True
+	return True
 
 
 if __name__ == "__main__":
-    K = 3
-    M = 5
-    A = [2, 1, 5, 1, 2, 2, 2]
-    result = solution(K, M, A)
-    print(result)
+	K = 3
+	M = 5
+	A = [2, 1, 5, 1, 2, 2, 2]
+	result = solution(K, M, A)
+	print(result)

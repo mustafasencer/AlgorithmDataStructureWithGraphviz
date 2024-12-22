@@ -6,26 +6,26 @@ https://leetcode.com/problems/generate-parentheses/discuss/10369/Clean-Python-DP
 
 
 def solve(n: int):
-    left, right = n, n
-    result = []
-    dfs(left, right, "", result)
-    return result
+	left, right = n, n
+	result = []
+	dfs(left, right, "", result)
+	return result
 
 
 def dfs(left, right, path, result):
-    if right < left:
-        return
-    if not left and not right:
-        result.append(path)
-        return
-    if left:
-        dfs(left - 1, right, path + "(", result)
-    if right:
-        dfs(left, right - 1, path + ")", result)
+	if right < left:
+		return
+	if not left and not right:
+		result.append(path)
+		return
+	if left:
+		dfs(left - 1, right, path + "(", result)
+	if right:
+		dfs(left, right - 1, path + ")", result)
 
 
 if __name__ == "__main__":
-    n = 5
-    result = solve(n)
-    print(result)
-    assert result == ["((()))", "(()())", "(())()", "()(())", "()()()"]
+	n = 5
+	result = solve(n)
+	print(result)
+	assert result == ["((()))", "(()())", "(())()", "()(())", "()()()"]

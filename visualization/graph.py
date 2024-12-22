@@ -3,7 +3,7 @@ from graphviz import Digraph as DiGraphImpl
 
 class GraphDrawer:
 	def __init__(self):
-		self.digraph = DiGraphImpl(format='png')
+		self.digraph = DiGraphImpl(format="png")
 		self.key_value_pairs = []
 		self._key = None
 		self.source = None
@@ -29,7 +29,7 @@ class GraphDrawer:
 
 	def create_node(self, value):
 		source = self.get_source()
-		self.digraph.add_node(str(source), str(value) if value else 'null')
+		self.digraph.add_node(str(source), str(value) if value else "null")
 
 	def append_edges(self, root):
 		if root.left:
@@ -48,7 +48,7 @@ class GraphDrawer:
 
 	def create_nodes(self, root):
 		if not root:
-			raise ValueError('Tree is empty!')
+			raise ValueError("Tree is empty!")
 		_, queue = [], [root]
 		while len(queue) > 0:
 			node = queue.pop(0)

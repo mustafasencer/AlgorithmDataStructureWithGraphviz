@@ -55,25 +55,25 @@ each element of array nums is an integer within the range [1..N + 1].
 
 
 def solution(N, nums):
-    """
-    1.
-    """
-    counters = [0] * N
-    max_counter = 0
+	"""
+	1.
+	"""
+	counters = [0] * N
+	max_counter = 0
 
-    for i in range(len(nums)):
-        value = nums[i]
-        if value == N + 1:
-            counters = [max_counter] * N
-        else:
-            counters[value - 1] += 1
-            max_counter = max(max_counter, counters[value - 1])
+	for i in range(len(nums)):
+		value = nums[i]
+		if value == N + 1:
+			counters = [max_counter] * N
+		else:
+			counters[value - 1] += 1
+			max_counter = max(max_counter, counters[value - 1])
 
-    return counters
+	return counters
 
 
 if __name__ == "__main__":
-    N = 5
-    nums = [3, 4, 4, 6, 1, 4, 4]
-    result = solution(N, nums)
-    assert result == [3, 2, 2, 4, 2]
+	N = 5
+	nums = [3, 4, 4, 6, 1, 4, 4]
+	result = solution(N, nums)
+	assert result == [3, 2, 2, 4, 2]

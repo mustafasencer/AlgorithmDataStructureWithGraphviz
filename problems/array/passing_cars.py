@@ -43,45 +43,45 @@ each element of array A is an integer that can have one of the following values:
 
 
 def solution(nums):
-    """
-    1. take into account that the most import value here is the 0 values
-    2. loop over the nums array
-    3. increase the passing cars count by the zeros that have been encountered so far
-    """
-    zero_count = 0
-    combinations = 0
-    for item in nums:
-        if item == 0:
-            zero_count += 1
-        else:
-            combinations += zero_count
+	"""
+	1. take into account that the most import value here is the 0 values
+	2. loop over the nums array
+	3. increase the passing cars count by the zeros that have been encountered so far
+	"""
+	zero_count = 0
+	combinations = 0
+	for item in nums:
+		if item == 0:
+			zero_count += 1
+		else:
+			combinations += zero_count
 
-        if combinations > 1e9:
-            return -1
+		if combinations > 1e9:
+			return -1
 
-    return combinations
+	return combinations
 
 
 def solution_1(nums):
-    """
-    1. another approach where anytime a 0 is encountered
-    2. go to the end of the array to increase the number of passing cars
-    """
-    passing_cars = 0
-    for i in range(len(nums)):
-        if nums[i] == 0:
-            j = i + 1
-            while j < len(nums):
-                if nums[j] == 1:
-                    passing_cars += 1
-                    if passing_cars > 1e9:
-                        return -1
-                j += 1
-    return passing_cars
+	"""
+	1. another approach where anytime a 0 is encountered
+	2. go to the end of the array to increase the number of passing cars
+	"""
+	passing_cars = 0
+	for i in range(len(nums)):
+		if nums[i] == 0:
+			j = i + 1
+			while j < len(nums):
+				if nums[j] == 1:
+					passing_cars += 1
+					if passing_cars > 1e9:
+						return -1
+				j += 1
+	return passing_cars
 
 
 if __name__ == "__main__":
-    A = [0, 1, 0, 1, 1]
-    result = solution_1(A)
-    assert result == 5
-    print(result)
+	A = [0, 1, 0, 1, 1]
+	result = solution_1(A)
+	assert result == 5
+	print(result)

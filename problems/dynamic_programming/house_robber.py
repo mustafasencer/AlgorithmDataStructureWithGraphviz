@@ -12,30 +12,30 @@ from typing import List
 
 
 def solution(nums: List[int]) -> int:
-    if not nums:
-        return 0
-    dp = [0] * len(nums)
-    for i in range(len(nums)):
-        if i < 2:
-            dp[i] = nums[i]
-        else:
-            dp[i] = nums[i] + max(dp[: i - 1])
-    return max(dp)
+	if not nums:
+		return 0
+	dp = [0] * len(nums)
+	for i in range(len(nums)):
+		if i < 2:
+			dp[i] = nums[i]
+		else:
+			dp[i] = nums[i] + max(dp[: i - 1])
+	return max(dp)
 
 
 def solution_1(nums) -> int:
-    dp = [0] * len(nums)
+	dp = [0] * len(nums)
 
-    for i in range(len(nums)):
-        if i < 2:
-            dp[i] = nums[i]
-        else:
-            dp[i] = nums[i] + max(dp[: i - 1])
+	for i in range(len(nums)):
+		if i < 2:
+			dp[i] = nums[i]
+		else:
+			dp[i] = nums[i] + max(dp[: i - 1])
 
-    return max(dp)
+	return max(dp)
 
 
 if __name__ == "__main__":
-    result = solution([2, 1, 8, 1, 2, 7])
-    print("done")
-    assert result == 17
+	result = solution([2, 1, 8, 1, 2, 7])
+	print("done")
+	assert result == 17

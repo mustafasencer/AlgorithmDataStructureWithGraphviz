@@ -48,73 +48,73 @@ import sys
 
 
 def solution(A):
-    """
-    1. check the contiguous sub arrays having 2 and 3 items
-    2. return the start index
-    """
-    if len(A) == 2:
-        return 0
+	"""
+	1. check the contiguous sub arrays having 2 and 3 items
+	2. return the start index
+	"""
+	if len(A) == 2:
+		return 0
 
-    min_slice_two = A[0] + A[1]
-    min_two_index = 0
+	min_slice_two = A[0] + A[1]
+	min_two_index = 0
 
-    min_slice_three = sys.maxsize
-    min_three_index = 0
+	min_slice_three = sys.maxsize
+	min_three_index = 0
 
-    for i in range(2, len(A)):
-        slice_two = sum(A[i - 1 : i + 1])
-        if slice_two < min_slice_two:
-            min_two_index = i - 1
-            min_slice_two = slice_two
+	for i in range(2, len(A)):
+		slice_two = sum(A[i - 1 : i + 1])
+		if slice_two < min_slice_two:
+			min_two_index = i - 1
+			min_slice_two = slice_two
 
-        slice_three = sum(A[i - 2 : i + 1])
-        if slice_three < min_slice_three:
-            min_three_index = i - 2
-            min_slice_three = slice_three
+		slice_three = sum(A[i - 2 : i + 1])
+		if slice_three < min_slice_three:
+			min_three_index = i - 2
+			min_slice_three = slice_three
 
-    if min_slice_three * 2 < min_slice_two * 3:
-        return min_three_index
-    else:
-        return min_two_index
+	if min_slice_three * 2 < min_slice_two * 3:
+		return min_three_index
+	else:
+		return min_two_index
 
 
 def solution_1(nums, k):
-    """
-    1. slightly different variation with known subarray size!
-    2. return the subarray itself
-    """
-    n = len(nums)
+	"""
+	1. slightly different variation with known subarray size!
+	2. return the subarray itself
+	"""
+	n = len(nums)
 
-    # k must be smaller than or equal to n
-    if n < k:
-        return 0
+	# k must be smaller than or equal to n
+	if n < k:
+		return 0
 
-    # Initialize beginning index of result
-    res_index = 0
+	# Initialize beginning index of result
+	res_index = 0
 
-    # Compute sum of first subarray of size k
-    curr_sum = 0
-    for i in range(k):
-        curr_sum += nums[i]
+	# Compute sum of first subarray of size k
+	curr_sum = 0
+	for i in range(k):
+		curr_sum += nums[i]
 
-    # Initialize minimum sum as current sum
-    min_sum = curr_sum
+	# Initialize minimum sum as current sum
+	min_sum = curr_sum
 
-    # Traverse from (k + 1)'th element to n'th element
-    for i in range(k, n):
-        # Add current item and remove first item of previous subarray
-        curr_sum -= nums[i - k]
-        curr_sum += nums[i]
+	# Traverse from (k + 1)'th element to n'th element
+	for i in range(k, n):
+		# Add current item and remove first item of previous subarray
+		curr_sum -= nums[i - k]
+		curr_sum += nums[i]
 
-        # Update result if needed
-        if curr_sum < min_sum:
-            min_sum = curr_sum
-            res_index = i - k + 1
+		# Update result if needed
+		if curr_sum < min_sum:
+			min_sum = curr_sum
+			res_index = i - k + 1
 
-    return nums[res_index : (res_index + k - 1)]
+	return nums[res_index : (res_index + k - 1)]
 
 
 if __name__ == "__main__":
-    A = [4, 2, 2, 5, 1, 5, 8]
-    result = solution(A)
-    print(result)
+	A = [4, 2, 2, 5, 1, 5, 8]
+	result = solution(A)
+	print(result)
