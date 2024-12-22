@@ -2,21 +2,20 @@ from collections import defaultdict
 
 
 class Graph:
-    def __init__(self):
+    def __init__(self) -> None:
         self.graph = defaultdict(list)
 
-    def add_edge(self, u, v):
+    def add_edge(self, u, v) -> None:
         self.graph[u].append(v)
 
-    def _dfs_util(self, v, visited):
+    def _dfs_util(self, v, visited) -> None:
         visited[v] = True
-        print(v, end=" ")
 
         for i in self.graph[v]:
             if not visited[i]:
                 self._dfs_util(i, visited)
 
-    def dfs(self, v):
+    def dfs(self, v) -> None:
         visited = [False] * (len(self.graph))
         self._dfs_util(v, visited)
 

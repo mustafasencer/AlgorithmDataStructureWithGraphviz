@@ -1,17 +1,15 @@
 # TODO: Complete in linear time xDD
 def solution(s):
-    """
-    1. Very hard!
-    """
+    """1. Very hard!"""
     # Transform S into T.
     # For example, S = "abba", T = "^#a#b#b#a#$".
     # ^ and $ signs are sentinels appended to each end to avoid bounds checking
-    separated_string = "#".join("^{}$".format(s))
+    separated_string = "#".join(f"^{s}$")
     n = len(separated_string)
     P = [0] * n
     C = R = 0
     for i in range(1, n - 1):
-        P[i] = (R > i) and min(R - i, P[2 * C - i])  # equals to i' = C - (i-C)
+        P[i] = (i < R) and min(R - i, P[2 * C - i])  # equals to i' = C - (i-C)
         # Attempt to expand palindrome centered at i
         while separated_string[i + 1 + P[i]] == separated_string[i - 1 - P[i]]:
             P[i] += 1
@@ -49,4 +47,3 @@ def helper(s, l, r):
 
 if __name__ == "__main__":
     result = solution("babad")
-    print(result)

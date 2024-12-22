@@ -2,10 +2,8 @@ from collections import defaultdict
 
 
 def solve(nums):
-    """
-    1.
-    """
-    groups = defaultdict(lambda: [])
+    """1."""
+    groups = defaultdict(list)
 
     for i in range(len(nums)):
         groups[nums[i]].append(i)

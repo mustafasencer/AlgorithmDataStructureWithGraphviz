@@ -1,14 +1,17 @@
+import sys
+
+
 class PriorityQueue:
-    def __init__(self):
+    def __init__(self) -> None:
         self.queue = []
 
-    def __str__(self):
+    def __str__(self) -> str:
         return " ".join([str(i) for i in self.queue])
 
     def is_empty(self):
         return self.queue == []
 
-    def insert(self, data):
+    def insert(self, data) -> None:
         self.queue.append(data)
 
     def delete(self):
@@ -21,8 +24,7 @@ class PriorityQueue:
             del self.queue[max_value]
             return item
         except IndexError:
-            print()
-            exit()
+            sys.exit()
 
 
 if __name__ == "__main__":
@@ -31,6 +33,5 @@ if __name__ == "__main__":
     myQueue.insert(1)
     myQueue.insert(14)
     myQueue.insert(7)
-    print(myQueue)
     while not myQueue.is_empty():
-        print(myQueue.delete())
+        pass

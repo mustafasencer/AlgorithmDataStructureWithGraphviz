@@ -29,7 +29,7 @@ each element of array A is an integer within the range [1..(N + 1)].
 def solution(nums):
     """
     https://leetcode.com/problems/missing-number/
-    1. check if the sequence overall sum has a missing element
+    1. check if the sequence overall sum has a missing element.
     """
     n = len(nums)
     sum_ = n * (n + 1) // 2

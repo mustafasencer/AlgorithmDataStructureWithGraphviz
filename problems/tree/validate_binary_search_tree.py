@@ -31,9 +31,7 @@ class Solution:
         if root.val and (root.val > max or root.val < min):
             return False
 
-        return self.recur_util(root.left, min, root.val) and self.recur_util(
-            root.right, root.val, max
-        )
+        return self.recur_util(root.left, min, root.val) and self.recur_util(root.right, root.val, max)
 
 
 if __name__ == "__main__":
@@ -43,4 +41,3 @@ if __name__ == "__main__":
     result = Solution().isValidBST(root)
     result_test = Solution().recursive_sol(root)
     assert result == result_test
-    print(result)

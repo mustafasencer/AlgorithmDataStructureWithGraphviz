@@ -19,4 +19,3 @@ if __name__ == "__main__":
     result = solution([2, 3, 4], [2, 3, 4, 5, 6])
     if result is not None:
         raise ValueError
-    print(result)

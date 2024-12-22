@@ -2,7 +2,7 @@ import heapq
 
 
 class MyHeap:
-    def __init__(self, initial=None, key=lambda x: x):
+    def __init__(self, initial=None, key=lambda x: x) -> None:
         self.key = key
         self.index = 0
         if initial:
@@ -12,7 +12,7 @@ class MyHeap:
         else:
             self._data = []
 
-    def push(self, item):
+    def push(self, item) -> None:
         heapq.heappush(self._data, (self.key(item), self.index, item))
         self.index += 1
 

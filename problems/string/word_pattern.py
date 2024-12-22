@@ -1,9 +1,7 @@
-"""
-https://leetcode.com/problems/word-pattern/
-"""
+"""https://leetcode.com/problems/word-pattern/."""
 
 
-def solution(nums, pattern):
+def solution(nums, pattern) -> bool:
     lookup = {}
 
     nums = nums.split(" ")
@@ -15,10 +13,8 @@ def solution(nums, pattern):
             pattern_letter = lookup[word]
             if pattern_letter == pattern[i]:
                 continue
-            else:
-                return False
-        else:
-            lookup[word] = pattern[i]
+            return False
+        lookup[word] = pattern[i]
 
     return True
 

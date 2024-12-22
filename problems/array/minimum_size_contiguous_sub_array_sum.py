@@ -1,7 +1,7 @@
 def solution(nums, target):
     """
     1. keep the window sum of the elements
-    2. remove the first item in the window to keep exploring the next contiguous sub arrays
+    2. remove the first item in the window to keep exploring the next contiguous sub arrays.
     """
     INF = len(nums) + 1
     min_length = INF

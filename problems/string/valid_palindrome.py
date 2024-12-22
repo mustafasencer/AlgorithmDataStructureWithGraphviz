@@ -8,14 +8,14 @@ def is_palindrome(s: str) -> bool:
         while i < j and not s[j].isalnum():
             j -= 1
 
-        if not s[i] == s[j]:
+        if s[i] != s[j]:
             return False
         i += 1
         j -= 1
     return True
 
 
-def test(string: str):
+def test(string: str) -> bool:
     string = string.lower()
     left = 0
     right = len(string) - 1
@@ -26,7 +26,7 @@ def test(string: str):
         while left < right and string[left].isalnum():
             right -= 1
 
-        if not string[left] == string[right]:
+        if string[left] != string[right]:
             return False
         left += 1
         right -= 1
@@ -36,4 +36,3 @@ def test(string: str):
 
 if __name__ == "__main__":
     result = test("0P")
-    print(result)

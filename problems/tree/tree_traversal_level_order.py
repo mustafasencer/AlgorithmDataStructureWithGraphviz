@@ -7,7 +7,7 @@ def level_order_bottom_recursion(root):
     return res
 
 
-def dfs(root, level, res):
+def dfs(root, level, res) -> None:
     if not root:
         return
     if len(res) < level + 1:

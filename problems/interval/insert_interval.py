@@ -1,7 +1,4 @@
-from typing import List
-
-
-def solution(intervals: List[List[int]], newInterval: List[int]) -> List[List[int]]:
+def solution(intervals: list[list[int]], newInterval: list[int]) -> list[list[int]]:
     intervals.append(newInterval)
     result = []
     for i in sorted(intervals, key=lambda x: x[0]):
@@ -14,4 +11,3 @@ def solution(intervals: List[List[int]], newInterval: List[int]) -> List[List[in
 
 if __name__ == "__main__":
     result = solution([[1, 2], [3, 5], [6, 7], [8, 10], [12, 16]], [4, 8])
-    print(result)

@@ -5,7 +5,7 @@ def binary_search(array, start_index, end_index, value):
         if array[mid] == value:
             return mid
 
-        elif array[mid] < value:
+        if array[mid] < value:
             start_index = mid + 1
 
         else:
@@ -22,6 +22,6 @@ if __name__ == "__main__":
     result = binary_search(arr, 0, len(arr) - 1, x)
 
     if result != -1:
-        print("Element is present at index % d" % result)
+        pass
     else:
-        print("Element is not present in array")
+        pass

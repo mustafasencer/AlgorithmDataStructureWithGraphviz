@@ -1,7 +1,7 @@
-from typing import Any, List
+from typing import Any
 
 
-def flatten_recursive(L: List) -> List[Any]:
+def flatten_recursive(L: list) -> list[Any]:
     """
     1. check whether 1st item is a list
     2. recursively flatten that item and the rest of the outer list
@@ -9,16 +9,16 @@ def flatten_recursive(L: List) -> List[Any]:
     """
     if not L:
         return []
-    elif isinstance(L[0], list):
+    if isinstance(L[0], list):
         return flatten_recursive(L[0]) + flatten_recursive(L[1:])
-    return [L[0]] + flatten_recursive(L[1:])
+    return [L[0], *flatten_recursive(L[1:])]
 
 
-def flatten_stack(L: List) -> List[Any]:
+def flatten_stack(L: list) -> list[Any]:
     """
     1. append all items into stack
     2. pop stack by checking the popped item's type
-    3. return the reversed result
+    3. return the reversed result.
     """
     stack = []
     result = []
@@ -41,4 +41,3 @@ def flatten_stack(L: List) -> List[Any]:
 if __name__ == "__main__":
     L = [[1, [2, 3]], [2]]
     result = flatten_stack(L)
-    print(result)

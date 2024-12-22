@@ -12,7 +12,7 @@ Given a non-empty string containing only digits, determine the total number of w
 def solution(s: str):
     """
     1. create a dp array
-    2. based on the digits and number with 2 basamaks increase the possibility count in the dp array
+    2. based on the digits and number with 2 basamaks increase the possibility count in the dp array.
     """
     if not s:
         return 0

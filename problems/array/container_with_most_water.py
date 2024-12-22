@@ -1,14 +1,8 @@
-"""
-Calculate max area based on the item at index i and the difference between i and j
-"""
-
-from typing import List
+"""Calculate max area based on the item at index i and the difference between i and j."""
 
 
-def solution(height: List[int]) -> int:
-    """
-    1.
-    """
+def solution(height: list[int]) -> int:
+    """1."""
     max_area = 0
     j = len(height) - 1
     i = 0

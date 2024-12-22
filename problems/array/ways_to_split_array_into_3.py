@@ -1,9 +1,7 @@
-"""
-https://leetcode.com/problems/ways-to-split-array-into-three-subarrays/
-"""
+"""https://leetcode.com/problems/ways-to-split-array-into-three-subarrays/."""
 
 
-def solution():
+def solution() -> None:
     pass
 
 

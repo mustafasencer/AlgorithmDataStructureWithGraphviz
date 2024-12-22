@@ -14,15 +14,13 @@ def reverse_list(node):
     return result
 
 
-def print_list(head):
+def print_list(head) -> None:
     node = head
     while node is not None:
-        print(node.data, end=" -> ")
         node = node.next
-    print("NULL")
 
 
-def push(value):
+def push(value) -> None:
     global head
     new_node = LinkedListNode(value)
     new_node.next = head

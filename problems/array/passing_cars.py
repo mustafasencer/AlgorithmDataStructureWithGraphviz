@@ -46,7 +46,7 @@ def solution(nums):
     """
     1. take into account that the most import value here is the 0 values
     2. loop over the nums array
-    3. increase the passing cars count by the zeros that have been encountered so far
+    3. increase the passing cars count by the zeros that have been encountered so far.
     """
     zero_count = 0
     combinations = 0
@@ -65,7 +65,7 @@ def solution(nums):
 def solution_1(nums):
     """
     1. another approach where anytime a 0 is encountered
-    2. go to the end of the array to increase the number of passing cars
+    2. go to the end of the array to increase the number of passing cars.
     """
     passing_cars = 0
     for i in range(len(nums)):
@@ -84,4 +84,3 @@ if __name__ == "__main__":
     A = [0, 1, 0, 1, 1]
     result = solution_1(A)
     assert result == 5
-    print(result)

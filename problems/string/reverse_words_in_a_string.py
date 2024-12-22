@@ -1,6 +1,4 @@
-"""
-Reverse Words in a String
-"""
+"""Reverse Words in a String."""
 
 
 def solution(string: str):  # not working right now, should be revised! (inplace trial)
@@ -32,4 +30,3 @@ if __name__ == "__main__":
     string = "  Bob    Loves  Alice   "
     result = solution_1(string)
     assert result == "Alice Loves Bob"
-    print(result)

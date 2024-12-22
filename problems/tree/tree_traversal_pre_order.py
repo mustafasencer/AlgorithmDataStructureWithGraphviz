@@ -5,7 +5,7 @@ from visualization.tree import TreeDrawer
 def recursive(root):
     result = []
 
-    def helper(root):
+    def helper(root) -> None:
         if root:
             result.append(root.val)
             helper(root.left)
@@ -20,7 +20,7 @@ def stack(root):
     stack = []
     current = root
     if not root:
-        return
+        return None
 
     while current or stack:
         if current:

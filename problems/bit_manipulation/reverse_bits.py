@@ -13,4 +13,3 @@ class Solution:
 
 if __name__ == "__main__":
     result = Solution().reverseBits(4294967293)
-    print(result)

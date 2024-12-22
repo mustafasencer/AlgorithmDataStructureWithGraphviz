@@ -4,24 +4,22 @@ from collections import namedtuple
 Edge = namedtuple("Edge", ["vertex", "weight"])
 
 
-class GraphUndirectedWeighted(object):
-    def __init__(self, vertex_count):
+class GraphUndirectedWeighted:
+    def __init__(self, vertex_count) -> None:
         self.vertex_count = vertex_count
         self.adjacency_list = [[] for _ in range(vertex_count)]
 
-    def add_edge(self, source, dest, weight):
+    def add_edge(self, source, dest, weight) -> None:
         assert source < self.vertex_count
         assert dest < self.vertex_count
         self.adjacency_list[source].append(Edge(dest, weight))
         self.adjacency_list[dest].append(Edge(source, weight))
 
     def get_edge(self, vertex):
-        for e in self.adjacency_list[vertex]:
-            yield e
+        yield from self.adjacency_list[vertex]
 
     def get_vertex(self):
-        for v in range(self.vertex_count):
-            yield v
+        yield from range(self.vertex_count)
 
 
 def dijkstra(graph, source, dest):
@@ -37,7 +35,7 @@ def dijkstra(graph, source, dest):
         distances.append(weight)
         parents.append(None)
 
-    q.put(([0, source]))
+    q.put([0, source])
 
     while not q.empty():
         v_tuple = q.get()
@@ -50,8 +48,9 @@ def dijkstra(graph, source, dest):
                 parents[e.vertex] = v
                 # primitive but effective negative cycle detection
                 if candidate_distance < -1000:
-                    raise Exception("Negative cycle detected")
-                q.put(([distances[e.vertex], e.vertex]))
+                    msg = "Negative cycle detected"
+                    raise Exception(msg)
+                q.put([distances[e.vertex], e.vertex])
 
     shortest_path = []
     end = dest
@@ -64,7 +63,7 @@ def dijkstra(graph, source, dest):
     return shortest_path, distances[dest]
 
 
-def main():
+def main() -> None:
     g = GraphUndirectedWeighted(9)
     g.add_edge(0, 1, 4)
     g.add_edge(1, 7, 6)
@@ -83,16 +82,20 @@ def main():
     # g.add_edge(9, 7, -4)
 
     shortest_path, distance = dijkstra(g, 0, 1)
-    assert shortest_path == [0, 1] and distance == 4
+    assert shortest_path == [0, 1]
+    assert distance == 4
 
     shortest_path, distance = dijkstra(g, 0, 8)
-    assert shortest_path == [0, 1, 2, 3, 7, 8] and distance == 11
+    assert shortest_path == [0, 1, 2, 3, 7, 8]
+    assert distance == 11
 
     shortest_path, distance = dijkstra(g, 5, 0)
-    assert shortest_path == [5, 3, 2, 1, 0] and distance == 9
+    assert shortest_path == [5, 3, 2, 1, 0]
+    assert distance == 9
 
     shortest_path, distance = dijkstra(g, 1, 1)
-    assert shortest_path == [1] and distance == 0
+    assert shortest_path == [1]
+    assert distance == 0
 
 
 if __name__ == "__main__":

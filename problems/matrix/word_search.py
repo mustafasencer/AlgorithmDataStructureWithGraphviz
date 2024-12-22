@@ -1,10 +1,8 @@
-from typing import List
-
-"""Backtracking / DFS """
+"""Backtracking / DFS."""
 
 
 class Solution:
-    def exist(self, board: List[List[str]], word: str) -> bool:
+    def exist(self, board: list[list[str]], word: str) -> bool:
         result = False
         for i in range(len(board)):
             for j in range(len(board[0])):
@@ -30,7 +28,4 @@ class Solution:
 
 
 if __name__ == "__main__":
-    result = Solution().exist(
-        [["A", "B", "C", "E"], ["S", "F", "C", "S"], ["A", "D", "E", "E"]], "ABCB"
-    )
-    print(result)
+    result = Solution().exist([["A", "B", "C", "E"], ["S", "F", "C", "S"], ["A", "D", "E", "E"]], "ABCB")

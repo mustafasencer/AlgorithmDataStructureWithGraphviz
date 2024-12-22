@@ -1,7 +1,5 @@
 def solution(A):
-    """
-    1. Hard: Not yet done
-    """
+    """1. Hard: Not yet done."""
     mapper = {}
 
     for i in range(len(A)):
@@ -27,7 +25,7 @@ def solution(A):
             leader_count += 1
 
         if (
-            not i + 1 == len(A)
+            i + 1 != len(A)
             and leader_count > (len(A[: i + 1]) / 2)
             and (max_value - leader_count) > (len(A[i + 1 :]) / 2)
         ):
@@ -40,4 +38,3 @@ if __name__ == "__main__":
     A = [1, 2, 1, 1, 2, 1]
     result = solution(A)
     assert result == 3
-    print(result)

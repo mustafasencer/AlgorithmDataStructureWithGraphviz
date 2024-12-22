@@ -1,6 +1,4 @@
-"""
-Created by Mustafa Sencer Özcan on 22.05.2020.
-"""
+"""Created by Mustafa Sencer Özcan on 22.05.2020."""
 
 
 class Solution:
@@ -13,4 +11,3 @@ class Solution:
 
 if __name__ == "__main__":
     result = Solution().minWindow("ADOBECODEBANC", "ABC")
-    print(result)

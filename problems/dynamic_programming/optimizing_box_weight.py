@@ -1,11 +1,9 @@
 def solution(nums):
-    """
-    1.
-    """
+    """1."""
     result = []
     count = 0
 
-    def dfs(nums, ans, result):
+    def dfs(nums, ans, result) -> None:
         nonlocal count
         if not nums:
             return
@@ -16,8 +14,7 @@ def solution(nums):
 
         for _ in range(1):
             count += 1
-            print(count)
-            dfs(nums[1:], ans + [nums[0]], result)
+            dfs(nums[1:], [*ans, nums[0]], result)
 
     nums.sort(reverse=True)
     dfs(nums, [], result)

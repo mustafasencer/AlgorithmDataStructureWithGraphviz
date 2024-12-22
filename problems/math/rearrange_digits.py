@@ -20,4 +20,3 @@ if __name__ == "__main__":
     digits = 12345678
     result = solution(digits)
     assert result == 18273645
-    print(result)

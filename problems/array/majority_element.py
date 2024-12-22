@@ -1,26 +1,21 @@
 def solution(nums):
-    """
-    1. No explanation!
-    """
+    """1. No explanation!"""
     nums.sort()
     return nums[len(nums) // 2]
 
 
 def solution_2(nums):
-    """
-    1.
-    """
+    """1."""
     m = {}
     for n in nums:
         m[n] = m.get(n, 0) + 1
         if m[n] > len(nums) // 2:
             return n
+    return None
 
 
 def solution_3(nums):
-    """
-    1. No explanation!
-    """
+    """1. No explanation!"""
     candidate, count = nums[0], 0
     for num in nums:
         if num == candidate:

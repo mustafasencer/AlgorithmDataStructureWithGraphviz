@@ -24,9 +24,7 @@ def solution(N):
 
 
 def solution_2(N):
-    """
-    1. same approach!
-    """
+    """1. same approach!"""
     max_gap = 0
     count = 0
     binary = f"{N:08b}"
@@ -50,4 +48,3 @@ if __name__ == "__main__":
     N = 32
     result = solution(N)
     assert result == 0
-    print(result)

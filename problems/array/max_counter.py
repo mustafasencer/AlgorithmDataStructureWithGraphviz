@@ -55,9 +55,7 @@ each element of array nums is an integer within the range [1..N + 1].
 
 
 def solution(N, nums):
-    """
-    1.
-    """
+    """1."""
     counters = [0] * N
     max_counter = 0
 

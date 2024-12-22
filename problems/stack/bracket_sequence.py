@@ -1,4 +1,4 @@
-def check_sequence(sequence):
+def check_sequence(sequence) -> bool | None:
     bracket_mapper = {"{": "}", "[": "]", "(": ")"}
     reverse = ["}", ")", "]"]
     stack = []
@@ -10,6 +10,7 @@ def check_sequence(sequence):
             stack.append(char)
     if not stack:
         return True
+    return None
 
 
 if __name__ == "__main__":

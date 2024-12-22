@@ -2,43 +2,39 @@ from collections import defaultdict
 
 
 class GraphNode:
-    def __init__(self, data, neighbors=None):
+    def __init__(self, data, neighbors=None) -> None:
         self.vertex = data
         self.neighbors = neighbors if neighbors is not None else []
 
 
 class WeightedGraph:
-    def __init__(self, vertices):
+    def __init__(self, vertices) -> None:
         self.V = vertices
         self.graph = []
 
-    def add_edge(self, v, w, c):
+    def add_edge(self, v, w, c) -> None:
         self.graph.append((v, w, c))
 
-    def print_graph(self):
+    def print_graph(self) -> None:
         for i in range(self.V):
-            print("Adjacency list of vertex {}\n head".format(i), end="")
             temp = self.graph[i]
             while temp:
-                print(" -> {}".format(temp.pop(0)), end="")
-            print(" \n")
+                pass
 
 
 class DirectedGraph:
-    def __init__(self, vertices):
+    def __init__(self, vertices) -> None:
         self.V = vertices
         self.graph = defaultdict(list)
 
-    def add_edge(self, v, w):
+    def add_edge(self, v, w) -> None:
         self.graph[v].append(w)
 
-    def print_graph(self):
+    def print_graph(self) -> None:
         for i in range(self.V):
-            print("Adjacency list of vertex {}\n head".format(i), end="")
             temp = self.graph[i]
             while temp:
-                print(" -> {}".format(temp.pop(0)), end="")
-            print(" \n")
+                pass
 
 
 if __name__ == "__main__":

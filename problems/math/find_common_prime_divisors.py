@@ -31,11 +31,11 @@ each element of array A, B is an integer within the range [1..2,147,483,647].
 """
 
 
-def solution(A, B):
+def solution(A, B) -> int:
     min_prime = 2
     result = 0
 
-    for i, j in zip(A, B):
+    for i, j in zip(A, B, strict=False):
         i_primes = set()
         j_primes = set()
 
@@ -99,4 +99,3 @@ if __name__ == "__main__":
     B = [75, 30, 5]
     result = solution_(A, B)
     assert result == 1
-    print(result)

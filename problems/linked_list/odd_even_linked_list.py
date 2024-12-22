@@ -2,7 +2,7 @@ from data_structures.linked_list import LinkedListNode
 
 
 class Solution:
-    def odd_even_list(self, head: LinkedListNode):
+    def odd_even_list(self, head: LinkedListNode) -> None:
         self.get_count(head)
         count = 1
         current = head.next
@@ -20,14 +20,14 @@ class Solution:
         return count
 
 
-class Context(object):
-    def __init__(self, first, second):
+class Context:
+    def __init__(self, first, second) -> None:
         self.first = first
         self.second = second
 
 
 class LinkedList:
-    def __init__(self):
+    def __init__(self) -> None:
         self.head = None
 
     def rearrange_odd_even(self):
@@ -77,16 +77,13 @@ class LinkedList:
             even.next = odd.next
             even = even.next
 
-    def print_list(self, node):
+    def print_list(self, node) -> None:
         while node is not None:
-            print(node.data, end="")
-            print("->", end="")
             node = node.next
-        print("NULL")
 
         # Function to insert a new node
 
-    def push(self, new_data):
+    def push(self, new_data) -> None:
         new_node = LinkedListNode(new_data)
         new_node.next = self.head
         self.head = new_node
@@ -101,10 +98,8 @@ if __name__ == "__main__":
     # ll.push(3)
     # ll.push(2)
     ll.push(1)
-    print("Given Linked List")
     ll.print_list(ll.head)
 
     context = ll.deneme()
 
-    print("\nModified Linked List")
     # ll.print_list(start)

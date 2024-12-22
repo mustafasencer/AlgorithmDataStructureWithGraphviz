@@ -1,7 +1,7 @@
 def solution(chars):
     """
     1. Append the dict
-    2. reloop and find the char that appears only once
+    2. reloop and find the char that appears only once.
     """
     mapper = {}
     for char in chars:

@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def merge(self, intervals: List[List[int]]) -> List[List[int]]:
+    def merge(self, intervals: list[list[int]]) -> list[list[int]]:
         result = []
         for interval in sorted(intervals, key=lambda x: x[0]):
             if result and result[-1][-1] >= interval[0]:
@@ -14,4 +11,3 @@ class Solution:
 
 if __name__ == "__main__":
     result = Solution().merge([[1, 4], [2, 3]])
-    print(result)

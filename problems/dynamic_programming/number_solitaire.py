@@ -62,6 +62,7 @@ def solution(A):  # false
             dp[i] = dp[i - 1] + A[i]
             return dp[i]
         dp[i] = max(dp[i - 1] + A[i], dp[i - 1])
+    return None
 
 
 def solution_1(A):
@@ -89,6 +90,7 @@ def solution_2(A):
             if i - j >= 0:
                 max_value = max(max_value, dp[i - j])
         dp[i] = max_value
+    return None
 
 
 if __name__ == "__main__":

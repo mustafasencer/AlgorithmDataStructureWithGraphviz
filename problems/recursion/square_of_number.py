@@ -1,7 +1,5 @@
 def solve(number):
-    """
-    1. (n - 1) ^ 2 = n ^ 2 - 2 * n + 1
-    """
+    """1. (n - 1) ^ 2 = n ^ 2 - 2 * n + 1."""
     if number == 0:
         return 0
     return solve(number - 1) + 2 * number - 1

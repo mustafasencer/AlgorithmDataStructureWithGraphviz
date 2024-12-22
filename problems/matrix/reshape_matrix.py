@@ -1,6 +1,4 @@
-"""
-https://leetcode.com/problems/reshape-the-matrix/
-"""
+"""https://leetcode.com/problems/reshape-the-matrix/."""
 
 
 def solve(mat, r, c):
@@ -10,9 +8,9 @@ def solve(mat, r, c):
 
     result = []
     flatten_mat = [col for row in mat for col in row]
-    for i in range(r):
+    for _i in range(r):
         row = []
-        for j in range(c):
+        for _j in range(c):
             row.append(flatten_mat.pop(0))
         result.append(row)
 

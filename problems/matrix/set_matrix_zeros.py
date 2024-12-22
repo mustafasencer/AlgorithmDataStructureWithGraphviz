@@ -1,10 +1,5 @@
-from typing import List
-
-
-def solution(matrix: List[List[int]]) -> List[List[int]] | None:
-    """
-    Do not return anything, modify matrix in-place instead.
-    """
+def solution(matrix: list[list[int]]) -> list[list[int]] | None:
+    """Do not return anything, modify matrix in-place instead."""
     is_col_0 = False
     is_row_0 = False
 

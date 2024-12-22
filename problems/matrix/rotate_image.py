@@ -1,11 +1,6 @@
-from typing import List
-
-
-def rotate(matrix: List[List[int]]) -> List[List[int]]:
-    """
-    Do not return anything, modify matrix in-place instead.
-    """
-    matrix[:] = zip(*matrix[::-1])
+def rotate(matrix: list[list[int]]) -> list[list[int]]:
+    """Do not return anything, modify matrix in-place instead."""
+    matrix[:] = zip(*matrix[::-1], strict=False)
     return matrix
 
 
@@ -19,4 +14,3 @@ def test_(matrix):
 
 if __name__ == "__main__":
     result = rotate([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
-    print(result)

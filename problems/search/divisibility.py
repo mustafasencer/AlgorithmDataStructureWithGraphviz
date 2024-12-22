@@ -76,7 +76,7 @@ def solution(K, M, A):
     return result
 
 
-def check_divisibility(mid_sum, K, A):
+def check_divisibility(mid_sum, K, A) -> bool:
     remaining_block_count = K
     current_block_sum = 0
 
@@ -98,4 +98,3 @@ if __name__ == "__main__":
     M = 5
     A = [2, 1, 5, 1, 2, 2, 2]
     result = solution(K, M, A)
-    print(result)

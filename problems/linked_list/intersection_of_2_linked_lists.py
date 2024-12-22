@@ -2,7 +2,7 @@ from data_structures.linked_list import LinkedListNode
 from problems.linked_list.build_linked_list import build_linked_list
 
 
-def get_intersection_node(headA: LinkedListNode, headB: LinkedListNode):
+def get_intersection_node(headA: LinkedListNode, headB: LinkedListNode) -> None:
     count_a = get_count(headA)
     count_b = get_count(headB)
     if count_a > count_b:
@@ -16,7 +16,7 @@ def get_intersection_node(headA: LinkedListNode, headB: LinkedListNode):
 def get_intersection(d, Node1, Node2):
     current1 = Node1
     current2 = Node2
-    for i in range(d):
+    for _i in range(d):
         if Node1 is None:
             return -1
         current1 = current1.next

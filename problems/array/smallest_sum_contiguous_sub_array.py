@@ -1,13 +1,12 @@
 import sys
-from typing import List
 
 
-def solution(nums: List[int]) -> int:
+def solution(nums: list[int]) -> int:
     """
     1. loop over the nums array and check if `current_min` is bigger than 0
     2. > 0 means that the item does not contribute to the smallest value (single positive is already smaller!)
      then refresh the value
-    3. < 0 means the value is negative and consequently should be added to get an even smaller number
+    3. < 0 means the value is negative and consequently should be added to get an even smaller number.
     """
     current_min = sys.maxsize
 

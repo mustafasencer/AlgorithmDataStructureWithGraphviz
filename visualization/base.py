@@ -8,11 +8,11 @@ class DiGraphImpl:
     class NodeAttributes:
         node_label = """<<FONT POINT-SIZE="18" FACE="ubuntu">%s</FONT><BR ALIGN="CENTER"/>>"""
 
-    def __init__(self, name="", format="pdf", is_vertical=False):
+    def __init__(self, name="", format="pdf", is_vertical=False) -> None:
         self.digraph = Digraph(format=format)
         self.digraph.attr(name=name, rankdir="TB" if is_vertical else "LR")
 
-    def add_node(self, key, value):
+    def add_node(self, key, value) -> None:
         if value == "null":
             self.digraph.node(
                 key,
@@ -31,8 +31,8 @@ class DiGraphImpl:
                 height="1",
             )
 
-    def add_edge(self, source, destination):
+    def add_edge(self, source, destination) -> None:
         self.digraph.edge(source, destination)
 
-    def view(self):
+    def view(self) -> None:
         self.digraph.view()

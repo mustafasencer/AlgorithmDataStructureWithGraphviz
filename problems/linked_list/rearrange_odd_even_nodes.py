@@ -3,7 +3,7 @@ from data_structures.linked_list import LinkedListNode
 head = None  # head of list
 
 
-def segregate_even_odd():
+def segregate_even_odd() -> None:
     global head
 
     # Starting node of list having
@@ -37,13 +37,12 @@ def segregate_even_odd():
 
         # If current value is odd, add
         # it to odd values list.
+        elif oddStart is None:
+            oddStart = currNode
+            oddEnd = oddStart
         else:
-            if oddStart is None:
-                oddStart = currNode
-                oddEnd = oddStart
-            else:
-                oddEnd.next = currNode
-                oddEnd = oddEnd.next
+            oddEnd.next = currNode
+            oddEnd = oddEnd.next
 
         # Move head pointer one step in
         # forward direction
@@ -64,7 +63,7 @@ def segregate_even_odd():
     head = evenStart
 
 
-def push(new_data):
+def push(new_data) -> None:
     global head
     # 1 & 2: Allocate the Node &
     #         Put in the data
@@ -77,13 +76,11 @@ def push(new_data):
     head = new_node
 
 
-def print_list():
+def print_list() -> None:
     global head
     node = head
     while node is not None:
-        print(node.data, end=" ")
         node = node.next
-    print()
 
 
 if __name__ == "__main__":
@@ -95,10 +92,8 @@ if __name__ == "__main__":
     push(1)
     push(0)
 
-    print("Original Linked list")
     print_list()
 
     segregate_even_odd()
 
-    print("Modified Linked list")
     print_list()

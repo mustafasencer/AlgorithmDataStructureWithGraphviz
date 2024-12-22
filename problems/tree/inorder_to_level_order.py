@@ -9,7 +9,7 @@ def complete_binary_tree(a):
     return result
 
 
-def print_inorder(root, result):
+def print_inorder(root, result) -> None:
     if root:
         print_inorder(root.left, result)
 
@@ -31,9 +31,9 @@ def build_tree_from_inorder(array, start, end):
         tNode.right = buildTree(inOrder, preOrder, inIndex + 1, inEnd)
 
         return tNode
+    return None
 
 
 if __name__ == "__main__":
     input = [1, 2, 3, 4, 5, 6]
     result = complete_binary_tree(input)
-    print(result)

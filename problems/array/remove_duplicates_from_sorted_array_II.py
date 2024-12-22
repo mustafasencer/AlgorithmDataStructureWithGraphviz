@@ -6,14 +6,12 @@ Do not allocate extra space for another array; you must do this by modifying the
 in-place with O(1) extra memory.
 """
 
-from typing import List
 
-
-def solution(nums: List[int]) -> int:
+def solution(nums: list[int]) -> int:
     """
     1. loop over the nums array
     2. check 2 index before and compare the value with current
-    3. if the value < than current then change it inplace and increase index
+    3. if the value < than current then change it inplace and increase index.
     """
     index = 0
     for value in nums:
@@ -23,7 +21,7 @@ def solution(nums: List[int]) -> int:
     return len(nums[:index])
 
 
-def solution_1(nums: List[int]) -> int:
+def solution_1(nums: list[int]) -> int:
     i = 1
     count = 2
     while i < len(nums):
@@ -39,7 +37,7 @@ def solution_1(nums: List[int]) -> int:
     return len(nums)
 
 
-def solution_2(nums: List[int]) -> int:
+def solution_2(nums: list[int]) -> int:
     i = 1
     count = 2
     while i < len(nums):
@@ -60,4 +58,3 @@ def solution_2(nums: List[int]) -> int:
 if __name__ == "__main__":
     result = solution_2([1, 1, 1, 1, 2, 2, 3, 3, 3])
     assert result == 6
-    print(result)

@@ -1,6 +1,4 @@
-"""
-Hint: Move pointers intelligently in order to solve it!
-"""
+"""Hint: Move pointers intelligently in order to solve it!"""
 
 
 def solution(s: str) -> int:
@@ -50,9 +48,8 @@ def solution_2(s):
                 start = i
             else:
                 dp[i] = i - start + 1
-        else:
-            if i != 0:
-                dp[i] = dp[i - 1] + 1
+        elif i != 0:
+            dp[i] = dp[i - 1] + 1
 
         lookup[current] = i
 
@@ -61,5 +58,4 @@ def solution_2(s):
 
 if __name__ == "__main__":
     result = solution_2("abbacdabc")
-    print(result)
     assert result == 4

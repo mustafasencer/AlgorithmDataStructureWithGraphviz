@@ -2,7 +2,7 @@ from visualization.base import DiGraphImpl
 
 
 class LinkedListDrawer:
-    def __init__(self):
+    def __init__(self) -> None:
         self.digraph = DiGraphImpl()
         self.key_value_pairs = []
         self._key = None
@@ -30,14 +30,14 @@ class LinkedListDrawer:
         self.source = key
         return key
 
-    def _create_node(self, val):
+    def _create_node(self, val) -> None:
         key = self.get_key(val)
         self.digraph.add_node(str(key), str(val) if val else "null")
 
-    def _create_edge(self, source, destination):
+    def _create_edge(self, source, destination) -> None:
         self.digraph.add_edge(str(source), str(destination))
 
-    def create_nodes(self, root):
+    def create_nodes(self, root) -> None:
         queue = [root]
         while queue:
             node = queue.pop(0)
@@ -46,6 +46,6 @@ class LinkedListDrawer:
                 node = node.next
                 queue.append(node)
 
-    def visualize(self, root):
+    def visualize(self, root) -> None:
         self.create_nodes(root)
         self.digraph.view()

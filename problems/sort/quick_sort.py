@@ -13,7 +13,7 @@ def partition(arr, low, high):
     return i + 1
 
 
-def quick_sort(arr, low, high):
+def quick_sort(arr, low, high) -> None:
     if low < high:
         # pi is partitioning index, arr[p] is now
         # at right place
@@ -29,6 +29,5 @@ if __name__ == "__main__":
     arr = [10, 7, 8, 9, 1, 5]
     n = len(arr)
     quick_sort(arr, 0, n - 1)
-    print("Sorted array is:")
-    for i in range(n):
-        print("%d" % arr[i])
+    for _i in range(n):
+        pass

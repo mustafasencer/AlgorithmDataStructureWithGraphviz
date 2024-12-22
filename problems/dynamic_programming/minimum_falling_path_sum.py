@@ -1,12 +1,9 @@
-from typing import List
-
-
-def solve(matrix: List[List[int]]):
+def solve(matrix: list[list[int]]):
     """
     1. start from the 2nd row!
     2. check the previous row within the diagonal limits
     3. change the current i, j item in the matrix by setting the min sum value
-    4. the last row of the matrix should have the last results and min should be selected
+    4. the last row of the matrix should have the last results and min should be selected.
     """
     for i in range(1, len(matrix)):
         for j in range(len(matrix[i])):

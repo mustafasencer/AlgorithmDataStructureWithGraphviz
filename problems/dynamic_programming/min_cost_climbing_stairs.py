@@ -6,10 +6,8 @@ You need to find minimum cost to reach the top of the floor,
 and you can either start from the step with index 0, or the step with index 1.
 """
 
-from typing import List
 
-
-def solution(cost: List[int]) -> int:
+def solution(cost: list[int]) -> int:
     min1, min2 = cost[0], cost[1]
     for c in cost[2:]:
         min1, min2 = min2, min(min1, min2) + c

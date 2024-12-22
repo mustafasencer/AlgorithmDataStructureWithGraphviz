@@ -1,7 +1,7 @@
 from collections import Counter
 
 
-def solution(s1, s2):
+def solution(s1, s2) -> bool:
     cntr, w = Counter(s1), len(s1)
 
     for i in range(len(s2)):
@@ -10,7 +10,7 @@ def solution(s1, s2):
         if i >= w and s2[i - w] in cntr:
             cntr[s2[i - w]] += 1
 
-        if all([cntr[i] == 0 for i in cntr]):
+        if all(cntr[i] == 0 for i in cntr):
             return True
 
     return False

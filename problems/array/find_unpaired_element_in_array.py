@@ -35,7 +35,7 @@ all but one of the values in nums occur an even number of times.
 def solution(nums):
     """
     1. loop over and store the item in an hash table
-    2. find the element not divisible by 2
+    2. find the element not divisible by 2.
     """
     lookup = {}
     for item in nums:
@@ -44,6 +44,7 @@ def solution(nums):
     for key, value in lookup.items():
         if value % 2:
             return key
+    return None
 
 
 if __name__ == "__main__":

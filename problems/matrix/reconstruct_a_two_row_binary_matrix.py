@@ -1,9 +1,7 @@
-"""
-https://leetcode.com/problems/reconstruct-a-2-row-binary-matrix/
-"""
+"""https://leetcode.com/problems/reconstruct-a-2-row-binary-matrix/."""
 
 
-def solution(U, L, C):
+def solution(U, L, C) -> str:
     n = len(C)
     upper_row = [0 for _ in range(n)]
     lower_row = [0 for _ in range(n)]
@@ -23,7 +21,7 @@ def solution(U, L, C):
     if U == L == 0:
         upper_row = "".join(str(e) for e in upper_row)
         lower_row = "".join(str(e) for e in lower_row)
-        return ",".join((upper_row, lower_row))
+        return f"{upper_row},{lower_row}"
     return "IMPOSSIBLE"
 
 

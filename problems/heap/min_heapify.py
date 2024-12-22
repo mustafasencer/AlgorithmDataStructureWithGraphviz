@@ -2,16 +2,16 @@ from heapq import heappop, heappush
 
 
 class MinHeap:
-    def __init__(self):
+    def __init__(self) -> None:
         self.heap = []
 
     def parent(self, i):
         return (i - 1) / 2
 
-    def insert_key(self, k):
+    def insert_key(self, k) -> None:
         heappush(self.heap, k)
 
-    def decrease_key(self, i, new_val):
+    def decrease_key(self, i, new_val) -> None:
         self.heap[i] = new_val
         while i != 0 and self.heap[self.parent(i)] > self.heap[i]:
             self.heap[i], self.heap[self.parent(i)] = (
@@ -22,7 +22,7 @@ class MinHeap:
     def extract_min(self):
         return heappop(self.heap)
 
-    def delete_key(self, i):
+    def delete_key(self, i) -> None:
         self.decrease_key(i, float("-inf"))
         self.extract_min()
 

@@ -25,8 +25,7 @@ def solution(l1, l2):
 def push(head, value):
     new_node = LinkedListNode(value)
     new_node.next = head
-    head = new_node
-    return head
+    return new_node
 
 
 if __name__ == "__main__":
@@ -38,5 +37,4 @@ if __name__ == "__main__":
     result = solution(l1, l2)
 
     while result:
-        print(result.val)
         result = result.next

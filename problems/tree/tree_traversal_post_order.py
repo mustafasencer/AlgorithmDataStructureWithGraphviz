@@ -6,7 +6,7 @@ from visualization.tree import TreeDrawer
 def recursive(root, p, q):  # post order recursive traversal
     result = []
 
-    def helper(root):
+    def helper(root) -> None:
         if root:
             helper(root.left)
             helper(root.right)
@@ -47,4 +47,3 @@ if __name__ == "__main__":
     root = build_tree(array, None, 0, len(array))
     result = stack(root)
     TreeDrawer().visualize(root)
-    print(result)

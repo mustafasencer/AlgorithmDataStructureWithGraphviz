@@ -12,8 +12,7 @@ def solution(array: str, k: int):
     # returns (k-1)th character
     if len(non_repeated_dict) < k:
         return "no output."
-    else:
-        return non_repeated_dict[k - 1]
+    return non_repeated_dict[k - 1]
 
 
 if __name__ == "__main__":

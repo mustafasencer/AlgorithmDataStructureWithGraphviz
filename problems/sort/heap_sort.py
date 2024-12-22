@@ -4,7 +4,7 @@ from heapq import heapify
 from problems.heap.max_heapify import heapify as heapify_
 
 
-def heap_sort(arr):
+def heap_sort(arr) -> None:
     length = len(arr)
 
     # Build a max heap.
@@ -17,11 +17,11 @@ def heap_sort(arr):
         heapify_(arr, i, 0)
 
 
-def heap_sort_1(arr):
+def heap_sort_1(arr) -> None:
     heapq.heapify(arr)
 
 
-def test_heap_sort(array):
+def test_heap_sort(array) -> None:
     heapify(array)
 
 

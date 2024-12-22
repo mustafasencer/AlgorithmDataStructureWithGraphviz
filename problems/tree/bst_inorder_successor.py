@@ -1,6 +1,4 @@
-"""
-https://www.geeksforgeeks.org/inorder-successor-in-binary-search-tree/#:~:text=In%20Binary%20Tree%2C%20Inorder%20successor,key%20of%20the%20input%20node.
-"""
+"""https://www.geeksforgeeks.org/inorder-successor-in-binary-search-tree/#:~:text=In%20Binary%20Tree%2C%20Inorder%20successor,key%20of%20the%20input%20node."""
 
 from data_structures.tree import TreeNodeWithParent
 from problems.tree.bst_build_from_array import build_bst
@@ -12,7 +10,7 @@ def solution(node):
         depending on which child we are coming from:
         left: return parent directly because it is already the smallest possible
         right: we need to go one level above check the upper parent! (tricky part)
-    2. if right exists; we need to go to the left most to find the minimum value in the right side! (bst property)
+    2. if right exists; we need to go to the left most to find the minimum value in the right side! (bst property).
     """
     if not node.right:
         while node.parent:

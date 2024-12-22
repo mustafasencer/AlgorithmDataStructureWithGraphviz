@@ -1,7 +1,7 @@
 from visualization.tree import TreeDrawer
 
 
-def heapify(arr, n, i):
+def heapify(arr, n, i) -> None:
     largest = i  # Initialize largest as root
     left = 2 * i + 1  # left = 2*i + 1
     right = 2 * i + 2  # right = 2*i + 2
@@ -15,7 +15,7 @@ def heapify(arr, n, i):
         heapify(arr, n, largest)
 
 
-def test(arr, n, i):
+def test(arr, n, i) -> None:
     largest = i
     l = 2 * i + 1
     r = 2 * i + 2

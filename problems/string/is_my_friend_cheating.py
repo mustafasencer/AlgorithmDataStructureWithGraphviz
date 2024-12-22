@@ -1,6 +1,4 @@
-"""
-Codewars
-"""
+"""Codewars."""
 
 
 def remove_nb(n):
@@ -18,4 +16,3 @@ def remove_nb(n):
 
 if __name__ == "__main__":
     result = remove_nb(5)
-    print(result)

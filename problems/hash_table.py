@@ -1,16 +1,16 @@
-from typing import MutableSequence, Sequence
+from collections.abc import MutableSequence, Sequence
 
 
 class HashTable:
     # Create empty bucket list of given size
-    def __init__(self, size):
+    def __init__(self, size) -> None:
         self.size = size
         self.hash_table = self.create_buckets()
 
     def create_buckets(self):
         return [[] for _ in range(self.size)]
 
-    def set_val(self, key, val):
+    def set_val(self, key, val) -> None:
         # Get the index from the key
         # using hash function
         hashed_key = hash(key) % self.size
@@ -45,7 +45,7 @@ class HashTable:
         bucket = self.hash_table[hashed_key]
 
         found_key = False
-        for index, record in enumerate(bucket):
+        for _index, record in enumerate(bucket):
             record_key, record_val = record
 
             # check if the bucket has same key as
@@ -59,11 +59,10 @@ class HashTable:
         # Otherwise indicate there was no record found
         if found_key:
             return record_val
-        else:
-            return "No record found"
+        return "No record found"
 
     # Remove a value with specific key
-    def delete_val(self, key):
+    def delete_val(self, key) -> None:
         # Get the index from the key using
         # hash function
         hashed_key = hash(key) % self.size
@@ -82,15 +81,14 @@ class HashTable:
                 break
         if found_key:
             bucket.pop(index)
-        return
 
     # To print the items of hash map
-    def __str__(self):
+    def __str__(self) -> str:
         return "".join(str(item) for item in self.hash_table)
 
 
 class Bar:
-    def __init__(self, size):
+    def __init__(self, size) -> None:
         self.size = size
         self.buckets = self.create_buckets(size)
 
@@ -98,7 +96,7 @@ class Bar:
     def create_buckets(size) -> MutableSequence[Sequence[int]]:
         return [() for _ in range(size)]
 
-    def set_value(self, key, value):
+    def set_value(self, key, value) -> None:
         key_hash = hash(key) % self.size
 
         for index, item in enumerate(self.buckets):
@@ -121,7 +119,7 @@ class Bar:
 
         return 0
 
-    def delete_value(self, key):
+    def delete_value(self, key) -> None:
         key_hash = hash(key) % self.size
 
         for index, item in enumerate(self.buckets):
@@ -130,7 +128,7 @@ class Bar:
             if item_key == key_hash:
                 self.buckets.pop(index)
 
-    def __str__(self):
+    def __str__(self) -> str:
         return "".join((str(value) for key, value in self.buckets))
 
 
@@ -139,17 +137,10 @@ if __name__ == "__main__":
 
     # insert some values
     hash_table.set_val("gfg@example.com", "some value")
-    print(hash_table)
-    print()
 
     hash_table.set_val("portal@example.com", "some other value")
-    print(hash_table)
-    print()
 
     # search/access a record with key
-    print(hash_table.get_val("portal@example.com"))
-    print()
 
     # delete or remove a value
     hash_table.delete_val("portal@example.com")
-    print(hash_table)

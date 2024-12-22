@@ -49,7 +49,7 @@ def solution(A, K):
     1. loop over the array
     2. add k to the current index
     3. find the mod of the addition based on the array length
-    4. this forms the new_index and can be set in the result array
+    4. this forms the new_index and can be set in the result array.
     """
     length = len(A)
     result = [0] * length

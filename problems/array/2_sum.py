@@ -1,25 +1,22 @@
-from typing import List
-
-
-def solution(nums: List[int], target: int) -> List[int] | None:
+def solution(nums: list[int], target: int) -> list[int] | None:
     dict_ = {}
     for i, value in enumerate(nums):
         n = target - value
         if n in dict_:
             return [dict_[n], i]
-        else:
-            dict_[value] = i
+        dict_[value] = i
+    return None
 
 
-def solution_1(nums: List[int], target: int) -> List[int] | None:
+def solution_1(nums: list[int], target: int) -> list[int] | None:
     lookup = {}
     for i in range(len(nums)):
         remaining = target - nums[i]
 
         if remaining in lookup:
             return [lookup[remaining], i]
-        else:
-            lookup[nums[i]] = i
+        lookup[nums[i]] = i
+    return None
 
 
 if __name__ == "__main__":

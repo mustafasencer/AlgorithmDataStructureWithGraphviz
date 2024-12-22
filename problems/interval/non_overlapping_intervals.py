@@ -3,10 +3,8 @@ Given a collection of interval, find the minimum number of interval you need to 
 the rest of the interval non-overlapping.
 """
 
-from typing import List
 
-
-def solution(intervals: List[List[int]]) -> int:
+def solution(intervals: list[list[int]]) -> int:
     return 0
 
 

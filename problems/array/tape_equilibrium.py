@@ -43,10 +43,8 @@ N is an integer within the range [2..100,000];
 each element of array A is an integer within the range [−1,000..1,000].
 """
 
-from typing import List
 
-
-def solution(nums: List[int]) -> int:
+def solution(nums: list[int]) -> int:
     all_sum = sum(nums)
     sum_first = 0
 
@@ -62,11 +60,11 @@ def solution(nums: List[int]) -> int:
     return min_value
 
 
-def solution_2(nums: List[int]) -> int:
+def solution_2(nums: list[int]) -> int:
     """
     🥉
     1. loop over the nums array
-    2. find the diff for each required index
+    2. find the diff for each required index.
     """
     min_value = abs(sum(nums[:1]) - sum(nums[1:]))
     for i in range(2, len(nums)):

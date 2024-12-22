@@ -1,8 +1,7 @@
 from collections import defaultdict
-from typing import List
 
 
-def solution(strs: List[str]) -> List[List[str]]:
+def solution(strs: list[str]) -> list[list[str]]:
     memo = {}
     for item in strs:
         sort_ = "".join(sorted(item))
@@ -13,7 +12,7 @@ def solution(strs: List[str]) -> List[List[str]]:
     return [v for k, v in memo.items()]
 
 
-def solution_1(strs: List[str]):
+def solution_1(strs: list[str]):
     lookup = defaultdict(list)
 
     for item in strs:

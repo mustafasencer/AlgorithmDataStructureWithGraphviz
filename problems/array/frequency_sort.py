@@ -1,12 +1,11 @@
 from collections import Counter, OrderedDict
-from typing import List
 
 
-def solve(nums: List[int]):
+def solve(nums: list[int]):
     """
     1. build counter dict
     2. loop over the counter and build an ordered dict based on the count value for each item
-    3. loop over the ordered dict and return the original array ordered
+    3. loop over the ordered dict and return the original array ordered.
     """
     counter = Counter(nums)
 

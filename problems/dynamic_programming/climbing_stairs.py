@@ -12,7 +12,7 @@ def solution(n: int) -> int:
     1. first step has 1 different ways to reach
     2. second step has 2 different ways to reach
     3. third step has 3 different steps to reach
-    4. modeling the problem as a DP solves it directly
+    4. modeling the problem as a DP solves it directly.
     """
     if n == 0:
         return 0

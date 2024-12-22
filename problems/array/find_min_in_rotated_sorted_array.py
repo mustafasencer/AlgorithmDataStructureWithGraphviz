@@ -8,13 +8,11 @@ Find the minimum element.
 You may assume no duplicate exists in the array.
 """
 
-from typing import List
 
-
-def find_min(nums: List[int]) -> int:
+def find_min(nums: list[int]) -> int:
     """
     1. take a binary search approach as the array is sorted
-    2. try to find the lowest element possible
+    2. try to find the lowest element possible.
     """
     low = 0
     high = len(nums) - 1
@@ -31,4 +29,3 @@ def find_min(nums: List[int]) -> int:
 
 if __name__ == "__main__":
     result = find_min([3, 4, 5, 0, 1, 2])
-    print(result)

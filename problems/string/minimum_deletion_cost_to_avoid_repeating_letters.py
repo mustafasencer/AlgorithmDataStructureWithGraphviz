@@ -1,6 +1,6 @@
 """
 https://leetcode.ca/2020-03-26-1578-Minimum-Deletion-Cost-to-Avoid-Repeating-Letters/
-https://leetcode.com/problems/minimum-time-to-make-rope-colorful
+https://leetcode.com/problems/minimum-time-to-make-rope-colorful.
 """
 
 

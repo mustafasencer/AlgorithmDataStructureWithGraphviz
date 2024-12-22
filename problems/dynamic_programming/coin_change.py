@@ -1,6 +1,6 @@
 def solution(coins, amount):
     MAXs = [1e9] * amount
-    dp = [0] + MAXs
+    dp = [0, *MAXs]
     for i in range(1, amount + 1):
         for coin in coins:
             if i - coin >= 0:
@@ -25,9 +25,9 @@ def solution_1(coins, amount):
                 newval = v + coin
                 if newval == amount:
                     return nc
-                elif newval > amount:
+                if newval > amount:
                     continue
-                elif not visited[newval]:
+                if not visited[newval]:
                     visited[newval] = True
                     value2.append(newval)
         value1, value2 = value2, []
@@ -41,16 +41,16 @@ def solution_2(coins, amount):
     def dfs(coins, remain, ans, result):
         nonlocal counter
         counter += 1
-        print(counter)
         if remain < 0:
-            return
+            return None
         if remain == 0:
             return result.append(ans)
         if not coins:
-            return
+            return None
 
         for i in range(len(coins)):
-            dfs(coins[i:], remain - coins[i], ans + [coins[i]], result)
+            dfs(coins[i:], remain - coins[i], [*ans, coins[i]], result)
+        return None
 
     dfs(coins, amount, [], result)
     return min([len(i) for i in result])

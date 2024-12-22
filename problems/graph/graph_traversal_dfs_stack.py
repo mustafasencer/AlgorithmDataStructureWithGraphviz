@@ -2,11 +2,11 @@ from collections import defaultdict
 
 
 class Graph:
-    def __init__(self, V):
+    def __init__(self, V) -> None:
         self.V = V
         self.graph = defaultdict(list)
 
-    def add_edge(self, v, w):
+    def add_edge(self, v, w) -> None:
         self.graph[v].append(w)
 
     def dfs(self, start):

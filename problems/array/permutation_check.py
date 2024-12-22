@@ -46,10 +46,8 @@ each element of array A is an integer within the range [1..1,000,000,000].
 """
 
 
-def solution(nums):
-    """
-    1. sort the nums array and check if a value is missing from the sequence
-    """
+def solution(nums) -> int:
+    """1. sort the nums array and check if a value is missing from the sequence."""
     nums.sort()
     prev = nums[0]
     for item in nums[1:]:
@@ -60,10 +58,10 @@ def solution(nums):
     return 1
 
 
-def solution_1(nums):
+def solution_1(nums) -> int:
     nums.sort()
     for i in range(1, len(nums)):
-        if not nums[i] - nums[i - 1] == 1:
+        if nums[i] - nums[i - 1] != 1:
             return 0
     return 1
 

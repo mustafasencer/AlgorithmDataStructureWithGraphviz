@@ -11,10 +11,9 @@ Return the least number of units of times that the CPU will take to finish all t
 
 import collections
 from heapq import heappop, heappush
-from typing import List
 
 
-def solution(tasks: List[str], n: int) -> int:
+def solution(tasks: list[str], n: int) -> int:
     curr_time, h = 0, []
     for k, v in collections.Counter(tasks).items():
         heappush(h, (-1 * v, k))
@@ -28,8 +27,7 @@ def solution(tasks: List[str], n: int) -> int:
                     temp.append((x + 1, y))
             if not h and not temp:
                 break
-            else:
-                i += 1
+            i += 1
         for item in temp:
             heappush(h, item)
     return curr_time

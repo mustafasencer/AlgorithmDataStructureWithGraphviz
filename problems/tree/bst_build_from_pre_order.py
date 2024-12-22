@@ -22,4 +22,3 @@ if __name__ == "__main__":
     root = build_with_stack(nums)
     TreeDrawer().visualize(root)
     in_order_result = build_with_stack(nums)
-    print(in_order_result)

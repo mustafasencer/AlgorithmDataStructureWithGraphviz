@@ -1,7 +1,4 @@
-from typing import List
-
-
-def solution(s: str, word_dict: List[str]) -> bool:
+def solution(s: str, word_dict: list[str]) -> bool:
     dp = [False] * len(s)
     for i in range(len(s)):
         for w in word_dict:

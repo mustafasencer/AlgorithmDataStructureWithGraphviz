@@ -50,5 +50,4 @@ if __name__ == "__main__":
     ]
     k = 4
     result = solution_2(nums, k)
-    print(result)
     assert result == ["the", "is", "sunny", "day"]

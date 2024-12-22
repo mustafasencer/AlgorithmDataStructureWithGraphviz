@@ -1,7 +1,4 @@
-from typing import List
-
-
-def solution(nums: List[int], k: int) -> List[int]:
+def solution(nums: list[int], k: int) -> list[int]:
     length = len(nums)
     result = []
 
@@ -13,9 +10,7 @@ def solution(nums: List[int], k: int) -> List[int]:
 
 
 def solution_1(nums, k):
-    """
-    1. modify nums in-place instead.
-    """
+    """1. modify nums in-place instead."""
     l = len(nums)
     k = k % l
     nums[:] = nums[l - k :] + nums[: l - k]

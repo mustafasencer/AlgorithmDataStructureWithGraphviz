@@ -42,14 +42,13 @@ def solution(S, P, Q):
     """ """
     # write your code in Python 3.6
     mapper = {"A": 1, "C": 2, "G": 3, "T": 4}
-    result = [min([mapper[char] for char in S[p : q + 1]]) for p, q in zip(P, Q)]
-    return result
+    return [min([mapper[char] for char in S[p : q + 1]]) for p, q in zip(P, Q, strict=False)]
 
 
 def solution_(S, P, Q):
     """ """
     result = []
-    for p, q in zip(P, Q):
+    for p, q in zip(P, Q, strict=False):
         if "A" in S[p : q + 1]:
             result.append(1)
         elif "C" in S[p : q + 1]:
@@ -67,4 +66,3 @@ if __name__ == "__main__":
     Q = [4, 5, 6]
     result = solution(S, P, Q)
     assert result == [2, 4, 1]
-    print(result)

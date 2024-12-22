@@ -1,16 +1,14 @@
 """
 https://leetcode.com/problems/3sum-closest/
-find the closest sum of 3 items that are closest to target
+find the closest sum of 3 items that are closest to target.
 """
 
-from typing import List
 
-
-def solve(nums: List[int], target: int):
+def solve(nums: list[int], target: int):
     """
     1. sort the nums array
     2. loop over the nums array with 2 pointers situated; one next to i and one at the end of nums array
-    3. increase and decrease the pointers to cover the entire nums array
+    3. increase and decrease the pointers to cover the entire nums array.
     """
     nums.sort()
     closest_3_sum = nums[0] + nums[1] + nums[2]

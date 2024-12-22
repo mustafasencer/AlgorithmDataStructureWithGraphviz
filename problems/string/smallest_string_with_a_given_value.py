@@ -1,6 +1,4 @@
-"""
-https://leetcode.com/problems/smallest-string-with-a-given-numeric-value/
-"""
+"""https://leetcode.com/problems/smallest-string-with-a-given-numeric-value/."""
 
 
 def solve(n, k):

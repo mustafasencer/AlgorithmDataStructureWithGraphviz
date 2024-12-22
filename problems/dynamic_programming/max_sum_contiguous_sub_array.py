@@ -3,14 +3,12 @@ Given an integer array nums, find the contiguous subarray (containing at least o
 which has the largest sum and return its sum.
 """
 
-from typing import List
 
-
-def solution(nums: List[int]) -> int:
+def solution(nums: list[int]) -> int:
     """
     1. loop over the nums array beginning from index 1
     2. if previous item in the array is > 0 then add it and set the value to the current index
-    3. return max of the nums array
+    3. return max of the nums array.
     """
     for i in range(1, len(nums)):
         if nums[i - 1] > 0:
@@ -21,7 +19,7 @@ def solution(nums: List[int]) -> int:
 def solution_1(nums):
     """
     1. same approach as above 👆
-    2. the only difference is that extra O(N) space complexity is added
+    2. the only difference is that extra O(N) space complexity is added.
     """
     first_value = nums[0]
     dp = [first_value] * len(nums)

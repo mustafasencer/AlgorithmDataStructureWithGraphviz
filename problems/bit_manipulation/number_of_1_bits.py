@@ -19,4 +19,3 @@ class Solution:
 
 if __name__ == "__main__":
     result = Solution().hammingWeight(23)
-    print(result)

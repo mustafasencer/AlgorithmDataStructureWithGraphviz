@@ -11,7 +11,7 @@ from data_structures.graph import GraphNode
 class Solution:
     def cloneGraph(self, node: GraphNode) -> GraphNode:
         if not node:
-            return
+            return None
         nodeCopy = GraphNode(node.vertex)
         dic = {node: nodeCopy}
         queue = collections.deque([node])
@@ -30,4 +30,3 @@ class Solution:
 
 if __name__ == "__main__":
     result = Solution().cloneGraph([[2, 4], [1, 3], [2, 4], [1, 3]])
-    print(result)

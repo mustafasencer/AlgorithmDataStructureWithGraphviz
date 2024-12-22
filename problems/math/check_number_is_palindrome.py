@@ -1,6 +1,6 @@
 """
 To check a number is palindrome or not without using any extra space
-https://www.geeksforgeeks.org/check-number-palindrome-not-without-using-extra-space/
+https://www.geeksforgeeks.org/check-number-palindrome-not-without-using-extra-space/.
 """
 
 
@@ -11,7 +11,6 @@ def solution(number: int) -> bool:
         divisor *= 10
 
     while number > 0:
-        print(divisor)
         leading_value = number // divisor
         trailing_value = number % 10
 
@@ -29,4 +28,3 @@ if __name__ == "__main__":
     number = 12211
     result = solution(number)
     assert result is False
-    print(result)

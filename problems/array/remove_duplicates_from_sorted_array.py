@@ -1,14 +1,10 @@
-"""
-Remove duplicates from sorted array without using extra memory
-"""
-
-from typing import List
+"""Remove duplicates from sorted array without using extra memory."""
 
 
-def solution(nums: List[int]) -> int:
+def solution(nums: list[int]) -> int:
     """
     1. loop over the nums array
-    2. use two pointers to track and compare previous value and replace index inplace
+    2. use two pointers to track and compare previous value and replace index inplace.
     """
     i = 0
 

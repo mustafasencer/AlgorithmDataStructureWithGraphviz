@@ -1,6 +1,4 @@
-"""
-https://leetcode.com/problems/sort-characters-by-frequency/
-"""
+"""https://leetcode.com/problems/sort-characters-by-frequency/."""
 
 from collections import Counter
 

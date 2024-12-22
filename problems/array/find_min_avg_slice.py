@@ -50,7 +50,7 @@ import sys
 def solution(A):
     """
     1. check the contiguous sub arrays having 2 and 3 items
-    2. return the start index
+    2. return the start index.
     """
     if len(A) == 2:
         return 0
@@ -74,14 +74,13 @@ def solution(A):
 
     if min_slice_three * 2 < min_slice_two * 3:
         return min_three_index
-    else:
-        return min_two_index
+    return min_two_index
 
 
 def solution_1(nums, k):
     """
     1. slightly different variation with known subarray size!
-    2. return the subarray itself
+    2. return the subarray itself.
     """
     n = len(nums)
 
@@ -117,4 +116,3 @@ def solution_1(nums, k):
 if __name__ == "__main__":
     A = [4, 2, 2, 5, 1, 5, 8]
     result = solution(A)
-    print(result)

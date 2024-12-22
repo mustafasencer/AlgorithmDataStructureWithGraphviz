@@ -1,17 +1,15 @@
 """
 Longest increasing sub sequence
 https://www.geeksforgeeks.org/longest-increasing-subsequence-dp-3/
-https://leetcode.com/problems/longest-increasing-subsequence/
+https://leetcode.com/problems/longest-increasing-subsequence/.
 """
 
-from typing import List
 
-
-def solution(nums: List[int]):
+def solution(nums: list[int]):
     """
     1. loop over the nums array
     2. nested loop until the i the index in order to check from the beginning the length of the increasing sequence
-    3. return dp max
+    3. return dp max.
     """
     dp = [1] * len(nums)
 

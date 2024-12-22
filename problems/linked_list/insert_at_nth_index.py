@@ -6,13 +6,11 @@ def insert_nth(head_node, index, data):
     # Return the head of the list.
     head = head_node
     if not head_node:
-        head = LinkedListNode(data)
-        return head
+        return LinkedListNode(data)
     if index < 1:
         new_node = LinkedListNode(data)
         new_node.next = head_node
-        head = new_node
-        return head
+        return new_node
     while index > 0:
         if index == 1:
             new_node = LinkedListNode(data)
@@ -22,21 +20,19 @@ def insert_nth(head_node, index, data):
         head_node = head_node.next
         index -= 1
     if index != 1:
-        print("List index out of range")
+        pass
     return head
 
 
 def insert_nth_(head_node, index, data):
     head = head_node
     if not head_node:
-        head = head_node
-        return head
+        return head_node
 
     if index < 1:
         new_node = LinkedListNode(data)
         new_node.next = head_node
-        head = new_node
-        return head
+        return new_node
 
     while index > 0:
         if index == 1:
@@ -52,9 +48,7 @@ def insert_nth_(head_node, index, data):
 
 def insert_nth__(head, index, data):
     return (
-        LinkedListNode(data, head)
-        if not index
-        else LinkedListNode(head.data, insert_nth__(head.next, index - 1, data))
+        LinkedListNode(data, head) if not index else LinkedListNode(head.data, insert_nth__(head.next, index - 1, data))
     )
 
 
@@ -62,7 +56,7 @@ if __name__ == "__main__":
     INDEX = 3
     VALUE = 100
     RANGE = 5
-    nums = [i for i in range(RANGE)]
+    nums = list(range(RANGE))
     head = build_linked_list(nums)
     result = insert_nth_(head, INDEX, VALUE)
     print_linked_list(result)

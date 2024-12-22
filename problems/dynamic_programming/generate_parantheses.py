@@ -1,7 +1,7 @@
 """
 Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
 https://leetcode.com/problems/generate-parentheses/discuss/10110/Simple-Python-DFS-solution-with-explanation
-https://leetcode.com/problems/generate-parentheses/discuss/10369/Clean-Python-DP-Solution
+https://leetcode.com/problems/generate-parentheses/discuss/10369/Clean-Python-DP-Solution.
 """
 
 
@@ -12,7 +12,7 @@ def solve(n: int):
     return result
 
 
-def dfs(left, right, path, result):
+def dfs(left, right, path, result) -> None:
     if right < left:
         return
     if not left and not right:
@@ -27,5 +27,4 @@ def dfs(left, right, path, result):
 if __name__ == "__main__":
     n = 5
     result = solve(n)
-    print(result)
     assert result == ["((()))", "(()())", "(())()", "()(())", "()()()"]

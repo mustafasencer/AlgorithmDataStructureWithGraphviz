@@ -8,10 +8,8 @@ Given a list of non-negative integers representing the amount of money of each h
 determine the maximum amount of money you can rob tonight without alerting the police.
 """
 
-from typing import List
 
-
-def solution(nums: List[int]) -> int:
+def solution(nums: list[int]) -> int:
     if not nums:
         return 0
     dp = [0] * len(nums)
@@ -37,5 +35,4 @@ def solution_1(nums) -> int:
 
 if __name__ == "__main__":
     result = solution([2, 1, 8, 1, 2, 7])
-    print("done")
     assert result == 17

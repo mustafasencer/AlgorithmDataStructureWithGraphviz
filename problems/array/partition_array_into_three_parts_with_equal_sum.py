@@ -1,13 +1,11 @@
-"""
-Partition array into three parts with equal sum
-"""
+"""Partition array into three parts with equal sum."""
 
 
 def solution(nums) -> bool:
     """
     1. loop over the nums array
     2. add item value to the part sum and check if part sum has reached the average (1/3)
-    3. return True if the count is 3
+    3. return True if the count is 3.
     """
     average = sum(nums) // 3
     remainder = sum(nums) % 3

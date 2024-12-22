@@ -2,7 +2,7 @@ from visualization.base import DiGraphImpl
 
 
 class TreeDrawer:
-    def __init__(self):
+    def __init__(self) -> None:
         self.digraph = DiGraphImpl(format="png", is_vertical=True)
         self.key_value_pairs = []
         self._key = None
@@ -30,15 +30,15 @@ class TreeDrawer:
         self.source = key
         return key
 
-    def create_edges(self):
+    def create_edges(self) -> None:
         for source, destination in self.edges:
             self.digraph.add_edge(source, destination)
 
-    def create_node(self, value):
+    def create_node(self, value) -> None:
         source = self.get_source()
         self.digraph.add_node(str(source), str(value) if value is not None else "null")
 
-    def append_edges(self, root):
+    def append_edges(self, root) -> None:
         if root.left:
             destination = self.get_key(root.left.val)
             self.edges.append((str(self.source), str(destination)))
@@ -46,9 +46,10 @@ class TreeDrawer:
             destination = self.get_key(root.right.val)
             self.edges.append((str(self.source), str(destination)))
 
-    def create_nodes(self, root):
+    def create_nodes(self, root) -> None:
         if not root:
-            raise ValueError("Tree is empty!")
+            msg = "Tree is empty!"
+            raise ValueError(msg)
         _result, queue = [], [root]
         while len(queue) > 0:
             node = queue.pop(0)
@@ -60,6 +61,6 @@ class TreeDrawer:
                 queue.append(node.right)
         self.create_edges()
 
-    def visualize(self, root):
+    def visualize(self, root) -> None:
         self.create_nodes(root)
         self.digraph.view()

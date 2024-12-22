@@ -1,11 +1,7 @@
-"""
-https://leetcode.com/problems/jump-game-ii/
-"""
-
-from typing import List
+"""https://leetcode.com/problems/jump-game-ii/."""
 
 
-def solve(nums: List[int]) -> int:
+def solve(nums: list[int]) -> int:
     if len(nums) < 2:
         return 1
 
@@ -19,12 +15,12 @@ def solve(nums: List[int]) -> int:
     return times
 
 
-def solve_2(nums: List[int]) -> int:
+def solve_2(nums: list[int]) -> int:
     """
     1. loop over the nums array starting from the 1st index
     2. for every index go back and check if the addition of i and j th item are >= than i
     3. if so just add it to the dp array with + 1
-    4. last item in dp is the min amount of moves necessary to reach end of array
+    4. last item in dp is the min amount of moves necessary to reach end of array.
     """
     dp = [0] * len(nums)
 
@@ -35,7 +31,6 @@ def solve_2(nums: List[int]) -> int:
                 dp[i] = dp[j] + 1
                 break
             j += 1
-        print(f"dp: {dp}")
 
     return dp[-1]
 

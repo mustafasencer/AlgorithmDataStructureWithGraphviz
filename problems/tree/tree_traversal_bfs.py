@@ -4,7 +4,7 @@ from visualization.tree import TreeDrawer
 
 def queue_multi_children(root):
     if not root:
-        return
+        return None
     result, queue = [root.val], [[root]]
     while len(queue) > 0:
         nodes = queue.pop(0)
@@ -34,13 +34,12 @@ def queue(root):
     return result
 
 
-def print_queue(root):
+def print_queue(root) -> None:
     if root is None:
         return
     queue = [root]
 
     while len(queue) > 0:
-        print(queue[0].val)
         node = queue.pop(0)
         if node.left is not None:
             queue.append(node.left)

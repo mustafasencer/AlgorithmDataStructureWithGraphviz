@@ -4,7 +4,7 @@ from problems.tree.tree_build_level_order import build_tree
 def recursion(root):
     result = []
 
-    def helper(root):
+    def helper(root) -> None:
         if root:
             helper(root.left)
             result.append(root.val)
@@ -32,7 +32,7 @@ def stack(root):
 
 def stack_(root):
     if not root or not root.val:
-        return
+        return None
     stack = []
     result = []
     while stack or root:
@@ -51,4 +51,3 @@ if __name__ == "__main__":
     result = stack(root)
     result_ = recursion(root)
     assert result == result_
-    print(result)

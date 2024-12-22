@@ -7,29 +7,27 @@ find all unique combinations in candidates where the candidate numbers sums to t
 The same repeated number may be chosen from candidates unlimited number of times! (Important)
 
 Note:
-
 All numbers (including target) will be positive integers.
 The solution set must not contain duplicate combinations.
+
 """
 
-from typing import List
 
-
-def solution(candidates: List[int], target: int) -> List[List[int]]:
+def solution(candidates: list[int], target: int) -> list[list[int]]:
     result = []
     candidates.sort()
     backtrack(result, candidates, [], target, 0)
     return result
 
 
-def backtrack(result_, nums, temp, remain, start):
+def backtrack(result_, nums, temp, remain, start) -> None:
     if remain < 0:
         return
     if remain == 0:
         result_.append(temp)
     else:
         for i in range(start, len(nums)):
-            backtrack(result_, nums, temp + [nums[i]], remain - nums[i], i)
+            backtrack(result_, nums, [*temp, nums[i]], remain - nums[i], i)
 
 
 def solution_1(candidates, target):
@@ -43,14 +41,14 @@ def solution_1(candidates, target):
     return result
 
 
-def dfs(candidates, remain, path, result_):
+def dfs(candidates, remain, path, result_) -> None:
     if remain < 0:
         return
     if remain == 0:
         result_.append(path)
         return
     for i in range(len(candidates)):
-        dfs(candidates[i:], remain - candidates[i], path + [candidates[i]], result_)  # Important!
+        dfs(candidates[i:], remain - candidates[i], [*path, candidates[i]], result_)  # Important!
 
 
 if __name__ == "__main__":

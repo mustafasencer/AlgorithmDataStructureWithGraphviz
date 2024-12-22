@@ -1,3 +1,1 @@
-"""
-Created by Mustafa Sencer Özcan on 20.05.2020.
-"""
+"""Created by Mustafa Sencer Özcan on 20.05.2020."""

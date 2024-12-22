@@ -1,12 +1,9 @@
-from typing import List
-
-
-def solution(nums: List[int]) -> bool:
+def solution(nums: list[int]) -> bool:
     """
     1. loop over the array
     2. check if any index has a circular path
     3. is_seen stores the indices that have been seen
-    4. if local set has the index stored then the circularity is confirmed
+    4. if local set has the index stored then the circularity is confirmed.
     """
     is_seen = set()
 
@@ -27,8 +24,8 @@ def solution(nums: List[int]) -> bool:
             i = (i + nums[i]) % len(
                 nums
             )  # Add the value at index i and get the mod of it to find the next i in the path
-            if (
-                prev == i or (nums[i] > 0) != (nums[prev] > 0)
+            if prev == i or (nums[i] > 0) != (
+                nums[prev] > 0
             ):  # if current i ends up in the same i than no path (single item) and both the i and prev values are > 0
                 break
 

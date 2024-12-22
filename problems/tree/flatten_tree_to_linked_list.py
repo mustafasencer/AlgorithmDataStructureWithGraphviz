@@ -30,7 +30,7 @@ def flatten_tree(root):
     result = root
     result = TreeNode()
     if not root:
-        return
+        return None
 
     while current or stack:
         if current:
@@ -48,7 +48,7 @@ def flatten_tree(root):
     return root
 
 
-def flatten(root):
+def flatten(root) -> None:
     if not root:
         return
 

@@ -1,5 +1,5 @@
 # An optimized version of Bubble Sort
-def bubble_sort(arr):
+def bubble_sort(arr) -> None:
     n = len(arr)
 
     # Traverse through all array elements
@@ -8,7 +8,7 @@ def bubble_sort(arr):
 
         # Last i elements are already
         #  in place
-        for j in range(0, n - i - 1):
+        for j in range(n - i - 1):
             # traverse the array from 0 to
             # n-i-1. Swap if the element
             # found is greater than the
@@ -28,6 +28,5 @@ if __name__ == "__main__":
 
     bubble_sort(arr)
 
-    print("Sorted array :")
-    for i in range(len(arr)):
-        print("%d" % arr[i], end=" ")
+    for _i in range(len(arr)):
+        pass

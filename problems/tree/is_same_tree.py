@@ -28,4 +28,3 @@ if __name__ == "__main__":
     TreeDrawer().visualize(root)
     TreeDrawer().visualize(root1)
     result = Solution().isSameTree(root, root1)
-    print(result)

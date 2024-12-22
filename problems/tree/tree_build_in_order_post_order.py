@@ -9,6 +9,7 @@ def recursive(post_order, in_order):
         root.right = recursive(post_order, in_order[index + 1 :])
         root.left = recursive(post_order, in_order[:index])
         return root
+    return None
 
 
 def better_recursive(post_order, in_order):

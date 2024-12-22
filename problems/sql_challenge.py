@@ -1,11 +1,9 @@
-"""
-https://helokarma.com/2021/04/27/codility-test-challenge-2/
-"""
+"""https://helokarma.com/2021/04/27/codility-test-challenge-2/."""
 
 
-def solve():
+def solve() -> None:
     """
-    create database test
+    Create database test.
 
     create table teams
     (

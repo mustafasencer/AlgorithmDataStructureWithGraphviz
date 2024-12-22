@@ -16,7 +16,7 @@ class Solution:
         return head
 
 
-def push(value):
+def push(value) -> None:
     global head
     new_node = LinkedListNode(value)
     new_node.next = head

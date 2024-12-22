@@ -1,8 +1,8 @@
-def solution(nums):
+def solution(nums) -> bool:
     """
     1. loop over the nums array
     2. remove in each iteration the current indexed item and check if it is sorted
-    3. return True if it is the case, False if not
+    3. return True if it is the case, False if not.
     """
     if nums == sorted(nums):
         return True

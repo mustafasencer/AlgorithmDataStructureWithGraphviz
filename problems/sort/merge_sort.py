@@ -1,4 +1,4 @@
-def merge_sort(arr):
+def merge_sort(arr) -> None:
     if len(arr) > 1:
         mid = len(arr) // 2  # Finding the mid of the array
         L = arr[:mid]  # Dividing the array elements
@@ -32,17 +32,14 @@ def merge_sort(arr):
 
 
 # Code to print the list
-def print_list(arr):
-    for i in range(len(arr)):
-        print(arr[i], end=" ")
-    print()
+def print_list(arr) -> None:
+    for _i in range(len(arr)):
+        pass
 
 
 # driver code to test the above code
 if __name__ == "__main__":
     arr = [12, 11, 13, 5, 6, 7]
-    print("Given array is", end="\n")
     print_list(arr)
     merge_sort(arr)
-    print("Sorted array is: ", end="\n")
     print_list(arr)

@@ -1,12 +1,11 @@
 from heapq import heappop, heappush
-from typing import List
 
 from data_structures.linked_list import DoublyLinkedListNode
 from problems.linked_list.build_linked_list import build_linked_list
 from visualization.linked_list import LinkedListDrawer
 
 
-def solution(lists: List[DoublyLinkedListNode]) -> DoublyLinkedListNode:
+def solution(lists: list[DoublyLinkedListNode]) -> DoublyLinkedListNode:
     queue = []
     fake = cur = DoublyLinkedListNode(-1)
     i = 0

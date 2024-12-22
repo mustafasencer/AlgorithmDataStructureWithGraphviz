@@ -4,10 +4,8 @@ Array is sorted!
 Hint: Leveraging sorted array would enable the solution to use only O(1) extra space.
 """
 
-from typing import List
 
-
-def solve(numbers: List[int]) -> int:
+def solve(numbers: list[int]) -> int:
     distinct = set()
     for value in numbers:
         distinct.add(abs(value))
@@ -15,7 +13,7 @@ def solve(numbers: List[int]) -> int:
     return len(distinct)
 
 
-def solve_2(numbers: List[int]) -> int:
+def solve_2(numbers: list[int]) -> int:
     count = len(numbers)
 
     i, j = 0, len(numbers) - 1

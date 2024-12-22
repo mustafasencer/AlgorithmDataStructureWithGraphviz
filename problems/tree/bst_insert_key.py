@@ -6,24 +6,21 @@ from visualization.tree import TreeDrawer
 def insert_key(root, node):
     if root is None:
         root = node
-    else:
-        if root.val < node.val:
-            if root.right is None:
-                root.right = node
-            else:
-                insert_key(root.right, node)
+    elif root.val < node.val:
+        if root.right is None:
+            root.right = node
         else:
-            if root.left is None:
-                root.left = node
-            else:
-                insert_key(root.left, node)
+            insert_key(root.right, node)
+    elif root.left is None:
+        root.left = node
+    else:
+        insert_key(root.left, node)
     return root
 
 
-def in_order(root):
+def in_order(root) -> None:
     if root:
         in_order(root.left)
-        print(root.val)
         in_order(root.right)
 
 

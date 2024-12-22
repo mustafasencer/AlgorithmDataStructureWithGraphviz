@@ -10,18 +10,15 @@ You may assume no duplicate exists in the array.
 Your algorithm's runtime complexity must be in the order of O(log n).
 """
 
-from typing import List
 
-
-def solution(nums: List[int], target: int) -> int:
+def solution(nums: list[int], target: int) -> int:
     """
     1. binary search the smallest element in the nums array
     2. this will give the rotation shift
     3. the rotation value should be used to find the target
         (now we can think of the shifted mid values as sorted array indices)
-    4. return -1 if target not found
+    4. return -1 if target not found.
     """
-
     low = 0
     high = len(nums) - 1
     while low < high:

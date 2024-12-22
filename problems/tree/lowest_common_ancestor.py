@@ -3,7 +3,7 @@ from visualization.tree import TreeDrawer
 
 
 def recursive(root, p, q):
-    if root is None or root == p or root == q:
+    if root in (p, q) or root is None:
         return root
 
     # Find p/q in left subtree

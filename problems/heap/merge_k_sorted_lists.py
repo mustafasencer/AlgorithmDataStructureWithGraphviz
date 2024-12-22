@@ -5,7 +5,7 @@ from data_structures.tree import TreeNode
 from problems.linked_list.build_linked_list import build_linked_list
 
 
-def merge_k_sorted_lists(lists):
+def merge_k_sorted_lists(lists) -> None:
     queue = lists
     while queue:
         queue.pop(0)
@@ -55,11 +55,8 @@ if __name__ == "__main__":
     q.put((3, "f"))
     q.put((3, "w"))
 
-    print(q.get())
-    print(q.get())
     linked_list_1 = build_linked_list([1, 4, 5])
     linked_list_2 = build_linked_list([2, 3, 4])
     linked_list_3 = build_linked_list([3, 6])
     lists = [linked_list_1, linked_list_2, linked_list_3]
     result = deneme(lists)
-    print(result)

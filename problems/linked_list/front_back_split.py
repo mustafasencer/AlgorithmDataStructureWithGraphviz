@@ -23,7 +23,7 @@ def front_back_split(source):
     return front, back
 
 
-def push(value):
+def push(value) -> None:
     global head
     new_node = LinkedListNode(value)
     new_node.next = head

@@ -2,7 +2,7 @@ from collections import OrderedDict
 
 
 class DLinkNode:
-    def __init__(self, key, value):
+    def __init__(self, key, value) -> None:
         self.key = key
         self.value = value
         self.prev = None
@@ -10,10 +10,8 @@ class DLinkNode:
 
 
 class LRUCache:
-    def __init__(self, capacity):
-        """
-        :type capacity: int
-        """
+    def __init__(self, capacity) -> None:
+        """:type capacity: int"""
         self.capacity = capacity
 
         self.lookup = {}  # value to LNode
@@ -24,12 +22,12 @@ class LRUCache:
         self.tail.prev = self.head
 
     # remove  node <-> target <-> node
-    def remove_link(self, node):
+    def remove_link(self, node) -> None:
         node.prev.next = node.next
         node.next.prev = node.prev
 
     # head <->  nxt
-    def add_link(self, node):
+    def add_link(self, node) -> None:
         # o -> o -> o -> o -> None
         nxt = self.head.next
 
@@ -53,17 +51,15 @@ class LRUCache:
             self.add_dlink(node)
 
             return node.data
-        else:
-            return -1
+        return -1
 
     # head <-> node
-    def put(self, key, value):
+    def put(self, key, value) -> None:
         """
         :type key: int
         :type value: int
         :rtype: None
         """
-
         # exist: update value and update state
         # non exist: create new node, add to lookup and add to linked list
 
@@ -89,7 +85,7 @@ class LRUCache:
 
 
 class LRUCacheDict:
-    def __init__(self, size=10):
+    def __init__(self, size=10) -> None:
         self.size = size
         self.cache = OrderedDict()
 
@@ -101,7 +97,7 @@ class LRUCacheDict:
         self.cache[key] = value
         return value
 
-    def set(self, key, value):
+    def set(self, key, value) -> None:
         try:
             self.cache.pop(key)
         except KeyError:

@@ -1,6 +1,4 @@
-"""
-Dynamic programming solution -> O(N*W)
-"""
+"""Dynamic programming solution -> O(N*W)."""
 
 
 def knapsack(condition_weight, weights, values, no_of_vals):
@@ -45,4 +43,3 @@ if __name__ == "__main__":
     wt = [10, 20, 30]
     W = 50
     n = len(val)
-    print(knapsack(W, wt, val, n))

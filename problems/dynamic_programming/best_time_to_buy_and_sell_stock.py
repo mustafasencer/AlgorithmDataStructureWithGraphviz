@@ -7,10 +7,8 @@ design an algorithm to find the maximum profit.
 Note that you cannot sell a stock before you buy one.
 """
 
-from typing import List
 
-
-def solution(prices: List[int]) -> int:
+def solution(prices: list[int]) -> int:
     if not prices:
         return 0
 
@@ -35,8 +33,7 @@ def solution_1(prices):
     max_profit = 0
 
     for i in range(1, len(prices)):
-        if prices[i] < dp[i]:
-            dp[i] = prices[i]
+        dp[i] = min(prices[i], dp[i])
         max_profit = max(prices[i] - min(dp[:i]), max_profit)
     return max_profit
 

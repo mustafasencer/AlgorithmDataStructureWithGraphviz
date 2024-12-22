@@ -22,7 +22,7 @@ def count(node, data):
     return count
 
 
-def push(value):
+def push(value) -> None:
     global head
     new_node = LinkedListNode(value)
     new_node.next = head
@@ -35,5 +35,3 @@ if __name__ == "__main__":
         push(i)
     count = count(head, 2)
     length = length(head)
-    print(count)
-    print(length)

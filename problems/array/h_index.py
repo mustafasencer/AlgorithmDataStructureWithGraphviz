@@ -1,11 +1,8 @@
-from typing import List
-
-
-def solve(nums: List[int]):
+def solve(nums: list[int]):
     """
     1. loop over the reversed nums
     2. check if the value is less than the index + 1
-    3. index will give the h index, thus break the loop
+    3. index will give the h index, thus break the loop.
     """
     nums.sort(reverse=True)
     h_index = 0

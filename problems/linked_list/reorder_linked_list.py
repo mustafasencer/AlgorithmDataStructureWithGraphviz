@@ -4,13 +4,10 @@ from problems.linked_list.build_linked_list import build_linked_list
 
 class Solution:
     def reorderList(self, head: LinkedListNode) -> None:
-        """
-        Do not return anything, modify head in-place instead.
-        """
+        """Do not return anything, modify head in-place instead."""
         head, middle = self._split(head)
         middle = self._reverse(middle)
-        head = self._merge(head, middle)
-        return head
+        return self._merge(head, middle)
 
     def _split(self, head):
         fast = head

@@ -1,12 +1,7 @@
-from typing import List
+def solve(nums: list[int]) -> list[list[int]]:
+    """1. Backtracking approach to find all possible permutations."""
 
-
-def solve(nums: List[int]) -> List[List[int]]:
-    """
-    1. Backtracking approach to find all possible permutations
-    """
-
-    def backtrack(start, end):
+    def backtrack(start, end) -> None:
         if start == end:
             ans.append(nums[:])
         for i in range(start, end):
@@ -19,16 +14,14 @@ def solve(nums: List[int]) -> List[List[int]]:
     return ans
 
 
-def solve_2(nums: List[int]) -> List[List[int]]:
-    """
-    1. DFS approach to find all possible permutations
-    """
+def solve_2(nums: list[int]) -> list[list[int]]:
+    """1. DFS approach to find all possible permutations."""
 
-    def dfs(nums, path, res):
+    def dfs(nums, path, res) -> None:
         if not nums:
             res.append(path)
         for i in range(len(nums)):
-            dfs(nums[:i] + nums[i + 1 :], path + [nums[i]], res)
+            dfs(nums[:i] + nums[i + 1 :], [*path, nums[i]], res)
 
     res = []
     dfs(nums, [], res)

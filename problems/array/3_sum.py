@@ -3,10 +3,8 @@ Given an array nums of n integers, are there elements a, b, c in nums such that 
 Find all unique triplets in the array which gives the sum of zero.
 """
 
-from typing import List, Set
 
-
-def solution(nums: List[int]) -> List[List[int]]:
+def solution(nums: list[int]) -> list[list[int]]:
     result = []
     nums.sort()
     length = len(nums)
@@ -35,11 +33,11 @@ def solution(nums: List[int]) -> List[List[int]]:
     return result
 
 
-def solution_1(nums: List[int]) -> Set:
+def solution_1(nums: list[int]) -> set:
     """
     1. loop over the nums array
     2. create left and right pointers and just move them according to the sum value
-    3. if sum == 0 is found just add it to the set and move both pointers
+    3. if sum == 0 is found just add it to the set and move both pointers.
     """
     result = set()
     nums.sort()
@@ -52,13 +50,12 @@ def solution_1(nums: List[int]) -> Set:
             if triplet_sum > 0:
                 left -= 1
                 continue
-            elif triplet_sum < 0:
+            if triplet_sum < 0:
                 right += 1
                 continue
-            else:
-                result.add((nums[left], nums[i], nums[right]))
-                right += 1
-                left -= 1
+            result.add((nums[left], nums[i], nums[right]))
+            right += 1
+            left -= 1
 
     return result
 

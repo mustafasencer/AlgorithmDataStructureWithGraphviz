@@ -34,6 +34,7 @@ def recursive(pre_order, in_order):
         root.left = recursive(pre_order, in_order[0:ind])
         root.right = recursive(pre_order, in_order[ind + 1 :])
         return root
+    return None
 
 
 if __name__ == "__main__":

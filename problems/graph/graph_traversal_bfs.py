@@ -2,11 +2,11 @@ from collections import defaultdict
 
 
 class Graph:
-    def __init__(self, V):
+    def __init__(self, V) -> None:
         self.V = V
         self.graph = defaultdict(list)
 
-    def add_edge(self, u, v):
+    def add_edge(self, u, v) -> None:
         self.graph[u].append(v)
 
     def bfs_queue(self, s):
