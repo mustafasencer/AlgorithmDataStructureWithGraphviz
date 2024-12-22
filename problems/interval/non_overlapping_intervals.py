@@ -7,8 +7,8 @@ from typing import List
 
 
 def solution(intervals: List[List[int]]) -> int:
-    pass
+    return 0
 
 
 if __name__ == "__main__":
-    solution()
+    solution([])

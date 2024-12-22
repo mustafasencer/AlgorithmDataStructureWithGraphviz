@@ -15,8 +15,12 @@ dependencies = [
 dev = ["isort>=5.13.2", "mypy>=1.14.0", "pytest>=8.3.4", "ruff>=0.8.4"]
 
 [tool.ruff]
-line-length = 100
+line-length = 120
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = ["D100"]
 
 [tool.ruff.format]
 quote-style = "double"
-docstring-code-format = true
+docstring-code-format = false
