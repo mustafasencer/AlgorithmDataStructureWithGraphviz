@@ -4,7 +4,7 @@ class Solution:
         i = 0
         while i < 32:
             output = output << 1
-            if number & 1 is 1:
+            if number & 1 == 1:
                 output = output | 1
             number = number >> 1
             i += 1

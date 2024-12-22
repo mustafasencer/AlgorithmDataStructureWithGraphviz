@@ -14,7 +14,7 @@ class Solution:
 
     def get_count(self, head: LinkedListNode) -> int:
         count = 0
-        while head.next != None:
+        while head.next is not None:
             head = head.next
             count += 1
         return count
@@ -31,7 +31,6 @@ class LinkedList:
         self.head = None
 
     def rearrange_odd_even(self):
-
         # Corner case
         if self.head is None:
             return None
@@ -42,7 +41,6 @@ class LinkedList:
         even_first = even
 
         while True:
-
             if (odd is None or even is None) or even.next is None:
                 odd.next = even_first
                 break
@@ -80,7 +78,7 @@ class LinkedList:
             even = even.next
 
     def print_list(self, node):
-        while node != None:
+        while node is not None:
             print(node.data, end="")
             print("->", end="")
             node = node.next

@@ -12,7 +12,7 @@ def solution(nums1: List[int], nums2: List[int]) -> float:
     if len_2 == 0:
         raise ValueError
 
-    i_min, i_max, half_len = 0, len_2, (len_1 + len_2) / 2
+    i_min, i_max, _half_len = 0, len_2, (len_1 + len_2) / 2
 
     while i_min <= i_max:
         pass

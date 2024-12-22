@@ -22,13 +22,13 @@ def segregate_even_odd():
     # Node to traverse the list.
     currNode = head
 
-    while currNode != None:
+    while currNode is not None:
         val = currNode.data
 
         # If current value is even, add
         # it to even values list.
         if val % 2 == 0:
-            if evenStart == None:
+            if evenStart is None:
                 evenStart = currNode
                 evenEnd = evenStart
             else:
@@ -38,7 +38,7 @@ def segregate_even_odd():
         # If current value is odd, add
         # it to odd values list.
         else:
-            if oddStart == None:
+            if oddStart is None:
                 oddStart = currNode
                 oddEnd = oddStart
             else:
@@ -52,7 +52,7 @@ def segregate_even_odd():
         # If either odd list or even list is empty,
     # no change is required as all elements
     # are either even or odd.
-    if oddStart == None or evenStart == None:
+    if oddStart is None or evenStart is None:
         return
 
     # Add odd list after even list.

@@ -1,5 +1,5 @@
 """
-    Dynamic programming solution -> O(N*W)
+Dynamic programming solution -> O(N*W)
 """
 
 
@@ -28,7 +28,7 @@ def knapsack_test(condition_weight, weights, values, no_of_vals):
 
     for no_of_val in range(no_of_vals + 1):
         for w in range(weights + 1):
-            if no_of_val is 0 or w is 0:
+            if no_of_val == 0 or w == 0:
                 dp[no_of_val][w] = 0
             elif values[no_of_val - 1] <= w:
                 dp[no_of_val][w] = max(

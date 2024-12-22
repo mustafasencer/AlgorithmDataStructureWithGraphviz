@@ -49,7 +49,7 @@ class GraphDrawer:
     def create_nodes(self, root):
         if not root:
             raise ValueError("Tree is empty!")
-        result, queue = [], [root]
+        _result, queue = [], [root]
         while len(queue) > 0:
             node = queue.pop(0)
             self.create_node(node.val)

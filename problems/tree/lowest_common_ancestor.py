@@ -7,17 +7,17 @@ def recursive(root, p, q):
         return root
 
     # Find p/q in left subtree
-    l = recursive(root.left, p, q)
+    _list = recursive(root.left, p, q)
 
     # Find p/q in right subtree
     r = recursive(root.right, p, q)
 
     # If p and q found in left and right subtree of this node, then this node is LCA
-    if l and r:
+    if _list and r:
         return root
 
     # Else return the node which returned a node from it's subtree such that one of it's ancestor will be LCA
-    return l if l else r
+    return _list if _list else r
 
 
 def lowest_common_ancestor(root):

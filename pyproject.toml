@@ -1,7 +1,7 @@
 [project]
 name = "algorithm-data-structure-graphviz"
 version = "0.1.0"
-description = "Add your description here"
+description = "Curated list of algorithm and data structure problems implemeted in Python and visualized by Graphviz"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
@@ -10,3 +10,6 @@ dependencies = [
     "chardet==3.0.4",
     "graphviz==0.20.3",
 ]
+
+[dependency-groups]
+dev = ["isort>=5.13.2", "pytest>=8.3.4", "ruff>=0.8.4"]

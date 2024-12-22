@@ -28,5 +28,5 @@ def solution(number: int) -> bool:
 if __name__ == "__main__":
     number = 12211
     result = solution(number)
-    assert result == False
+    assert result is False
     print(result)
