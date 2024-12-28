@@ -1,0 +1,22 @@
+{
+  "site_package_search_strategy": "pep561",
+  "source_directories": [
+    "."
+  ],
+  "exclude": [
+    ".*/build/.*",
+    ".*/dist/.*",
+    ".*/.venv/.*",
+    ".*/venv/.*",
+    ".*/node_modules/.*",
+    ".*/public/.*",
+    ".*/src/.*",
+    ".*/static/.*",
+    ".*/templates/.*",
+    ".*/migrations/.*",
+    ".*/settings.py/.*",
+    ".*/manage.py/.*",
+    ".*/db.sqlite3/.*",
+    ".*/pyre_configuration/.*"
+  ]
+}

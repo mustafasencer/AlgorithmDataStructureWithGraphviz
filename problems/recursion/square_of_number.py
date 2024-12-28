@@ -1,3 +1,8 @@
+"""
+Given a number n, find the square of n using recursion.
+"""
+
+
 def solve(number):
     """1. (n - 1) ^ 2 = n ^ 2 - 2 * n + 1."""
     if number == 0:
