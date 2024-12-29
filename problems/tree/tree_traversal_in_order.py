@@ -1,7 +1,8 @@
+from data_structures.tree import TreeNode
 from problems.tree.tree_build_level_order import build_tree
 
 
-def recursion(root):
+def recursion(root: TreeNode):
     result = []
 
     def helper(root) -> None:
@@ -14,7 +15,7 @@ def recursion(root):
     return result
 
 
-def stack(root):
+def stack(root: TreeNode):
     current = root
     stack = []
     result = []
@@ -30,7 +31,7 @@ def stack(root):
     return result
 
 
-def stack_(root):
+def stack_(root: TreeNode):
     if not root or not root.val:
         return None
     stack = []
