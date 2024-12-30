@@ -1,4 +1,4 @@
-from problems.tree.tree_build_level_order import build_tree
+from problems.tree.builds.build_tree_level_order import build_tree
 
 
 def is_balanced(root):

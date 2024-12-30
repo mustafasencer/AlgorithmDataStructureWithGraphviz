@@ -1,5 +1,5 @@
 from data_structures.tree import TreeNode
-from problems.tree.bst_build_from_array import build_bst
+from problems.tree.builds.build_bst_from_array import build_bst
 from visualization.tree import TreeDrawer
 
 

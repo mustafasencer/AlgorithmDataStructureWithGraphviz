@@ -1,7 +1,9 @@
-"""https://www.geeksforgeeks.org/inorder-successor-in-binary-search-tree/#:~:text=In%20Binary%20Tree%2C%20Inorder%20successor,key%20of%20the%20input%20node."""
+"""
+https://www.geeksforgeeks.org/inorder-successor-in-binary-search-tree/#:~:text=In%20Binary%20Tree%2C%20Inorder%20successor,key%20of%20the%20input%20node
+"""
 
 from data_structures.tree import TreeNodeWithParent
-from problems.tree.bst_build_from_array import build_bst
+from problems.tree.builds.build_bst_from_array import build_bst
 
 
 def solution(node):

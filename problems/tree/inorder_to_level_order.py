@@ -1,4 +1,4 @@
-from problems.tree.tree_build_level_order import build_tree
+from problems.tree.builds.build_tree_level_order import build_tree
 
 
 def complete_binary_tree(a):
@@ -22,15 +22,15 @@ def build_tree_from_inorder(array, start, end):
     if start > end:
         return None
 
-        if inStrt == inEnd:
-            return tNode
+        # if inStrt == inEnd:
+        #     return tNode
 
-        inIndex = search(inOrder, inStrt, inEnd, tNode.data)
+        # inIndex = search(inOrder, inStrt, inEnd, tNode.data)
 
-        tNode.left = buildTree(inOrder, preOrder, inStrt, inIndex - 1)
-        tNode.right = buildTree(inOrder, preOrder, inIndex + 1, inEnd)
+        # tNode.left = buildTree(inOrder, preOrder, inStrt, inIndex - 1)
+        # tNode.right = buildTree(inOrder, preOrder, inIndex + 1, inEnd)
 
-        return tNode
+        # return tNode
     return None
 
 

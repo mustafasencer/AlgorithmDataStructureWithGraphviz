@@ -12,7 +12,7 @@ def recursive(post_order, in_order):
     return None
 
 
-def better_recursive(post_order, in_order):
+def recursive_v2(post_order, in_order):
     map_in_order = {}
     for i, val in enumerate(in_order):
         map_in_order[val] = i
@@ -32,5 +32,5 @@ def better_recursive(post_order, in_order):
 if __name__ == "__main__":
     in_order = [4, 2, 5, 1, 6, 3, 7]
     post_order = [4, 5, 2, 6, 7, 3, 1]
-    root = better_recursive(post_order, in_order)
+    root = recursive_v2(post_order, in_order)
     TreeDrawer().visualize(root)

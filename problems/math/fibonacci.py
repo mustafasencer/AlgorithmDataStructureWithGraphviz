@@ -57,6 +57,16 @@ def fibonacci_positive(n):
     return b
 
 
+def fibonacci_generator(n):
+    a, b = 0, 1
+
+    for _ in range(n + 1):
+        yield a
+        a, b = b, a + b
+
+
 if __name__ == "__main__":
+    result = fibonacci_generator(6)
+    print(list(result))
     fibonacci_positive(6)
     fibonacci(10)
