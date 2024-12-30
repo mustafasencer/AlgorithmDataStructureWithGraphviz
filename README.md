@@ -1,6 +1,6 @@
-## 💻 Curated List of Algorithmic Problems
+## 🍍 Curated List of Algorithmic Problems
 
-___
+---
 
 Curated list of some Algorithmic _problems_ which I deem important to have in mind. Graphviz is utilized as the
 visualization tool to represent some graph and tree algorithms.
@@ -15,86 +15,80 @@ make deps
 
 ## 🧑‍💻 Problems
 
-Several _techniques/approaches_ could be utilized in order to find the 
-angle of attack to a problem. 
+Several _techniques/approaches_ could be utilized in order to find the
+angle of attack to a problem.
 Below are the **tags** related to the relevant
 _techniques, approaches, data structures, etc._
 to ease the process of mental researching before defining the angle of an attack to a problem.
 
 ### 🏷️ Tags
 
-#### Approaches:
+- 📃 - **Array**
+- 👉 - **BFS**
+- 🕳️ - **DFS**
+- 🔍 - **Binary Search Tree**
+- 🔟 - **Bit Manipulation**
+- 📝 - **Dynamic Programming**
+- 📈 - **Graph**
+- 🔣 - **HashTable**
+- 🌲 - **Heap**
+- 🔗 - **Linked List**
+- ✖ - **Math**
+- 🔢 - **Matrix**
+- 🔁 - **Recursion**
+- 🖇️ - **Sorting**
+- 📚 - **Stack and Queue**
+- 🔤 - **String**
+- 🌴 - **Tree**
+- 🌿 - **Trie**
+- 2️⃣ - **Two Pointers**
 
-* 📃 **Array**
-* 👉 **BFS**
-* 🔍 **Binary Search Tree**
-* 🔟 **Bit Manipulation**
-* 🕳️ **DFS**
-* 📝 **Dynamic Programming**
-* 📈 **Graph**
-* 🔣 **HashTable**
-* 🌲 **Heap**
-* 🔗 **Linked List**
-* ✖ **Math**
-* 🔢 **Matrix**
-* 🔁 **Recursion**
-* 🖇️ **Sorting**
-* .📚 **Stack and Queue**
-* 🔤 **String**
-* 🌴 **Tree**
-* 🌿 **Trie**
-* 2️⃣ **Two Pointers**
+#### Hardness :
 
----
+- 🥉 Easy
+- 🥈 Medium
+- 🥇 Hard
+- 🏅 Very Hard
 
-#### Difficulties:
+### ❓ Problems with relevant tags
 
-* 🥉 Easy
-* 🥈 Medium
-* 🥇 Hard
-* 🏅 Very Hard
-
-
-
-### ❓ List of Problems with Tag Representations
-
-- Absolute distinct count 📃 | 🥉
-- Array rank transform 📃 🔣
-- Binary Gap 📃 
-- Check if array is circular 📃 
-- Closest 3 Sum 📃 
-- Container with most water 📃 
-- Contains duplicate II 📃 
-- Cyclic rotation 📃 
-- Equi leader 📃 
+- Absolute distinct count - 📃 & 🥉
+- Array rank transform - 📃 & 🔣
+- Binary Gap 📃
+- Check if array is circular 📃
+- Closest 3 Sum 📃
+- Container with most water 📃
+- Contains duplicate II 📃
+- Cyclic rotation 📃
+- Equi leader 📃
 - Find minimum in rotated sorted array 📃
 - Find minimum average slice 📃
-- Find pivot index 📃 
-- Find unpaired element in array 📃 
-- Flatten array 📃 
-- Frequency sort 📃 
-- Genomic range query 📃 
-- Group by given group size 📃 
+- Find pivot index 📃
+- Find unpaired element in array 📃
+- Flatten array 📃
+- Frequency sort 📃
+- Genomic range query 📃
+- Group by given group size 📃
 - H-index 📃
-- K-Closest distance origin 📃 
-- Longest consecutive sequence 📃 
+- K-Closest distance origin 📃
+- Longest consecutive sequence 📃
 - Majority element 📃
-- Max counter 📝 
-- Max product sub-array 📝 
-- Max sum sub-array 📝 
-- Median of two sorted array 📝 
-- Non-decreasing by removing one 📝 
-- Number of disc intersections 📝 
-- Partition array into parts with equal sum 📝 
-- Passing cars 📝 
-- Permutation check 📝 
-- Permutation missing element 📈 
-- Permutations 📈 
-- Remove duplicates from sorted array II 📈 
-- Replace elements with greatest element on right side 📈 
-- Rotate array 📈 
-- Search in rotated sorted array 📈 
-- Shortest unsorted continuous array 🌲 
+- Max counter 📝
+- Max product sub-array 📝
+- Max sum sub-array 📝
+- Median of two sorted array 📝
+- Non-decreasing by removing one 📝
+- Number of disc intersections 📝
+- Partition array into parts with equal sum 📝
+- Passing cars 📝
+- Permutation check 📝
+- Permutation missing element 📈
+- Permutations 📈
+- Remove duplicates from sorted array II 📈
+- Replace elements with greatest element on right side 📈
+- Rotate array 📈
+- Search in rotated sorted array 📈
+- Shortest unsorted continuous array 🌲
 - Insert interval
 - Merge intervals
 - Count & Length 🔗
@@ -157,8 +151,8 @@ to ease the process of mental researching before defining the angle of an attack
 - Build a priority queue structure 🌲
 - Build a linked-list structure 🔗
 - Traverse Tree BFS recursive 🌴
-- Traverse Tree BFS queue 🌴 
-- Traverse Tree BFS stack 🌴 
+- Traverse Tree BFS queue 🌴
+- Traverse Tree BFS stack 🌴
 - Traverse Tree DFS In-order 🌴
 - Traverse Tree DFS Pre-order 🌴
 - Traverse Tree DFS Post-order 🌴
