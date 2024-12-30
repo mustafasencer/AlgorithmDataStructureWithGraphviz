@@ -2,7 +2,17 @@ from data_structures.tree import TreeNode
 from visualization.tree import TreeDrawer
 
 
-def iterative(pre_order, in_order):
+def recursive(pre_order, in_order):
+    if in_order:
+        ind = in_order.index(pre_order.pop(0))
+        root = TreeNode(in_order[ind])
+        root.left = recursive(pre_order, in_order[0:ind])
+        root.right = recursive(pre_order, in_order[ind + 1 :])
+        return root
+    return None
+
+
+def stack(pre_order, in_order):
     if len(pre_order) == 0:
         return None
 
@@ -25,16 +35,6 @@ def iterative(pre_order, in_order):
         i += 1
 
     return head
-
-
-def recursive(pre_order, in_order):
-    if in_order:
-        ind = in_order.index(pre_order.pop(0))
-        root = TreeNode(in_order[ind])
-        root.left = recursive(pre_order, in_order[0:ind])
-        root.right = recursive(pre_order, in_order[ind + 1 :])
-        return root
-    return None
 
 
 if __name__ == "__main__":

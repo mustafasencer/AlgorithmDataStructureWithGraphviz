@@ -33,7 +33,7 @@ def stack(root):
     return result
 
 
-def stack_1(root):
+def stack_v2(root):
     if not root or not root.val:
         return []
     stack = []
@@ -48,7 +48,7 @@ def stack_1(root):
     return result
 
 
-def stack_2(root):
+def stack_v3(root):
     if not root:
         return []
 
@@ -69,9 +69,9 @@ def stack_2(root):
 
 if __name__ == "__main__":
     array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    root = build_tree(array, None, 0, len(array))
+    root = build_tree(array, len(array))
     result = stack(root)
-    result_ = stack_1(root)
-    result__ = stack_2(root)
+    result_ = stack_v2(root)
+    result__ = stack_v3(root)
     assert result_ == result
     TreeDrawer().visualize(root)

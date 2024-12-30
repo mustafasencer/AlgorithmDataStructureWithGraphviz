@@ -60,6 +60,6 @@ def queue_with_level(root):
 
 if __name__ == "__main__":
     array = [1, 2, 3, 4, 5]
-    root = build_tree(array, None, 0, len(array))
+    root = build_tree(array, len(array))
     result = queue_with_level(root)
     assert result == [[4, 5], [2, 3], [1]]

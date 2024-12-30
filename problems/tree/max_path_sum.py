@@ -17,7 +17,7 @@ def solution(root):
     return max_value
 
 
-def solution_1(root: TreeNode) -> int:
+def solution_v2(root: TreeNode) -> int:
     result = 0
 
     def dfs(root):
@@ -54,7 +54,7 @@ def sol(root):
 
 if __name__ == "__main__":
     array = [1, 2, 3, 4, 5, 6, 7]
-    root = build_tree(array, None, 0, len(array))
+    root = build_tree(array, len(array))
     result = solution(root)
-    result_ = solution_1(root)
+    result_ = solution_v2(root)
     assert result_ == result

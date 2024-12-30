@@ -23,8 +23,8 @@ class Solution:
 if __name__ == "__main__":
     array = [1, 1]
     array1 = [1, None, 1]
-    root = build_tree(array, None, 0, len(array))
-    root1 = build_tree(array1, None, 0, len(array1))
+    root = build_tree(array, len(array))
+    root1 = build_tree(array1, len(array1))
     TreeDrawer().visualize(root)
     TreeDrawer().visualize(root1)
     result = Solution().isSameTree(root, root1)

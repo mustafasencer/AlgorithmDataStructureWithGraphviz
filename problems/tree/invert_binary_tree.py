@@ -6,6 +6,7 @@ Output: [4,7,2,9,6,3,1]
 """
 
 from problems.tree.builds.build_tree_level_order import build_tree
+from visualization.tree import TreeDrawer
 
 
 class TreeNode:
@@ -19,17 +20,15 @@ def solution(root: TreeNode):
     if not root:
         return
 
-    temp = root
-    temp.left = root.right
-    temp.right = root.left
     solution(root.left)
     solution(root.right)
-
-    return temp
+    root.right, root.left = root.left, root.right
+    return root
 
 
 if __name__ == "__main__":
     array = [4, 2, 7, 1, 3, 6, 9]
-    root = build_tree(array, None, 0, len(array))
+    root = build_tree(array, len(array))
+    TreeDrawer().visualize(root)
     result = solution(root)
-    assert result == [4, 7, 2, 9, 6, 3, 1]
+    TreeDrawer().visualize(result)

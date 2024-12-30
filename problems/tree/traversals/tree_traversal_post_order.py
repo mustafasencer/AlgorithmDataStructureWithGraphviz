@@ -44,6 +44,6 @@ def stack(root):
 
 if __name__ == "__main__":
     array = [1, 2, 3, 4, 5, 6, 7]
-    root = build_tree(array, None, 0, len(array))
+    root = build_tree(array, len(array))
     result = stack(root)
     TreeDrawer().visualize(root)

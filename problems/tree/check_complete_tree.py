@@ -17,7 +17,8 @@ def solution(root) -> bool:
 
 
 if __name__ == "__main__":
-    array = [1, None, 1, 3, None, 5]
-    root = build_tree(array, None, 0, len(array))
+    array = [1, 2, 3, 4, None, 5]
+    root = build_tree(array, len(array))
     result = solution(root)
+    assert result is False
     TreeDrawer().visualize(root)
