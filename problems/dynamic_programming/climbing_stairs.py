@@ -25,7 +25,7 @@ def solution(n: int) -> int:
     return b
 
 
-def solution_1(n):
+def solution_v2(n):
     if n == 0:
         return 0
 
@@ -40,6 +40,6 @@ def solution_1(n):
 
 
 if __name__ == "__main__":
-    result = solution_1(5)
+    result = solution_v2(5)
     result__ = solution(5)
     assert result == result__
