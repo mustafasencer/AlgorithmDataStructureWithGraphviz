@@ -1,6 +1,6 @@
 ## 🍍 Curated List of Algorithmic Problems
 
----
+## ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 
 Curated list of some Algorithmic _problems_ which I deem important to have in mind. Graphviz is utilized as the
 visualization tool to represent some graph and tree algorithms.
