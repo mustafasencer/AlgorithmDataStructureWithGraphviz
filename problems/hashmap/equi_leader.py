@@ -1,16 +1,16 @@
 def solution(A):
     """1. Hard: Not yet done."""
-    mapper = {}
+    lookup = {}
 
     for i in range(len(A)):
-        if A[i] in mapper:
-            mapper[A[i]] += 1
+        if A[i] in lookup:
+            lookup[A[i]] += 1
         else:
-            mapper[A[i]] = 1
+            lookup[A[i]] = 1
 
     max_value = 0
     max_key = 0
-    for k, v in mapper.items():
+    for k, v in lookup.items():
         if v > max_value:
             max_value = v
             max_key = k

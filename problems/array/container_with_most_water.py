@@ -1,4 +1,6 @@
-"""Calculate max area based on the item at index i and the difference between i and j."""
+"""
+Calculate max area based on the item at index i and the difference between i and j.
+"""
 
 
 def solution(height: list[int]) -> int:
@@ -16,7 +18,7 @@ def solution(height: list[int]) -> int:
     return max_area
 
 
-def solution_2(height):
+def solution_v2(height):
     i = 0
     j = len(height) - 1
     max_area = 0
@@ -33,5 +35,5 @@ def solution_2(height):
 
 if __name__ == "__main__":
     result_ = solution([1, 8, 6, 2, 5, 4, 8, 3, 7])
-    result = solution_2([1, 8, 6, 2, 5, 4, 8, 3, 7])
+    result = solution_v2([1, 8, 6, 2, 5, 4, 8, 3, 7])
     assert result == result_

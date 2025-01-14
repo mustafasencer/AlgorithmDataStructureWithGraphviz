@@ -84,7 +84,7 @@ class LRUCache:
             self.add_dlink(node)
 
 
-class LRUCacheDict:
+class LRUCacheHashMap:
     def __init__(self, size=10) -> None:
         self.size = size
         self.cache = OrderedDict()

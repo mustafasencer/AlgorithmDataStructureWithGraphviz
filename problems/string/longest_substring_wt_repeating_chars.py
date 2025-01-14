@@ -57,5 +57,5 @@ def solution_2(s):
 
 
 if __name__ == "__main__":
-    result = solution_2("abbacdabc")
+    result = solution("abbacdabc")
     assert result == 4

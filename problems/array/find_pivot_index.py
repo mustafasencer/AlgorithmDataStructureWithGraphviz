@@ -1,5 +1,7 @@
+"""1. loop over and check the sum equality of both sides of the index."""
+
+
 def solution(nums: list[int]):
-    """1. loop over and check the sum equality of both sides of the index."""
     for i in range(len(nums)):
         sum_first = 0 if i == 0 else sum(nums[:i])
         if sum_first == sum(nums[i + 1 :]):

@@ -30,27 +30,28 @@ def backtrack(result_, nums, temp, remain, start) -> None:
             backtrack(result_, nums, [*temp, nums[i]], remain - nums[i], i)
 
 
-def solution_1(candidates, target):
+def solution_v2(candidates, target):
     """
     1. DFS over the candidates array and check if remain hits 0
     2. Be careful! There can be repeated items in the answer
     3. Thus, line 52 starts from i th index again and again to enable repeated items to be in the result!
     """
     result = []
-    dfs(candidates, target, [], result)
+
+    def dfs(candidates, path, remain):
+        nonlocal result
+        if remain < 0:
+            return
+        if remain == 0:
+            result.append(path)
+
+        for i in range(len(candidates)):
+            dfs(candidates[i:], [*path, candidates[i]], remain - candidates[i])
+
+    dfs(candidates, [], target)
     return result
 
 
-def dfs(candidates, remain, path, result_) -> None:
-    if remain < 0:
-        return
-    if remain == 0:
-        result_.append(path)
-        return
-    for i in range(len(candidates)):
-        dfs(candidates[i:], remain - candidates[i], [*path, candidates[i]], result_)  # Important!
-
-
 if __name__ == "__main__":
-    result = solution_1([2, 3, 6, 7], 7)
+    result = solution_v2([2, 3, 6, 7], 7)
     assert result == [[2, 2, 3], [7]]

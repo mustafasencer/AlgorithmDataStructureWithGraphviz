@@ -19,20 +19,22 @@ class HashTable:
         bucket = self.hash_table[hashed_key]
 
         found_key = False
-        for index, record in enumerate(bucket):
-            record_key, record_val = record
+        found_index = 0
+        for i, record in enumerate(bucket):
+            record_key, _ = record
 
             # check if the bucket has same key as
             # the key to be inserted
             if record_key == key:
                 found_key = True
+                found_index = i
                 break
 
         # If the bucket has same key as the key to be inserted,
         # Update the key value
         # Otherwise append the new key-value pair to the bucket
         if found_key:
-            bucket[index] = (key, val)
+            bucket[found_index] = (key, val)
         else:
             bucket.append((key, val))
 
@@ -45,7 +47,7 @@ class HashTable:
         bucket = self.hash_table[hashed_key]
 
         found_key = False
-        for _index, record in enumerate(bucket):
+        for _, record in enumerate(bucket):
             record_key, record_val = record
 
             # check if the bucket has same key as

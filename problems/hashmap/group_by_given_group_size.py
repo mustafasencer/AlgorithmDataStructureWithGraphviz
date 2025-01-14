@@ -1,7 +1,7 @@
 from collections import defaultdict
 
 
-def solve(nums):
+def solution(nums):
     """1."""
     groups = defaultdict(list)
 
@@ -18,5 +18,5 @@ def chunk(list, size):
 
 if __name__ == "__main__":
     group_sizes = [3, 3, 3, 3, 3, 1, 3]
-    result = solve(group_sizes)
+    result = solution(group_sizes)
     assert result == []

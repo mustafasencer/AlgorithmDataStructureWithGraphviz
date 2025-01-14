@@ -34,5 +34,5 @@ def solution_1(nums):
 
 if __name__ == "__main__":
     array = [1, 3, -3, 5, 2, 3]
-    result = solution_1(array)
+    result = temp(array)
     assert result == 11

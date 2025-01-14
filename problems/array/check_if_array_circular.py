@@ -1,3 +1,8 @@
+"""
+Check if the array is circular
+"""
+
+
 def solution(nums: list[int]) -> bool:
     """
     1. loop over the array

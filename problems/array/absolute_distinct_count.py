@@ -13,7 +13,7 @@ def solve(numbers: list[int]) -> int:
     return len(distinct)
 
 
-def solve_2(numbers: list[int]) -> int:
+def solve_v2(numbers: list[int]) -> int:
     count = len(numbers)
 
     i, j = 0, len(numbers) - 1
@@ -49,5 +49,5 @@ def solve_2(numbers: list[int]) -> int:
 
 if __name__ == "__main__":
     nums = [-5, -3, 0, 1, 3, 3]
-    result = solve_2(nums)
+    result = solve_v2(nums)
     assert result == 4

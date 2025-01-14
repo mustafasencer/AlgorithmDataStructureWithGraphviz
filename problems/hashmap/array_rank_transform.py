@@ -1,5 +1,4 @@
 def array_rank_transform(arr: list[int]) -> list[int]:
-    """1."""
     copy_ = arr.copy()
     copy_.sort()
     store = {}
@@ -15,17 +14,12 @@ def array_rank_transform(arr: list[int]) -> list[int]:
     return arr
 
 
-def array_rank_transform_2(arr):
-    """1."""
+def array_rank_transform_v2(arr):
     store = {val: index + 1 for index, val in enumerate(sorted(set(arr)))}
-
-    for i in range(len(arr)):
-        arr[i] = store[arr[i]]
-
-    return arr
+    return [store[item] for item in arr]
 
 
 if __name__ == "__main__":
     result = array_rank_transform([40, 10, 20, 30])
-    _result = array_rank_transform_2([40, 10, 20, 30])
-    assert result == _result
+    result_v2 = array_rank_transform_v2([40, 10, 20, 30])
+    assert result == result_v2

@@ -1,4 +1,4 @@
-def solve(nums: list[int]) -> list[list[int]]:
+def solution(nums: list[int]) -> list[list[int]]:
     """1. Backtracking approach to find all possible permutations."""
 
     def backtrack(start, end) -> None:
@@ -14,7 +14,7 @@ def solve(nums: list[int]) -> list[list[int]]:
     return ans
 
 
-def solve_2(nums: list[int]) -> list[list[int]]:
+def solution_v2(nums: list[int]) -> list[list[int]]:
     """1. DFS approach to find all possible permutations."""
 
     def dfs(nums, path, res) -> None:
@@ -30,5 +30,5 @@ def solve_2(nums: list[int]) -> list[list[int]]:
 
 if __name__ == "__main__":
     nums = [1, 2, 3]
-    result = solve_2(nums)
+    result = solution_v2(nums)
     assert result == [[1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1], [3, 1, 2], [3, 2, 1]]

@@ -77,7 +77,7 @@ def solution(A):
     return min_two_index
 
 
-def solution_1(nums, k):
+def solution_v2(nums, k):
     """
     1. slightly different variation with known subarray size!
     2. return the subarray itself.
