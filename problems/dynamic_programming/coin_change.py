@@ -10,7 +10,7 @@ def solution(coins, amount):
     return dp[-1]
 
 
-def solution_1(coins, amount):
+def solution_v2(coins, amount):
     if amount == 0:
         return 0
     value1 = [0]
@@ -34,7 +34,7 @@ def solution_1(coins, amount):
     return -1
 
 
-def solution_2(coins, amount):
+def solution_v3(coins, amount):
     result = []
     counter = 0
 
@@ -59,5 +59,5 @@ def solution_2(coins, amount):
 if __name__ == "__main__":
     coins = [1, 2, 5]
     amount = 6
-    result = solution_2(coins, amount)
+    result = solution_v3(coins, amount)
     assert result == 2

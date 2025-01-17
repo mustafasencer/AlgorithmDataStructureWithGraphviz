@@ -26,7 +26,7 @@ def lcs(str0, str1):
     return dp[m][n]
 
 
-def lcsv2(str0, str1):
+def lcs_v2(str0, str1):
     m = len(str0)
     n = len(str1)
 

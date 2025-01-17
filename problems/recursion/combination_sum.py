@@ -16,18 +16,18 @@ The solution set must not contain duplicate combinations.
 def solution(candidates: list[int], target: int) -> list[list[int]]:
     result = []
     candidates.sort()
+
+    def backtrack(result_, nums, temp, remain, start) -> None:
+        if remain < 0:
+            return
+        if remain == 0:
+            result_.append(temp)
+        else:
+            for i in range(start, len(nums)):
+                backtrack(result_, nums, [*temp, nums[i]], remain - nums[i], i)
+
     backtrack(result, candidates, [], target, 0)
     return result
-
-
-def backtrack(result_, nums, temp, remain, start) -> None:
-    if remain < 0:
-        return
-    if remain == 0:
-        result_.append(temp)
-    else:
-        for i in range(start, len(nums)):
-            backtrack(result_, nums, [*temp, nums[i]], remain - nums[i], i)
 
 
 def solution_v2(candidates, target):

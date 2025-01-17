@@ -34,5 +34,5 @@ def solution_v2(nums: list[int]) -> int:
 
 if __name__ == "__main__":
     nums = [1, 2, 101, 1, 4, 100, 5, 6]
-    result = solution_v2(nums)
+    result = solution(nums)
     assert result == 5

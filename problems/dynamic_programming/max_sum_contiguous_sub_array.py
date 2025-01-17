@@ -16,7 +16,7 @@ def solution(nums: list[int]) -> int:
     return max(nums)
 
 
-def solution_1(nums):
+def solution_v2(nums):
     """
     1. same approach as above 👆
     2. the only difference is that extra O(N) space complexity is added.
@@ -34,5 +34,5 @@ def solution_1(nums):
 
 if __name__ == "__main__":
     array = [1, 3, -3, 5, 2, 3]
-    result = temp(array)
+    result = solution(array)
     assert result == 11

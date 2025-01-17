@@ -1,7 +1,7 @@
 """https://leetcode.com/problems/jump-game-ii/."""
 
 
-def solve(nums: list[int]) -> int:
+def solution(nums: list[int]) -> int:
     if len(nums) < 2:
         return 1
 
@@ -15,7 +15,7 @@ def solve(nums: list[int]) -> int:
     return times
 
 
-def solve_2(nums: list[int]) -> int:
+def solution_v2(nums: list[int]) -> int:
     """
     1. loop over the nums array starting from the 1st index
     2. for every index go back and check if the addition of i and j th item are >= than i
@@ -36,6 +36,6 @@ def solve_2(nums: list[int]) -> int:
 
 
 if __name__ == "__main__":
-    nums = [2, 3, 1, 1, 4]
-    result = solve(nums)
-    assert result == 2
+    nums = [2, 3, 1, 1, 4, 1, 1, 1, 0]
+    result = solution_v2(nums)
+    assert result == 3

@@ -28,37 +28,39 @@ def solution(prices: list[int]) -> int:
     return max(dp)
 
 
-def solution_1(prices):
-    dp = [prices[0]] * len(prices)
+def solution_v2(prices):
+    """
+    1. start looping from the 1st index
+    2. substract the previous index (memoized)
+    3. store the max value in a separate variable
+    4. in each loop get the max of the substraction result and in-place update the variable
+    5. update the memoized store with the min value (by comparing with the currently looped value)
+    -> 1, 2, 3, 4, 5
+          ^
+    """
+    dp = [0] * len(prices)
+    dp[0] = prices[0]
     max_profit = 0
 
     for i in range(1, len(prices)):
-        dp[i] = min(prices[i], dp[i])
-        max_profit = max(prices[i] - min(dp[:i]), max_profit)
+        current = prices[i] - dp[i - 1]
+
+        max_profit = max(current, max_profit)
+
+        dp[i] = min(dp[i - 1], prices[i])
+
     return max_profit
 
 
-def solution_2(prices):
-    dp = [0] * len(prices)
-
+def brute_force(prices):
+    max_profit = 0
     for i in range(1, len(prices)):
-        dp[i] = prices[i] - min(prices[:i])
-    return max(dp)
+        for j in range(i):
+            max_profit = max(prices[i] - prices[j])
 
-
-def solution_3(prices):
-    dp = [0] * len(prices)
-
-    for i in range(1, len(prices)):
-        gain = prices[i] - min(prices[:i])
-        if gain > 0:
-            dp[i] = max(dp[i - 1], gain)
-        else:
-            dp[i] = dp[i - 1]
-
-    return dp[-1]
+    return max_profit
 
 
 if __name__ == "__main__":
-    result = solution_3([7, 1, 5, 3, 6, 4])
+    result = brute_force([7, 1, 5, 3, 6, 4])
     assert result == 5

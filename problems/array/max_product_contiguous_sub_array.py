@@ -17,7 +17,7 @@ def solution(nums: list[int]) -> int:
     return result
 
 
-def solution_1(nums):
+def solution_v2(nums):
     """1. No explanation!"""
     nums_copy = nums[::-1]
     for i in range(len(nums)):
@@ -26,7 +26,7 @@ def solution_1(nums):
     return max(nums + nums_copy)
 
 
-def solution_2(nums):
+def solution_v3(nums):
     """
     1. loop over the nums array
     2. keep a current product for each index in nums

@@ -21,7 +21,7 @@ def solution(nums: list[int]) -> int:
     return max(dp)
 
 
-def solution_1(nums) -> int:
+def solution_v2(nums) -> int:
     dp = [0] * len(nums)
 
     for i in range(len(nums)):
@@ -34,5 +34,5 @@ def solution_1(nums) -> int:
 
 
 if __name__ == "__main__":
-    result = solution([2, 1, 8, 1, 2, 7])
+    result = solution([2, 1, 8, 1, 2, 7, 2])
     assert result == 17
